@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link } from 'react-router';
+import { AuthContext } from '../../Context/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
+
+    const { user, LogOut } = use(AuthContext)
+
+    const handleLogOut = () => {
+        LogOut()
+            .then(result => {
+                console.log('successfully logout', result);
+                toast.success('successfully logout');
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
 
     const navLinks =
         <>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/all-trainer'>All Trainger</Link></li>
+
+            {
+                user && <>
+                    <li><Link to='/be-a-trainer'>Be a trainer</Link></li>
+                    <li><Link to='/dashboard'>Dashboard</Link></li>
+                </>
+            }
         </>
 
     return (
@@ -34,7 +57,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                {
+                    user ?
+                        <Link onClick={handleLogOut} to='/login' className="btn bg-purple-600 hover:bg-purple-700 text-white">Log Out</Link> :
+                        <Link to='/login' className="btn">Login</Link>
+
+                }
             </div>
         </div>
     );
