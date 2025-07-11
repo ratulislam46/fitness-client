@@ -40,7 +40,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const signInWithGoogle = () => {
-        signInWithPopup(auth, provider)
+        return signInWithPopup(auth, provider)
     }
 
 
