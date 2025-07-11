@@ -2,9 +2,11 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { Link } from "react-router";
 import { useQuery } from '@tanstack/react-query';
 import Swal from "sweetalert2";
+import UseAxios from "../../../hooks/UseAxios";
 
 const TrainerApplied = () => {
     const axiosSecure = useAxiosSecure();
+    const axiosIntance = UseAxios()
 
     const { refetch, data: appliedTrainers = [] } = useQuery({
         queryKey: ['applied-trainers'],
@@ -17,7 +19,7 @@ const TrainerApplied = () => {
 
     const handleConfirm = async (id, email, action) => {
         console.log(id, email, action);
-        Swal.fire({
+        const confirm = await Swal.fire({
             title: 'Are you sure?',
             text: "This user will be approved as a trainer.",
             icon: 'warning',
@@ -25,16 +27,24 @@ const TrainerApplied = () => {
             confirmButtonColor: '#16a34a',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, confirm it!'
-        }).then((result) => {
-            // if (result.isConfirmed) {
-            //     axiosSecure.patch(`/applied-trainers/confirm/${id}`)
-            //         .then(res => {
-            //             if (res.data.modifiedCount > 0) {
-            //                 Swal.fire('Confirmed!', 'Trainer has been approved.', 'success');
-            //             }
-            //         });
-            // }
-        });
+        })
+
+        if (!confirm.isConfirmed) return;
+
+        try {
+            await axiosIntance.patch(`/trainers/status/${id}`, {
+                status: action,
+                email: email
+            });
+            refetch()
+            Swal.fire({
+                title: `Trainer ${action}`,
+                icon: 'success'
+            })
+        }
+        catch (error) {
+            console.log('could not update trainer status', error);
+        }
     }
 
     return (
@@ -75,7 +85,7 @@ const TrainerApplied = () => {
                                             onClick={() => handleConfirm(trainer._id, trainer.email, "confirm")}
                                             className="btn btn-xs btn-outline btn-success">Confirm</button>
                                         <button
-                                            onClick={() => handleConfirm(trainer._id, trainer.email, "reject")}
+
                                             className="btn btn-xs btn-outline btn-error">Reject </button>
                                     </td>
                                 </tr>

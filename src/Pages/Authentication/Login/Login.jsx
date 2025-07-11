@@ -8,7 +8,7 @@ import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
 
 const LoginPage = () => {
 
-    const { SignIn, signInWithGoogle } = use(AuthContext)
+    const { SignIn } = use(AuthContext)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate();
     const from = location.state || '/';
