@@ -5,7 +5,7 @@ const About = () => {
                 {/* Text Section */}
                 <div>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                        About <span className="text-purple-600">FitNest</span>
+                        About <span className="text-primary">FitNest</span>
                     </h2>
                     <p className="text-gray-600 text-base mb-4">
                         FitNest is a smart fitness tracking platform that empowers individuals to set, track, and smash their wellness goals. We’re committed to making fitness accessible and enjoyable through data, challenges, expert guidance, and a powerful community.

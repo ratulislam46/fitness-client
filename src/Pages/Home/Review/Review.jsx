@@ -48,7 +48,7 @@ const Review = () => {
         <section className="py-20 px-6 bg-gray-100">
             <div className="max-w-6xl mx-auto text-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                    What Our <span className="text-purple-600">Members Say</span>
+                    What Our <span className="text-primary">Members Say</span>
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
                     Real stories from people just like you. Discover how FitNest helped them reach their fitness goals.

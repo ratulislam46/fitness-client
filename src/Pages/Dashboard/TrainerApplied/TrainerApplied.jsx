@@ -1,19 +1,45 @@
-import React, { useEffect, useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Link } from "react-router";
+import { useQuery } from '@tanstack/react-query';
+import Swal from "sweetalert2";
 
 const TrainerApplied = () => {
     const axiosSecure = useAxiosSecure();
-    const [appliedTrainers, setAppliedTrainers] = useState([]);
 
-    useEffect(() => {
-        axiosSecure.get("/applied-trainers")
-            .then(res => setAppliedTrainers(res.data))
-            .catch(err => console.error("Error fetching applied trainers", err));
-    }, [axiosSecure]);
+    const { refetch, data: appliedTrainers = [] } = useQuery({
+        queryKey: ['applied-trainers'],
+        queryFn: async () => {
+            const res = await axiosSecure.get("/trainers/pending");
+            return res.data
+        }
+    })
+    console.log(appliedTrainers);
+
+    const handleConfirm = async (id, email, action) => {
+        console.log(id, email, action);
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "This user will be approved as a trainer.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#16a34a',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, confirm it!'
+        }).then((result) => {
+            // if (result.isConfirmed) {
+            //     axiosSecure.patch(`/applied-trainers/confirm/${id}`)
+            //         .then(res => {
+            //             if (res.data.modifiedCount > 0) {
+            //                 Swal.fire('Confirmed!', 'Trainer has been approved.', 'success');
+            //             }
+            //         });
+            // }
+        });
+    }
 
     return (
         <div className="p-6">
-            <h2 className="text-2xl font-bold text-center text-purple-600 mb-4">Applied Trainers</h2>
+            <h2 className="text-2xl font-bold text-center text-primary mb-4">Applied Trainers</h2>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full text-sm">
@@ -44,9 +70,13 @@ const TrainerApplied = () => {
                                         <span className="badge badge-warning text-xs">{trainer.status}</span>
                                     </td>
                                     <td className="flex gap-2">
-                                        <button className="btn btn-xs btn-outline btn-info">Details</button>
-                                        <button className="btn btn-xs btn-outline btn-success">Confirm</button>
-                                        <button className="btn btn-xs btn-outline btn-error">Reject</button>
+                                        <Link to={`/dashboard/applied-trainers/${trainer._id}`} className="btn btn-xs btn-outline btn-info">Details</Link>
+                                        <button
+                                            onClick={() => handleConfirm(trainer._id, trainer.email, "confirm")}
+                                            className="btn btn-xs btn-outline btn-success">Confirm</button>
+                                        <button
+                                            onClick={() => handleConfirm(trainer._id, trainer.email, "reject")}
+                                            className="btn btn-xs btn-outline btn-error">Reject </button>
                                     </td>
                                 </tr>
                             ))
