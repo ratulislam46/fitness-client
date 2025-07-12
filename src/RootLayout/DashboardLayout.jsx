@@ -70,8 +70,6 @@ const Dashboard = () => {
                         </Link>
                     </li>
 
-
-                    {/* DO: this link page work  */}
                     {/* All Trainers */}
                     <li>
                         <Link
@@ -83,6 +81,18 @@ const Dashboard = () => {
                         </Link>
                     </li>
 
+                    {/* Activity Log */}
+                    <li>
+                        <Link
+                            to="/dashboard/activity-log"
+                            className="flex items-center gap-3 text-rose-600 hover:bg-rose-100 px-3 py-2 rounded-lg transition"
+                        >
+                            <MdOutlineHistoryEdu className="text-xl text-rose-500" />
+                            <span className="font-semibold">Activity Log</span>
+                        </Link>
+                    </li>
+
+                    {/* DO: this link page work  */}
                     {/* Balance */}
                     <li>
                         <Link
@@ -127,25 +137,16 @@ const Dashboard = () => {
                         </Link>
                     </li>
 
-                    {/* Activity Log */}
-                    <li>
-                        <Link
-                            to="/dashboard/activity-log"
-                            className="flex items-center gap-3 text-rose-600 hover:bg-rose-100 px-3 py-2 rounded-lg transition"
-                        >
-                            <MdOutlineHistoryEdu className="text-xl text-rose-500" />
-                            <span className="font-semibold">Activity Log</span>
-                        </Link>
-                    </li>
+
 
                     {/* Profile */}
                     <li>
                         <Link
-                            to="/dashboard/profile"
+                            to="/dashboard/my-profile"
                             className="flex items-center gap-3 text-sky-600 hover:bg-sky-100 px-3 py-2 rounded-lg transition"
                         >
                             <MdOutlinePerson className="text-xl text-sky-500" />
-                            <span className="font-semibold">Profile</span>
+                            <span className="font-semibold">My Profile</span>
                         </Link>
                     </li>
 

@@ -17,7 +17,7 @@ const AllNewsLetter = () => {
 
     return (
         <div className="p-6 mt-10 overflow-x-auto bg-white rounded shadow">
-            <h2 className="text-2xl font-bold mb-4 text-primary">All Newsletter Subscribers</h2>
+            <h2 className="text-3xl font-bold mb-4 text-primary">All Newsletter Subscribers</h2>
 
             <table className="table table-zebra w-full">
                 <thead>

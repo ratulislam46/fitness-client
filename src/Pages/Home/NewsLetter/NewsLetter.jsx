@@ -1,9 +1,10 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import UseAxios from "../../../hooks/UseAxios";
+import { FiSend } from "react-icons/fi";
 
 const Newsletter = () => {
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const axiosInstance = UseAxios()
 
     const onSubmit = async (data) => {
@@ -23,25 +24,53 @@ const Newsletter = () => {
     };
 
     return (
-        <section className="bg-gradient-to-r from-indigo-100 to-purple-100 py-20 px-4">
-            <div className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow-lg">
-                <h2 className="text-2xl font-bold text-center mb-4 text-primary">Subscribe to our Newsletter</h2>
+        <div className="w-full bg-white py-16 px-4 md:px-10">
+            <div className="max-w-6xl mx-auto shadow-md bg-white rounded-lg p-8 grid md:grid-cols-2 gap-10 items-center">
+                {/* Left side - Text */}
+                <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                        SUBSCRIBE TO OUR NEWSLETTER!!
+                    </h2>
+                    <p className="text-gray-600">
+                        Subscribe our newsletter to get exciting latest and updated news. So you stay connected to our forums.
+                    </p>
+                </div>
+
+                {/* Right side - Form */}
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                    <input
-                        {...register("name", { required: true })}
-                        placeholder="Your Name"
-                        className="input input-bordered w-full"
-                    />
-                    <input
-                        {...register("email", { required: true })}
-                        type="email"
-                        placeholder="Your Email"
-                        className="input input-bordered w-full"
-                    />
-                    <button className="btn btn-primary w-full">Subscribe Now</button>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                        <input
+                            type="text"
+                            {...register("name", { required: "Name is required" })}
+                            placeholder="Enter your name"
+                            className="input input-bordered w-full"
+                        />
+                        {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+                    </div>
+
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                        <input
+                            type="email"
+                            {...register("email", {
+                                required: "Email is required",
+                            })}
+                            placeholder="Enter your email"
+                            className="input input-bordered w-full"
+                        />
+                        {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+                    </div>
+
+                    <button
+                        type="submit"
+                        className="btn btn-primary w-full flex items-center justify-center gap-2"
+                    >
+                        Subscribe Now <FiSend />
+                    </button>
                 </form>
             </div>
-        </section>
+        </div>
     );
 };
 

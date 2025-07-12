@@ -12,6 +12,8 @@ import PrivateRoute from "../PrivateRoutes/PrivateRoutes";
 import TrainerApplied from "../Pages/Dashboard/TrainerApplied/TrainerApplied";
 import TrainerDetails from "../Pages/Dashboard/TrainerApplied/TrainerDetails";
 import Trainers from "../Pages/Dashboard/Trainers/Trainers";
+import ActivityLog from "../Pages/Dashboard/ActivityLog/ActivityLog";
+import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
 
 
 
@@ -67,6 +69,14 @@ export const router = createBrowserRouter([
             {
                 path: 'trainers',
                 Component: Trainers
+            },
+            {
+                path: 'activity-log',
+                Component: ActivityLog
+            },
+            {
+                path: 'my-profile',
+                Component: MyProfile
             }
         ]
     }

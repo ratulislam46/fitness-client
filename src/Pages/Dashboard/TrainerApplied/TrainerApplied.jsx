@@ -88,7 +88,7 @@ const TrainerApplied = () => {
 
     return (
         <div className="p-6">
-            <h2 className="text-2xl font-bold text-center text-primary mb-4">Applied Trainers</h2>
+            <h2 className="text-3xl font-bold mb-4 text-primary">Applied Trainers</h2>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full text-sm">
