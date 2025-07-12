@@ -75,7 +75,7 @@ const Dashboard = () => {
                     {/* All Trainers */}
                     <li>
                         <Link
-                            to="/dashboard/all-trainers"
+                            to="/dashboard/trainers"
                             className="flex items-center gap-3 text-blue-600 hover:bg-blue-100 px-3 py-2 rounded-lg transition"
                         >
                             <FaUsers className="text-xl text-blue-500" />

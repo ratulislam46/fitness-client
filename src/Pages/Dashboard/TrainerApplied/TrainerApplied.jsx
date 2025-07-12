@@ -66,6 +66,7 @@ const TrainerApplied = () => {
             email: selectedTrainer.email,
             experience: selectedTrainer.skills?.join(", ") || "N/A",
             feedback,
+            status: 'rejected',
             rejected_by: user?.email,
             rejected_at: new Date().toISOString()
         };
@@ -73,7 +74,7 @@ const TrainerApplied = () => {
 
         try {
             await axiosIntance.post("/trainer-rejections", rejectionData);
-            await axiosIntance.delete(`/trainers/${selectedTrainer._id}`);
+            await axiosIntance.delete(`/trainers/delete/${selectedTrainer._id}`);
             Swal.fire("Rejected!", "Trainer application rejected.", "success");
             setOpenRejectModal(false);
             setFeedback("");

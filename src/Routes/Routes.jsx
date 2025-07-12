@@ -11,6 +11,7 @@ import AllNewsLetter from "../Pages/Dashboard/AllNewsLetter/AllNewsLetter";
 import PrivateRoute from "../PrivateRoutes/PrivateRoutes";
 import TrainerApplied from "../Pages/Dashboard/TrainerApplied/TrainerApplied";
 import TrainerDetails from "../Pages/Dashboard/TrainerApplied/TrainerDetails";
+import Trainers from "../Pages/Dashboard/Trainers/Trainers";
 
 
 
@@ -62,6 +63,10 @@ export const router = createBrowserRouter([
             {
                 path: "applied-trainers/:id",
                 Component: TrainerDetails
+            },
+            {
+                path: 'trainers',
+                Component: Trainers
             }
         ]
     }
