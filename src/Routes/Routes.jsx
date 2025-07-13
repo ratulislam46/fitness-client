@@ -15,6 +15,7 @@ import Trainers from "../Pages/Dashboard/Trainers/Trainers";
 import ActivityLog from "../Pages/Dashboard/ActivityLog/ActivityLog";
 import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
 import AddForm from "../Pages/Dashboard/AddForum/AddForm";
+import ForumDetails from "../Pages/Home/ForumPost/ForumDetails";
 
 
 
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
             {
                 path: 'add-forum',
                 Component: AddForm
+            },
+            {
+                path: 'forum-details/:id',
+                Component: ForumDetails
             }
         ]
     }

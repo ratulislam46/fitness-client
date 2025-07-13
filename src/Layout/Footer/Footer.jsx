@@ -1,13 +1,9 @@
-import toast from "react-hot-toast";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Footer = () => {
 
-  const handleSubcribe = (e) => {
-    e.preventDefault()
-    toast.success('Subscribe successfully!');
-  }
+
 
   return (
     <footer className="bg-gray-900 text-gray-200 px-6 py-12">
@@ -48,20 +44,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">Subscribe</h3>
           <p className="text-gray-400 text-sm mb-2">Get weekly fitness tips & motivation in your inbox.</p>
-          <form className="flex flex-col gap-2">
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-            />
-            <button
-              type="submit"
-              onClick={handleSubcribe}
-              className="bg-purple-600 hover:bg-purple-700 text-white py-2 rounded font-medium"
-            >
-              Subscribe
-            </button>
-          </form>
+          
         </div>
       </div>
 
