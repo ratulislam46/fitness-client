@@ -1,7 +1,9 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../Context/AuthProvider';
 import toast from 'react-hot-toast';
+import FitnestIcon from './FitnestIcon';
+import './Navbar.css'
 
 const Navbar = () => {
 
@@ -21,19 +23,19 @@ const Navbar = () => {
 
     const navLinks =
         <>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/all-trainer'>All Trainger</Link></li>
+            <li className='text-white'><NavLink to='/'>Home</NavLink></li>
+            <li className='text-white'><NavLink to='/all-trainer'>All Trainger</NavLink></li>
 
             {
                 user && <>
-                    <li><Link to='/be-a-trainer'>Be a trainer</Link></li>
-                    <li><Link to='/dashboard'>Dashboard</Link></li>
+                    <li className='text-white'><NavLink to='/be-a-trainer'>Be a trainer</NavLink></li>
+                    <li className='text-white'><NavLink to='/dashboard'>Dashboard</NavLink></li>
                 </>
             }
         </>
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-[#283747] shadow-sm fixed top-0 left-0 w-full z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,13 +43,13 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-[#283747] rounded-box z-1 mt-3 w-52 p-2 shadow">
                         {
                             navLinks
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">FITNEST</a>
+                <FitnestIcon></FitnestIcon>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -60,7 +62,7 @@ const Navbar = () => {
                 {
                     user ?
                         <Link onClick={handleLogOut} to='/login' className="btn bg-purple-600 hover:bg-purple-700 text-white">Log Out</Link> :
-                        <Link to='/login' className="btn">Login</Link>
+                        <Link to='/login' className="btn bg-purple-600 hover:bg-purple-700 text-white">Login</Link>
 
                 }
             </div>

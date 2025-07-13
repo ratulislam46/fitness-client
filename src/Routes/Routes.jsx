@@ -14,6 +14,7 @@ import TrainerDetails from "../Pages/Dashboard/TrainerApplied/TrainerDetails";
 import Trainers from "../Pages/Dashboard/Trainers/Trainers";
 import ActivityLog from "../Pages/Dashboard/ActivityLog/ActivityLog";
 import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
+import AddForm from "../Pages/Dashboard/AddForum/AddForm";
 
 
 
@@ -77,6 +78,10 @@ export const router = createBrowserRouter([
             {
                 path: 'my-profile',
                 Component: MyProfile
+            },
+            {
+                path: 'add-forum',
+                Component: AddForm
             }
         ]
     }

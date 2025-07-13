@@ -42,7 +42,7 @@ const Dashboard = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                <ul className="menu bg-[#283747] text-base-content min-h-full w-80 p-4">
                     {/* Sidebar content here */}
                     <div className='pb-6'>
                         <FitnestIcon></FitnestIcon>
@@ -92,6 +92,29 @@ const Dashboard = () => {
                         </Link>
                     </li>
 
+
+                    {/* Profile */}
+                    <li>
+                        <Link
+                            to="/dashboard/my-profile"
+                            className="flex items-center gap-3 text-sky-600 hover:bg-sky-100 px-3 py-2 rounded-lg transition"
+                        >
+                            <MdOutlinePerson className="text-xl text-sky-500" />
+                            <span className="font-semibold">My Profile</span>
+                        </Link>
+                    </li>
+
+                    {/* Add New Forum */}
+                    <li>
+                        <Link
+                            to="/dashboard/add-forum"
+                            className="flex items-center gap-3 text-indigo-600 hover:bg-indigo-100 px-3 py-2 rounded-lg transition"
+                        >
+                            <MdForum className="text-xl text-indigo-500" />
+                            <span className="font-semibold">Add New Forum</span>
+                        </Link>
+                    </li>
+
                     {/* DO: this link page work  */}
                     {/* Balance */}
                     <li>
@@ -123,30 +146,6 @@ const Dashboard = () => {
                         >
                             <FaCalendarAlt className="text-xl text-yellow-500" />
                             <span className="font-semibold">Manage Slots</span>
-                        </Link>
-                    </li>
-
-                    {/* Add New Forum */}
-                    <li>
-                        <Link
-                            to="/dashboard/add-forum"
-                            className="flex items-center gap-3 text-indigo-600 hover:bg-indigo-100 px-3 py-2 rounded-lg transition"
-                        >
-                            <MdForum className="text-xl text-indigo-500" />
-                            <span className="font-semibold">Add New Forum</span>
-                        </Link>
-                    </li>
-
-
-
-                    {/* Profile */}
-                    <li>
-                        <Link
-                            to="/dashboard/my-profile"
-                            className="flex items-center gap-3 text-sky-600 hover:bg-sky-100 px-3 py-2 rounded-lg transition"
-                        >
-                            <MdOutlinePerson className="text-xl text-sky-500" />
-                            <span className="font-semibold">My Profile</span>
                         </Link>
                     </li>
 
