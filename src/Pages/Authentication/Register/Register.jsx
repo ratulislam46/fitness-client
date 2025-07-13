@@ -63,7 +63,9 @@ const Register = () => {
 
     return (
         <div>
-            <FitnestIcon></FitnestIcon>
+            <div className="bg-gray-100 lg:pl-6 lg:pt-6 pt-2">
+                <FitnestIcon></FitnestIcon>
+            </div>
             <div className="min-h-screen flex items-center justify-center px-4 bg-gray-100">
                 <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">

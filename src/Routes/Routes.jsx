@@ -16,6 +16,8 @@ import ActivityLog from "../Pages/Dashboard/ActivityLog/ActivityLog";
 import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
 import AddForm from "../Pages/Dashboard/AddForum/AddForm";
 import ForumDetails from "../Pages/Home/ForumPost/ForumDetails";
+import ForumPage from "../Pages/ForumsPage/ForumsPage";
+import ForumPostDetails from "../Pages/ForumsPage/ForumPostDetails";
 
 
 
@@ -35,6 +37,14 @@ export const router = createBrowserRouter([
             {
                 path: 'be-a-trainer',
                 Component: BeATrainer
+            },
+            {
+                path: 'all-forum-post',
+                Component: ForumPage
+            },
+            {
+                path: 'single-forum-details/:id',
+                Component: ForumPostDetails
             }
         ]
     },

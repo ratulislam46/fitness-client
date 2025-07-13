@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import UseAxiosSecure from '../../../hooks/useAxiosSecure';
-import Loading from '../../../Components/Loading/Loading';
 import { SlCalender } from 'react-icons/sl';
+import UseAxiosSecure from '../../hooks/useAxiosSecure';
+import Loading from '../../Components/Loading/Loading';
 
-const ForumDetails = () => {
+const ForumPostDetails = () => {
 
     const { id } = useParams();
     const axiosSecure = UseAxiosSecure();
@@ -27,7 +27,7 @@ const ForumDetails = () => {
     const date = new Date(created_at).toLocaleDateString();
 
     return (
-        <section className="max-w-4xl mx-auto mt-12 mb-6 px-4 md:px-8 py-12 bg-gray-50 border border-gray-300 rounded-xl">
+        <section className="max-w-4xl mx-auto mt-24 mb-12 px-4 md:px-8 py-12 bg-gray-50 border border-gray-300 rounded-xl">
             {/* Header */}
             <div className="flex items-center justify-between mb-6 flex-wrap gap-4 border-b pb-3 border-gray-400 ">
                 <div className="flex items-center gap-4">
@@ -71,4 +71,4 @@ const ForumDetails = () => {
 };
 
 
-export default ForumDetails;
+export default ForumPostDetails;

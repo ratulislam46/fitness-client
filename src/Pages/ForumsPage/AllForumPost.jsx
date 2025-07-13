@@ -2,11 +2,11 @@ import React, { use } from 'react';
 import { Link } from 'react-router';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 import { SlCalender } from "react-icons/sl";
-import UseAxios from '../../../hooks/UseAxios';
-import { AuthContext } from '../../../Context/AuthProvider';
 import Swal from 'sweetalert2';
+import UseAxios from '../../hooks/UseAxios';
+import { AuthContext } from '../../Context/AuthProvider';
 
-const ShowForumPost = ({ forum, refetch }) => {
+const AllForumPost = ({ forum, refetch }) => {
 
     const axiosInstance = UseAxios();
     const { user } = use(AuthContext)
@@ -36,7 +36,7 @@ const ShowForumPost = ({ forum, refetch }) => {
     const date = new Date(forum.created_at).toLocaleDateString();
 
     return (
-        <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
+        <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300 border border-secondary">
             <div className="flex items-center mb-4 border-b pb-3 border-gray-400">
                 <img
                     src={forum.posted_by?.image}
@@ -59,7 +59,7 @@ const ShowForumPost = ({ forum, refetch }) => {
             <h3 className="text-lg font-bold text-gray-800 mb-2">{forum.title}</h3>
             <p className="text-gray-600 text-sm mb-4">
                 {forum.details.length > 100 ? forum.details.slice(0, 100) + '...' : forum.details}
-                <Link to={`/dashboard/forum-details/${forum._id}`} className="text-blue-500 ml-1">see more</Link>
+                <Link to={`/single-forum-details/${forum._id}`} className="text-blue-500 ml-1">see more</Link>
             </p>
 
             <img
@@ -86,4 +86,4 @@ const ShowForumPost = ({ forum, refetch }) => {
     );
 };
 
-export default ShowForumPost;
+export default AllForumPost;

@@ -48,7 +48,7 @@ const BeATrainer = () => {
     };
 
     return (
-        <div className="max-w-3xl mx-auto bg-white shadow-md p-6 rounded-lg mt-10">
+        <div className="max-w-3xl mx-auto bg-white shadow-md p-6 rounded-lg mt-24">
             <h2 className="text-2xl font-bold mb-6 text-center text-primary">Apply to be a Trainer</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
 
