@@ -18,6 +18,8 @@ import AddForm from "../Pages/Dashboard/AddForum/AddForm";
 import ForumDetails from "../Pages/Home/ForumPost/ForumDetails";
 import ForumPage from "../Pages/ForumsPage/ForumsPage";
 import ForumPostDetails from "../Pages/ForumsPage/ForumPostDetails";
+import AddClass from "../Pages/Dashboard/AddClass/AddClass";
+import AllClasses from "../Pages/AllClasses/AllClasses";
 
 
 
@@ -45,6 +47,10 @@ export const router = createBrowserRouter([
             {
                 path: 'single-forum-details/:id',
                 Component: ForumPostDetails
+            },
+            {
+                path: 'classes',
+                Component: AllClasses
             }
         ]
     },
@@ -97,6 +103,10 @@ export const router = createBrowserRouter([
             {
                 path: 'forum-details/:id',
                 Component: ForumDetails
+            },
+            {
+                path: 'add-class',
+                Component: AddClass
             }
         ]
     }

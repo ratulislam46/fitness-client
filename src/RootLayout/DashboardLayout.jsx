@@ -115,6 +115,17 @@ const Dashboard = () => {
                         </Link>
                     </li>
 
+                    {/* Add New Class */}
+                    <li>
+                        <Link
+                            to="/dashboard/add-class"
+                            className="flex items-center gap-3 text-purple-600 hover:bg-purple-100 px-3 py-2 rounded-lg transition"
+                        >
+                            <FaPlusCircle className="text-xl text-purple-500" />
+                            <span className="font-semibold">Add New Class</span>
+                        </Link>
+                    </li>
+
                     {/* DO: this link page work  */}
                     {/* Balance */}
                     <li>
@@ -124,17 +135,6 @@ const Dashboard = () => {
                         >
                             <FaMoneyBillWave className="text-xl text-green-500" />
                             <span className="font-semibold">Balance</span>
-                        </Link>
-                    </li>
-
-                    {/* Add New Class */}
-                    <li>
-                        <Link
-                            to="/dashboard/add-class"
-                            className="flex items-center gap-3 text-purple-600 hover:bg-purple-100 px-3 py-2 rounded-lg transition"
-                        >
-                            <FaPlusCircle className="text-xl text-purple-500" />
-                            <span className="font-semibold">Add New Class</span>
                         </Link>
                     </li>
 

@@ -24,8 +24,9 @@ const Navbar = () => {
     const navLinks =
         <>
             <li className='text-white'><NavLink to='/'>Home</NavLink></li>
-            <li className='text-white'><NavLink to='/all-trainer'>All Trainger</NavLink></li>
-            <li className='text-white'><NavLink to='/all-forum-post'>Forums Post</NavLink></li>
+            <li className='text-white'><NavLink to='/all-trainer'>Trainers</NavLink></li>
+            <li className='text-white'><NavLink to='/all-forum-post'>Forums</NavLink></li>
+            <li className='text-white'><NavLink to='/classes'>Classes</NavLink></li>
 
             {
                 user && <>

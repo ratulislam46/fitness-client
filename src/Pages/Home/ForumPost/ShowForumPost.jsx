@@ -65,7 +65,7 @@ const ShowForumPost = ({ forum, refetch }) => {
             <img
                 src={forum.bannerImage}
                 alt="Forum Banner"
-                className="w-full h-48 object-cover rounded-md mb-4"
+                className="w-full h-80 object-cover rounded-md mb-4"
             />
 
             <div className="flex gap-4">

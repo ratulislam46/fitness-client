@@ -10,25 +10,18 @@ const BeATrainer = () => {
     const axiosInstance = UseAxios()
     const { register, handleSubmit, control, reset } = useForm();
 
-    const daysOptions = [
-        { value: "Sunday", label: "Sunday" },
-        { value: "Monday", label: "Monday" },
-        { value: "Tuesday", label: "Tuesday" },
-        { value: "Wednesday", label: "Wednesday" },
-        { value: "Thursday", label: "Thursday" },
-        { value: "Friday", label: "Friday" },
-        { value: "Saturday", label: "Saturday" },
-    ];
 
     const onSubmit = async (data) => {
+        const time = data.availableTime;
+        const converABTimeInANumber = parseInt(time)
+
         const formData = {
             fullName: data.fullName,
             email: user?.email,
             age: data.age,
             profileImage: data.profileImage,
             skills: data.skills,
-            availableDays: data.availableDays.map(day => day.value),
-            availableTime: data.availableTime,
+            availableTime: converABTimeInANumber,
             otherInfo: data.otherInfo,
             status: "pending",
             applied_at: new Date(),
@@ -100,27 +93,10 @@ const BeATrainer = () => {
                     ))}
                 </div>
 
-                {/* Available Days (React Select - Multi) */}
-                <Controller
-                    name="availableDays"
-                    control={control}
-                    rules={{ required: true }}
-                    render={({ field }) => (
-                        <Select
-                            {...field}
-                            isMulti
-                            options={daysOptions}
-                            className="react-select-container"
-                            classNamePrefix="react-select"
-                            placeholder="Select Available Days"
-                        />
-                    )}
-                />
-
                 {/* Available Time */}
                 <input
-                    type="text"
-                    placeholder="Available Time (e.g. 7AM - 10AM)"
+                    type="number"
+                    placeholder="Available hours in a day"
                     {...register("availableTime", { required: true })}
                     className="input input-bordered w-full"
                 />
