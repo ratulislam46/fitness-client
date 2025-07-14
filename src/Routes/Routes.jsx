@@ -51,6 +51,10 @@ export const router = createBrowserRouter([
             {
                 path: 'classes',
                 Component: AllClasses
+            },
+            {
+                path: 'trainer/:id',
+                Component: TrainerDetails
             }
         ]
     },

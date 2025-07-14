@@ -21,10 +21,10 @@ const TrainerDetails = () => {
 
     return (
 
-        <div className="max-w-5xl mx-auto p-6 bg-base-100 shadow-lg rounded-xl">
-            <h2 className="text-3xl font-bold text-center text-primary mb-6">Trainer Application Details</h2>
+        <div className="max-w-5xl mx-auto mt-28 p-6 bg-base-100 rounded-xl">
+            <h2 className="text-3xl font-bold text-center mb-6 border-b border-gray-300 pb-2">Trainer Application Details</h2>
 
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col md:flex-row gap-8 shadow-md py-10 px-8 rounded-xl">
                 {/* Profile Image */}
                 <div className="md:w-1/3 flex justify-center">
                     <img

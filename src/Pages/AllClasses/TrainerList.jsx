@@ -13,6 +13,8 @@ const TrainerList = ({ className }) => {
         }
     });
 
+    console.log(trainers);
+
     return (
         <div className="mt-3">
             <h4 className="text-xl italic font-bold">Trainers who Took this class</h4>

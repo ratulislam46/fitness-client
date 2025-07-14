@@ -80,7 +80,7 @@ const BeATrainer = () => {
 
                 {/* Skills (checkboxes) */}
                 <div className="grid grid-cols-2 gap-3">
-                    {["Yoga", "Cardio", "Strength", "Zumba", "Dance", "Pilates"].map((skill) => (
+                    {["Yoga", "Cardio", "Strength", "Zumba", "Dance", "Pilates","Muscle", "Sports"].map((skill) => (
                         <label key={skill} className="flex items-center gap-2">
                             <input
                                 type="checkbox"
