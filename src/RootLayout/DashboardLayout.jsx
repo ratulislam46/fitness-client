@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router';
-import { MdEmail, MdPendingActions, MdForum, MdOutlineHistoryEdu, MdOutlinePerson } from "react-icons/md";
+import { MdEmail, MdPendingActions, MdForum, MdOutlineHistoryEdu, MdOutlinePerson, MdAccessTime } from "react-icons/md";
 import { FaUsers, FaMoneyBillWave, FaPlusCircle, FaCalendarAlt } from "react-icons/fa";
 import { BiBookBookmark } from "react-icons/bi";
 import FitnestIcon from '../Layout/Navbar/FitnestIcon';
@@ -125,6 +125,18 @@ const Dashboard = () => {
                             <span className="font-semibold">Add New Class</span>
                         </Link>
                     </li>
+
+                    {/* Add New Slot */}
+                    <li>
+                        <Link
+                            to="/dashboard/add-slot"
+                            className="flex items-center gap-3 text-indigo-600 hover:bg-indigo-100 px-3 py-2 rounded-lg transition"
+                        >
+                            <MdAccessTime className="text-xl text-indigo-500" />
+                            <span className="font-semibold">Add New Slot</span>
+                        </Link>
+                    </li>
+
 
                     {/* DO: this link page work  */}
                     {/* Balance */}

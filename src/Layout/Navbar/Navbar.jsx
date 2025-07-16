@@ -61,6 +61,14 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+
+                {/* user image */}
+                {
+                    user &&
+                    <img className='w-10 mr-2 rounded-2xl' src={user.photoURL || 'https://i.postimg.cc/pX5mX6Zd/istockphoto-1337144146-612x612.jpg'} alt="" />
+                }
+
+                {/* conditional button  */}
                 {
                     user ?
                         <Link onClick={handleLogOut} to='/login' className="btn bg-purple-600 hover:bg-purple-700 text-white">Log Out</Link> :

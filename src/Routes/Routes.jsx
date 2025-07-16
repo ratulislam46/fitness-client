@@ -20,6 +20,7 @@ import ForumPage from "../Pages/ForumsPage/ForumsPage";
 import ForumPostDetails from "../Pages/ForumsPage/ForumPostDetails";
 import AddClass from "../Pages/Dashboard/AddClass/AddClass";
 import AllClasses from "../Pages/AllClasses/AllClasses";
+import AddNewSlot from "../Pages/Dashboard/AddNewSlot/AddNewSlot";
 
 
 
@@ -111,6 +112,10 @@ export const router = createBrowserRouter([
             {
                 path: 'add-class',
                 Component: AddClass
+            },
+            {
+                path: 'add-slot',
+                Component: AddNewSlot
             }
         ]
     }

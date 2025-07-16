@@ -36,7 +36,7 @@ const AllForumPost = ({ forum, refetch }) => {
     const date = new Date(forum.created_at).toLocaleDateString();
 
     return (
-        <div className="max-w-3xl mx-auto bg-white rounded-lg  p-4 transition duration-300 border border-indigo-100">
+        <div className=" bg-white rounded-lg  p-4 transition duration-300 border border-indigo-100">
             <div className="flex items-center mb-4 border-b pb-3 border-gray-400">
                 <img
                     src={forum.posted_by?.image}

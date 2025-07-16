@@ -23,8 +23,8 @@ const ForumPage = () => {
     }
 
     return (
-        <section className="py-12 mt-24 px-4 md:px-10 bg-base-100">
-            <h2 className="text-3xl font-bold text-center mb-8 text-primary">Latest Community Posts</h2>
+        <section className="max-w-3xl mx-auto py-12 mt-16 px-4 md:px-10 bg-base-100">
+            <h2 className="text-3xl font-bold text-center mb-8 border-b border-gray-300 pb-2">Latest Community Posts</h2>
 
             <div className="grid grid-cols-1 gap-14">
                 {forums.map((forum) =>

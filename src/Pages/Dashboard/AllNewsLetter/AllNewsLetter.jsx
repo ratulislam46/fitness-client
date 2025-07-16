@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import UseAxiosSecure from '../../../hooks/useAxiosSecure';
+import UseAxiosSecure from '../../../hooks/UseAxiosSecure';
 
 const AllNewsLetter = () => {
-    const axiosSecure = UseAxiosSecure();
+    const axiosSecure = UseAxiosSecure()
     const [subscribers, setSubscribers] = useState([]);
 
     useEffect(() => {

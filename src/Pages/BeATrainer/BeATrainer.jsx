@@ -11,6 +11,17 @@ const BeATrainer = () => {
     const { register, handleSubmit, control, reset } = useForm();
 
 
+    const daysOptions = [
+        { value: "Sunday", label: "Sunday" },
+        { value: "Monday", label: "Monday" },
+        { value: "Tuesday", label: "Tuesday" },
+        { value: "Wednesday", label: "Wednesday" },
+        { value: "Thursday", label: "Thursday" },
+        { value: "Friday", label: "Friday" },
+        { value: "Saturday", label: "Saturday" },
+    ];
+
+
     const onSubmit = async (data) => {
         const time = data.availableTime;
         const converABTimeInANumber = parseInt(time)
@@ -21,6 +32,7 @@ const BeATrainer = () => {
             age: data.age,
             profileImage: data.profileImage,
             skills: data.skills,
+            availableDays: data.availableDays.map(day => day.value),
             availableTime: converABTimeInANumber,
             otherInfo: data.otherInfo,
             status: "pending",
@@ -80,7 +92,7 @@ const BeATrainer = () => {
 
                 {/* Skills (checkboxes) */}
                 <div className="grid grid-cols-2 gap-3">
-                    {["Yoga", "Cardio", "Strength", "Zumba", "Dance", "Pilates","Muscle", "Sports"].map((skill) => (
+                    {["Yoga", "Cardio", "Strength", "Zumba", "Dance", "Pilates", "Muscle", "Sports"].map((skill) => (
                         <label key={skill} className="flex items-center gap-2">
                             <input
                                 type="checkbox"
@@ -93,10 +105,28 @@ const BeATrainer = () => {
                     ))}
                 </div>
 
+                {/* Available Days (React Select - Multi) */}
+                <Controller
+                    name="availableDays"
+                    control={control}
+                    rules={{ required: true }}
+                    render={({ field }) => (
+                        <Select
+                            {...field}
+                            isMulti
+                            options={daysOptions}
+                            className="react-select-container"
+                            classNamePrefix="react-select"
+                            placeholder="Select Available Days"
+                        />
+                    )}
+                />
+
                 {/* Available Time */}
                 <input
                     type="number"
                     placeholder="Available hours in a day"
+                    min={1}
                     {...register("availableTime", { required: true })}
                     className="input input-bordered w-full"
                 />
