@@ -27,7 +27,7 @@ const MyProfile = () => {
         },
         enabled: !!user?.email
     });
-    console.log(userData);
+    // console.log(userData);
 
     useEffect(() => {
         if (userData) {
@@ -92,7 +92,7 @@ const MyProfile = () => {
                     <img
                         src={userData?.image || user?.photoURL}
                         alt="Profile"
-                        className="w-32 h-32 rounded-full border-2 border-blue-600 object-cover shadow-md"
+                        className="w-32 h-32 rounded-2xl border-2 border-blue-600 object-cover shadow-md"
                     />
                 </div>
             </div>

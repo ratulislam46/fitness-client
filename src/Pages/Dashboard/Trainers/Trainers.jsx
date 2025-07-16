@@ -16,7 +16,7 @@ const Trainers = () => {
             return res.data;
         }
     });
-    console.log(trainers);
+    // console.log(trainers);
 
     const handleDelete = async (trainer) => {
         const confirm = await Swal.fire({

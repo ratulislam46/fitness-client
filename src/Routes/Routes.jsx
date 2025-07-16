@@ -22,6 +22,8 @@ import AddClass from "../Pages/Dashboard/AddClass/AddClass";
 import AllClasses from "../Pages/AllClasses/AllClasses";
 import AddNewSlot from "../Pages/Dashboard/AddNewSlot/AddNewSlot";
 import ManageSlot from "../Pages/Dashboard/ManageSlot/ManageSlot";
+import Balance from "../Pages/Dashboard/Balance/Balance";
+import BookedTrainers from "../Pages/Dashboard/BookedTrainers/BookedTrainers";
 
 
 
@@ -119,8 +121,16 @@ export const router = createBrowserRouter([
                 Component: AddNewSlot
             },
             {
-                path:'manage-slots',
+                path: 'manage-slots',
                 Component: ManageSlot
+            },
+            {
+                path: 'balance',
+                Component: Balance
+            },
+            {
+                path: 'booked-trainers',
+                Component: BookedTrainers
             }
         ]
     }

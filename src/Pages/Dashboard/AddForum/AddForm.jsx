@@ -24,7 +24,7 @@ const AddForum = () => {
         },
         enabled: !!user?.email
     });
-    console.log(userData);
+    // console.log(userData);
 
     const onSubmit = async (data) => {
         setUploading(true);

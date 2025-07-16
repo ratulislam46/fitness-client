@@ -150,6 +150,7 @@ const Dashboard = () => {
 
 
                     {/* DO: this link page work  */}
+
                     {/* Balance */}
                     <li>
                         <Link
@@ -160,7 +161,6 @@ const Dashboard = () => {
                             <span className="font-semibold">Balance</span>
                         </Link>
                     </li>
-
 
                     {/* Booked Trainer */}
                     <li>

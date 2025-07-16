@@ -23,7 +23,7 @@ const ManageSlot = () => {
             return res.data;
         },
     });
-    console.log(slots);
+    // console.log(slots);
 
     const handleDelete = (id) => {
         Swal.fire({
