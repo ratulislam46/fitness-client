@@ -137,6 +137,17 @@ const Dashboard = () => {
                         </Link>
                     </li>
 
+                    {/* Manage Slots */}
+                    <li>
+                        <Link
+                            to="/dashboard/manage-slots"
+                            className="flex items-center gap-3 text-yellow-600 hover:bg-yellow-100 px-3 py-2 rounded-lg transition"
+                        >
+                            <FaCalendarAlt className="text-xl text-yellow-500" />
+                            <span className="font-semibold">Manage Slots</span>
+                        </Link>
+                    </li>
+
 
                     {/* DO: this link page work  */}
                     {/* Balance */}
@@ -150,16 +161,6 @@ const Dashboard = () => {
                         </Link>
                     </li>
 
-                    {/* Manage Slots */}
-                    <li>
-                        <Link
-                            to="/dashboard/manage-slots"
-                            className="flex items-center gap-3 text-yellow-600 hover:bg-yellow-100 px-3 py-2 rounded-lg transition"
-                        >
-                            <FaCalendarAlt className="text-xl text-yellow-500" />
-                            <span className="font-semibold">Manage Slots</span>
-                        </Link>
-                    </li>
 
                     {/* Booked Trainer */}
                     <li>

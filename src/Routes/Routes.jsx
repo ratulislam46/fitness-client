@@ -21,6 +21,7 @@ import ForumPostDetails from "../Pages/ForumsPage/ForumPostDetails";
 import AddClass from "../Pages/Dashboard/AddClass/AddClass";
 import AllClasses from "../Pages/AllClasses/AllClasses";
 import AddNewSlot from "../Pages/Dashboard/AddNewSlot/AddNewSlot";
+import ManageSlot from "../Pages/Dashboard/ManageSlot/ManageSlot";
 
 
 
@@ -116,6 +117,10 @@ export const router = createBrowserRouter([
             {
                 path: 'add-slot',
                 Component: AddNewSlot
+            },
+            {
+                path:'manage-slots',
+                Component: ManageSlot
             }
         ]
     }

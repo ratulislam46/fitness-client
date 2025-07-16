@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Banner = () => {
   return (
-    <div className="w-full mt-20 max-w-7xl mx-auto">
+    <div className="w-full mt-20 max-w-7xl mx-auto px-1 lg:px-0">
       <Carousel
         autoPlay
         infiniteLoop
