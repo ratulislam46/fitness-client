@@ -74,7 +74,7 @@ const TrainersDetails = () => {
             </div>
 
             {/* Available Slots Section */}
-            <div className="bg-white shadow-md rounded-xl p-6 border border-gray-300">
+            <div className="bg-cyan-50 shadow-md rounded-xl p-6 border border-gray-300">
                 <h2 className="text-xl font-bold mb-4">Available Slots</h2>
                 {slots.length === 0 ? (
                     <p className="text-gray-500">No slots available for booking.</p>
@@ -83,9 +83,14 @@ const TrainersDetails = () => {
                         {slots.map(slot => (
                             <div
                                 key={slot._id}
-                                className="p-4 bg-cyan-300 shadow-xl hover:shadow-2xl rounded-lg transition ">
+                                className="p-4 bg-cyan-200 shadow-xl hover:shadow-2xl rounded-lg transition space-y-2">
                                 <h3 className="text-2xl font-bold">{slot.slotName}</h3>
                                 <p className="text-sm font-semibold">Duration: {slot.slotDuration} hours</p>
+                                <div className="flex flex-wrap gap-2 mt-1">
+                                    {slot.selectedClasses?.map((skill, i) => (
+                                        <span key={i} className="bg-white text-cyan-900 px-3 py-1 rounded-full text-sm">{skill}</span>
+                                    ))}
+                                </div>
                                 <p className="text-sm font-semibold">Days: {slot.availableDays.join(', ')}</p>
                                 <p className="text-sm italic mt-1 text-gray-500">{slot.note}</p>
                                 <Link

@@ -26,6 +26,7 @@ import Balance from "../Pages/Dashboard/Balance/Balance";
 import BookedTrainers from "../Pages/Dashboard/BookedTrainers/BookedTrainers";
 import TrainersDetails from "../Pages/AllTrainer/TrainersDetails";
 import TrainerBookedPage from "../Pages/AllTrainer/TrainerBookedPage";
+import PaymentPage from "../Pages/AllTrainer/PaymentPage";
 
 
 
@@ -51,7 +52,12 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <TrainerBookedPage></TrainerBookedPage>
                 </PrivateRoute>
-
+            },
+            {
+                path: 'payment',
+                element: <PrivateRoute>
+                    <PaymentPage></PaymentPage>
+                </PrivateRoute>
             },
             {
                 path: 'be-a-trainer',

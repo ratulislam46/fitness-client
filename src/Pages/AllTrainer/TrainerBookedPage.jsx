@@ -27,10 +27,10 @@ const TrainerBookedPage = () => {
         action = "ACCESS_BASIC";
     } else if (selectedPlan === "Standard") {
         price = 50;
-        action = "ACCESS_STANDARD_GROUP_CLASSES";
+        action = "ACCESS_STANDARD";
     } else if (selectedPlan === "Premium") {
         price = 100;
-        action = "ACCESS_ALL_SERVICES";
+        action = "ACCESS_PREMIUM";
     }
 
     const handlePlanSelect = () => {
