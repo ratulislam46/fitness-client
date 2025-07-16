@@ -24,6 +24,8 @@ import AddNewSlot from "../Pages/Dashboard/AddNewSlot/AddNewSlot";
 import ManageSlot from "../Pages/Dashboard/ManageSlot/ManageSlot";
 import Balance from "../Pages/Dashboard/Balance/Balance";
 import BookedTrainers from "../Pages/Dashboard/BookedTrainers/BookedTrainers";
+import TrainersDetails from "../Pages/AllTrainer/TrainersDetails";
+import TrainerBookedPage from "../Pages/AllTrainer/TrainerBookedPage";
 
 
 
@@ -39,6 +41,17 @@ export const router = createBrowserRouter([
             {
                 path: 'all-trainer',
                 Component: AllTrainer
+            },
+            {
+                path: 'trainers/:id',
+                Component: TrainersDetails
+            },
+            {
+                path: 'book-slot/:slotId',
+                element: <PrivateRoute>
+                    <TrainerBookedPage></TrainerBookedPage>
+                </PrivateRoute>
+
             },
             {
                 path: 'be-a-trainer',
@@ -58,7 +71,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'trainer/:id',
-                Component: TrainerDetails
+                Component: TrainersDetails
             }
         ]
     },

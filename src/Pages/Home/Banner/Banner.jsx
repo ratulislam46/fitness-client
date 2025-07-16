@@ -31,7 +31,7 @@ const Banner = () => {
         </div>
         <div>
           <img
-            src="../../../../public/image/banner03.png"
+            src="../../../../public/image/banner03.jpg"
             alt="Banner 3"
             className="h-[400px] lg:h-[600px] object-cover w-full"
           />

@@ -13,7 +13,7 @@ const AllTrainer = () => {
             return res.data;
         },
     });
-    console.log(trainers);
+    // console.log(trainers);
 
     if (isLoading) return <p className="text-center py-8">Loading...</p>;
 
@@ -54,7 +54,7 @@ const AllTrainer = () => {
 
                         {/* Know More Button */}
                         <Link
-                            to={`/trainer/${trainer._id}`}
+                            to={`/trainers/${trainer._id}`}
                             className="btn btn-md btn-primary mt-4 w-full"
                         >
                             Know More
