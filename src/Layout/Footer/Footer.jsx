@@ -1,5 +1,6 @@
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router";
+import FitnestIcon from "../Navbar/FitnestIcon";
 
 const Footer = () => {
 
@@ -11,7 +12,9 @@ const Footer = () => {
 
         {/* Column 1: Brand Info */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-2">FitNest</h2>
+          <div className="-ml-2">
+            <FitnestIcon></FitnestIcon>
+          </div>
           <p className="text-gray-400 text-sm">
             Your all-in-one fitness tracking and community platform.
             Smash goals, stay motivated, and transform your life.
@@ -44,7 +47,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">Subscribe</h3>
           <p className="text-gray-400 text-sm mb-2">Get weekly fitness tips & motivation in your inbox.</p>
-          
+
         </div>
       </div>
 

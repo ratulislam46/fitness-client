@@ -10,7 +10,7 @@ import NewsLetter from '../NewsLetter/NewsLetter';
 const Home = () => {
     return (
         <div>
-            {/* <Banner></Banner> */}
+            <Banner></Banner>
             <Featured></Featured>
             <About></About>
             <ForumPost></ForumPost>
