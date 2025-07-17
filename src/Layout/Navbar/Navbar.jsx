@@ -3,11 +3,14 @@ import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../Context/AuthProvider';
 import toast from 'react-hot-toast';
 import FitnestIcon from './FitnestIcon';
-import './Navbar.css'
+import './Navbar.css';
+import UseUserRole from '../../hooks/UseUserRole';
 
 const Navbar = () => {
 
-    const { user, LogOut } = use(AuthContext)
+    const { user, LogOut } = use(AuthContext);
+    const { role, isLoading } = UseUserRole();
+    console.log(role);
 
     const handleLogOut = () => {
         LogOut()
@@ -28,9 +31,20 @@ const Navbar = () => {
             <li className='text-white'><NavLink to='/all-forum-post'>Forums</NavLink></li>
             <li className='text-white'><NavLink to='/classes'>Classes</NavLink></li>
 
+            {/* trainer can not see this link */}
+            {
+                !isLoading && role === 'member' && <>
+                    <li className='text-white'><NavLink to='/be-a-trainer'>Be a trainer</NavLink></li>
+                </>
+            }
+            {
+                !isLoading && role === 'admin' && <>
+                    <li className='text-white'><NavLink to='/be-a-trainer'>Be a trainer</NavLink></li>
+                </>
+            }
+
             {
                 user && <>
-                    <li className='text-white'><NavLink to='/be-a-trainer'>Be a trainer</NavLink></li>
                     <li className='text-white'><NavLink to='/dashboard'>Dashboard</NavLink></li>
                 </>
             }
@@ -65,7 +79,7 @@ const Navbar = () => {
                 {/* user image */}
                 {
                     user &&
-                    <img className='w-10 mr-2 rounded-2xl' src={user.photoURL || 'https://i.postimg.cc/pX5mX6Zd/istockphoto-1337144146-612x612.jpg'} alt="" />
+                    <img className='w-10 h-10 mr-2 rounded-2xl' src={user.photoURL || 'https://i.postimg.cc/pX5mX6Zd/istockphoto-1337144146-612x612.jpg'} alt="" />
                 }
 
                 {/* conditional button  */}

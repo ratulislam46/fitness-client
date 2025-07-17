@@ -27,8 +27,8 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li><Link to="/" className="hover:text-purple-400">Home</Link></li>
             <li><Link to="/classes" className="hover:text-purple-400">Classes</Link></li>
-            <li><Link to="/trainers" className="hover:text-purple-400">Trainers</Link></li>
-            <li><Link to="/contact" className="hover:text-purple-400">Contact</Link></li>
+            <li><Link to="/all-trainer" className="hover:text-purple-400">Trainers</Link></li>
+            <li><Link  className="hover:text-purple-400">Contact</Link></li>
           </ul>
         </div>
 
@@ -53,7 +53,7 @@ const Footer = () => {
 
       {/* Bottom copyright */}
       <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} FitNest. All rights reserved.
+        © {new Date().getFullYear()} Fitness. All rights reserved.
       </div>
     </footer>
   );

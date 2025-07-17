@@ -27,6 +27,7 @@ import BookedTrainers from "../Pages/Dashboard/BookedTrainers/BookedTrainers";
 import TrainersDetails from "../Pages/AllTrainer/TrainersDetails";
 import TrainerBookedPage from "../Pages/AllTrainer/TrainerBookedPage";
 import PaymentPage from "../Pages/AllTrainer/PaymentPage";
+import Forbidden from "../Components/Loading/Forbidden";
 
 
 
@@ -78,6 +79,10 @@ export const router = createBrowserRouter([
             {
                 path: 'trainer/:id',
                 Component: TrainersDetails
+            },
+            {
+                path: 'forbidden',
+                Component: Forbidden
             }
         ]
     },
