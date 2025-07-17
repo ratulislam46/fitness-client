@@ -1,15 +1,16 @@
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
+
 import { Link } from "react-router";
 import { useQuery } from '@tanstack/react-query';
 import Swal from "sweetalert2";
 import UseAxios from "../../../hooks/UseAxios";
 import { use, useState } from "react";
 import { AuthContext } from "../../../Context/AuthProvider";
+import UseAxiosSecure from "../../../hooks/UseAxiosSecure";
 
 const TrainerApplied = () => {
 
     const { user } = use(AuthContext)
-    const axiosSecure = useAxiosSecure();
+    const axiosSecure = UseAxiosSecure();
     const axiosIntance = UseAxios();
     const [openRejectModal, setOpenRejectModal] = useState(false);
     const [selectedTrainer, setSelectedTrainer] = useState(null);

@@ -5,13 +5,13 @@ import { use, useState } from "react";
 import UseAxios from "../../../hooks/UseAxios";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import UseAxiosSecure from "../../../hooks/useAxiosSecure.jsx";
+import UseAxiosSecure from "../../../hooks/UseAxiosSecure.jsx";
 
 
 const AddClass = () => {
     const { user } = use(AuthContext)
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const axiosSecure = UseAxiosSecure();
+    const axiosSecure = UseAxiosSecure()
     const axiosInstance = UseAxios()
     const [uploading, setUploading] = useState(false);
 

@@ -9,8 +9,6 @@ import UseUserRole from '../../hooks/UseUserRole';
 const Navbar = () => {
 
     const { user, LogOut } = use(AuthContext);
-    const { role, isLoading } = UseUserRole();
-    console.log(role);
 
     const handleLogOut = () => {
         LogOut()
@@ -31,20 +29,9 @@ const Navbar = () => {
             <li className='text-white'><NavLink to='/all-forum-post'>Forums</NavLink></li>
             <li className='text-white'><NavLink to='/classes'>Classes</NavLink></li>
 
-            {/* trainer can not see this link */}
-            {
-                !isLoading && role === 'member' && <>
-                    <li className='text-white'><NavLink to='/be-a-trainer'>Be a trainer</NavLink></li>
-                </>
-            }
-            {
-                !isLoading && role === 'admin' && <>
-                    <li className='text-white'><NavLink to='/be-a-trainer'>Be a trainer</NavLink></li>
-                </>
-            }
-
             {
                 user && <>
+                    <li className='text-white'><NavLink to='/be-a-trainer'>Be a trainer</NavLink></li>
                     <li className='text-white'><NavLink to='/dashboard'>Dashboard</NavLink></li>
                 </>
             }

@@ -1,8 +1,9 @@
-import UseAxiosSecure from "../../../hooks/useAxiosSecure";
+
 import { AuthContext } from "../../../Context/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
 import { use, useState } from "react";
 import { FaEye } from "react-icons/fa";
+import UseAxiosSecure from "../../../hooks/UseAxiosSecure";
 
 const ActivityLog = () => {
     const { user } = use(AuthContext);

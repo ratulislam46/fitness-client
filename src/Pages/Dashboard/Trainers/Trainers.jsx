@@ -1,5 +1,5 @@
 import React from 'react';
-import UseAxiosSecure from '../../../hooks/useAxiosSecure';
+import UseAxiosSecure from '../../../hooks/UseAxiosSecure';
 import UseAxios from '../../../hooks/UseAxios';
 import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';

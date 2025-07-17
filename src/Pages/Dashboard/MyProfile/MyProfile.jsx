@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { AuthContext } from "../../../Context/AuthProvider";
-import UseAxiosSecure from "../../../hooks/useAxiosSecure";
+import UseAxiosSecure from "../../../hooks/UseAxiosSecure";
 import UseAxios from "../../../hooks/UseAxios";
 import axios from "axios";
 import toast from "react-hot-toast";

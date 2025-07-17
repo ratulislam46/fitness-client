@@ -1,5 +1,5 @@
 import { AuthContext } from "../../../Context/AuthProvider";
-import UseAxiosSecure from "../../../hooks/useAxiosSecure";
+import UseAxiosSecure from "../../../hooks/UseAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import { use } from "react";
 import Swal from "sweetalert2";
