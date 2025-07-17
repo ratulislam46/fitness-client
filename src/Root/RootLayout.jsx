@@ -2,10 +2,12 @@ import React from 'react';
 import Navbar from '../Layout/Navbar/Navbar';
 import { Outlet } from 'react-router';
 import Footer from '../Layout/Footer/Footer';
+import RootDynamicTitle from '../Components/DynamicTitle/RootDynamicTitle';
 
 const HomeLayout = () => {
     return (
-        <div>
+        <>
+            <RootDynamicTitle></RootDynamicTitle>
             <nav>
                 <Navbar></Navbar>
             </nav>
@@ -15,7 +17,7 @@ const HomeLayout = () => {
             <footer>
                 <Footer></Footer>
             </footer>
-        </div>
+        </>
     );
 };
 
