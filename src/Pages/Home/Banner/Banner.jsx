@@ -1,5 +1,8 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import bannerone from '../../../../public/image/banner01.jpg';
+import bannertwo from '../../../../public/image/banner02.jpg';
+import bannerthree from '../../../../public/image/banner03.jpg'
 
 const Banner = () => {
   return (
@@ -9,7 +12,7 @@ const Banner = () => {
         infiniteLoop
         showThumbs={false}
         showStatus={false}
-        interval={3000}
+        interval={5000}
         stopOnHover={false}
         swipeable
         emulateTouch
@@ -17,21 +20,21 @@ const Banner = () => {
       >
         <div>
           <img
-            src="../../../../public/image/banner01.jpg"
+            src={bannerone}
             alt="Banner 1"
             className="h-[400px] lg:h-[600px] object-cover w-full"
           />
         </div>
         <div>
           <img
-            src="../../../../public/image/banner02.jpg"
+            src={bannertwo}
             alt="Banner 2"
             className="h-[400px] lg:h-[600px] object-cover w-full"
           />
         </div>
         <div>
           <img
-            src="../../../../public/image/banner03.jpg"
+            src={bannerthree}
             alt="Banner 3"
             className="h-[400px] lg:h-[600px] object-cover w-full"
           />

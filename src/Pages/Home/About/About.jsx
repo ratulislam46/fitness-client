@@ -1,3 +1,5 @@
+import workout from '../../../../public/image/workout.jpg'
+
 const About = () => {
     return (
         <section className="py-16 px-6 bg-white">
@@ -24,7 +26,7 @@ const About = () => {
                 {/* Image Section */}
                 <div>
                     <img
-                        src="../../../../public/image/workout.jpg"
+                        src={workout}
                         alt="About FitNest"
                         className="rounded-xl shadow-lg w-full"
                     />
