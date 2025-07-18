@@ -1,11 +1,36 @@
-import React from 'react';
+import UseAxiosSecure from "../../../hooks/UseAxiosSecure";
+import { use } from "react";
+import { AuthContext } from "../../../Context/AuthProvider";
+import { useQuery } from "@tanstack/react-query";
+import BookedDetails from "./BookedDetails";
 
 const BookedTrainers = () => {
+    const { user } = use(AuthContext)
+    const axiosSecure = UseAxiosSecure();
+
+    const { data: bookedSlots = [], isLoading } = useQuery({
+        queryKey: ["bookedSlots", user?.email],
+        enabled: !!user?.email,
+        queryFn: async () => {
+            const res = await axiosSecure.get(`/booked-slots?email=${user.email}`);
+            return res.data.slots;
+        },
+    });
+    console.log(bookedSlots);
+
+    if (isLoading) return <p>Loading...</p>;
+
     return (
-        <div>
-            BookedTrainers
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+            {bookedSlots.map(slot =>
+                <BookedDetails
+                key={slot._id}
+                    slot={slot}
+                >
+                </BookedDetails>)}
         </div>
     );
 };
+
 
 export default BookedTrainers;

@@ -10,7 +10,7 @@ import DashboardDynamicTitle from '../Components/DynamicTitle/DashboardDynamicTi
 const Dashboard = () => {
 
     const { role, isLoading } = UseUserRole();
-    console.log(role, isLoading);
+    // console.log(role, isLoading);
 
     return (
         <div>

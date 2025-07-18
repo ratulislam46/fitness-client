@@ -2,37 +2,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaStar } from "react-icons/fa";
 import { useRef } from "react";
-
-const reviews = [
-    {
-        id: 1,
-        name: "Alice Johnson",
-        photo: "/assets/user1.jpg",
-        rating: 5,
-        comment: "FitNest changed my life! The trainers are amazing and the app is so easy to use.",
-    },
-    {
-        id: 2,
-        name: "Bob Smith",
-        photo: "/assets/user2.jpg",
-        rating: 4,
-        comment: "Great community and helpful features. I love tracking my progress here.",
-    },
-    {
-        id: 3,
-        name: "Clara Lee",
-        photo: "/assets/user3.jpg",
-        rating: 5,
-        comment: "The challenges keep me motivated. Highly recommend FitNest!",
-    },
-    {
-        id: 4,
-        name: "David Kim",
-        photo: "/assets/user4.jpg",
-        rating: 4,
-        comment: "Excellent app and fantastic trainers. I feel stronger every day.",
-    },
-];
+import UseAxios from "../../../hooks/UseAxios";
+import { useQuery } from "@tanstack/react-query";
 
 const responsive = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 1440 }, items: 3 },
@@ -43,6 +14,15 @@ const responsive = {
 
 const Review = () => {
     const carouselRef = useRef();
+    const axiosIntance = UseAxios();
+    const { data: reviews = [] } = useQuery({
+        queryKey: ['customer-review'],
+        queryFn: async () => {
+            const res = await axiosIntance.get('customer-review')
+            return res.data;
+        }
+    })
+    // console.log(reviews);
 
     return (
         <section className="py-20 px-6 bg-gray-100">
@@ -65,18 +45,18 @@ const Review = () => {
                 transitionDuration={600}
                 containerClass="carousel-container"
                 itemClass="px-4"
-                arrows={false} 
+                arrows={false}
             >
-                {reviews.map((review) => (
+                {reviews?.map((review) => (
                     <div key={review.id} className="bg-white p-6 rounded-xl shadow-md h-full hover:shadow-xl transition">
                         <div className="flex items-center mb-4 gap-4">
                             <img
-                                src={review.photo}
-                                alt={review.name}
+                                src={review.userImage}
+                                alt={review.userName}
                                 className="w-14 h-14 rounded-full object-cover border-2 border-purple-500"
                             />
                             <div className="text-left">
-                                <h3 className="font-semibold text-gray-800">{review.name}</h3>
+                                <h3 className="font-semibold text-gray-800">{review.userName}</h3>
                                 <div className="flex text-yellow-400 text-sm">
                                     {[...Array(review.rating)].map((_, i) => (
                                         <FaStar key={i} />
@@ -84,7 +64,7 @@ const Review = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="text-gray-600 italic">“{review.comment}”</p>
+                        <p className="text-gray-600 italic">“{review.feedback}”</p>
                     </div>
                 ))}
             </Carousel>

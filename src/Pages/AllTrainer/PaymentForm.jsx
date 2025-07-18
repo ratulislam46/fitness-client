@@ -6,6 +6,7 @@ import UseAxios from '../../hooks/UseAxios';
 import { useQuery } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router';
 
 const PaymentForm = ({ price, trainerId, slotId, plan, action, user }) => {
 
@@ -14,6 +15,7 @@ const PaymentForm = ({ price, trainerId, slotId, plan, action, user }) => {
     const axiosSecure = UseAxiosSecure();
     const axiosInstance = UseAxios();
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate()
 
     const { data: clientSecret, isLoading: secretLoading } = useQuery({
         queryKey: ['create-payment-intent', price],
@@ -80,6 +82,7 @@ const PaymentForm = ({ price, trainerId, slotId, plan, action, user }) => {
                     draggable: true
                 });
             }
+            navigate('/all-trainer')
         }
 
         setLoading(false);

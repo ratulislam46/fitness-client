@@ -28,6 +28,7 @@ import TrainersDetails from "../Pages/AllTrainer/TrainersDetails";
 import TrainerBookedPage from "../Pages/AllTrainer/TrainerBookedPage";
 import PaymentPage from "../Pages/AllTrainer/PaymentPage";
 import Forbidden from "../Components/Loading/Forbidden";
+import NotFound from "../Components/Error/NotFound";
 
 
 
@@ -62,7 +63,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'be-a-trainer',
-                Component: BeATrainer
+                element: <PrivateRoute>
+                    <BeATrainer></BeATrainer>
+                </PrivateRoute>
             },
             {
                 path: 'all-forum-post',
@@ -157,6 +160,10 @@ export const router = createBrowserRouter([
                 Component: BookedTrainers
             }
         ]
+    },
+    {
+        path: '/*',
+        Component: NotFound
     }
 
 ]);

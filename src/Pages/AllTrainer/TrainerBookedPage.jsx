@@ -1,8 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
-import UseAxiosSecure from "../../hooks/useAxiosSecure";
-import { useState } from "react";
+import UseAxiosSecure from "../../hooks/UseAxiosSecure";
 
 const TrainerBookedPage = () => {
     const { slotId } = useParams();
