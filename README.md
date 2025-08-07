@@ -8,32 +8,6 @@ FitNess is a modern fitness and training platform that allows users to explore f
 
 👉 [Live Website](https://whimsical-praline-dd388c.netlify.app/)
 
----
-
-## 📁 Project Structure
-
-src/
-├── assets/ # All static images/icons
-├── components/ # Reusable components (e.g., Loading, DynamicTitle)
-├── context/ # React Context Providers (AuthProvider, AuthContext, etc.)
-├── hooks/ # Custom React hooks (useAxios, useAxiosSecure, useAxiosRole)
-├── pages/ # All page components
-│ ├── Home/ # Homepage and its sections
-│ ├── AllClasses/ # AllClasses, ClassDetails
-│ ├── AllTrainers/ # AllTrainers, TrainerDetails
-│ ├── BeATrainer/ # Trainer application page
-│ ├── Booking/ # BookingPage, PaymentPage
-│ ├── ForumPage/ # Forum posts and add forum
-│ ├── Authentication/ # Login, Register, GoogleSignIn
-│ └── Dashboard/ # Admin, Trainer, and User Dashboard Pages
-├── PrivateRoutes/ # Role-based private route components
-├── RootLayout/ # Layout components (e.g., DashboardLayout)
-├── routes/ # Route configuration files
-├── App.jsx # Main app component with route setup
-└── main.jsx # Entry point, wrapped with providers
-
-
----
 
 ## 🚀 Features
 
@@ -66,10 +40,13 @@ src/
 
 ## 📸 Screenshots
 
-![Homepage](./src/assets/banner.png)
-![Dashboard](./src/assets/dashboard.png)
-![Classes](./src/assets/class.png)
-![Forums](./src/assets/forum.png)
+#### 🔹 Banner
+![Admin Dashboard](./assets/banner.png)
+
+![Homepage](./assets/fitness-home.png)
+![Dashboard](./assets/finess-dashboard.png)
+![Classes](./assets/class.png)
+![Forums](./assets/forum.png)
 
 ## ⚙️ Installation & Running Locally
 

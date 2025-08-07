@@ -69,7 +69,7 @@ const Review = () => {
                 ))}
             </Carousel>
 
-            {/* ✅ Bottom buttons */}
+            {/* Bottom buttons */}
             <div className="mt-8 flex justify-center gap-6">
                 <button
                     onClick={() => carouselRef.current?.previous()}
