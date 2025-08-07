@@ -41,7 +41,6 @@ FitNess is a modern fitness and training platform that allows users to explore f
 ## 📸 Screenshots
 
 #### 🔹 Banner
-![Admin Dashboard](./assets/banner.png)
 
 ![Homepage](./assets/fitness-home.png)
 ![Dashboard](./assets/finess-dashboard.png)
