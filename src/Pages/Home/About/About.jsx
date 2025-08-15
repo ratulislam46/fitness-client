@@ -2,8 +2,8 @@ import workout from '../../../../public/image/workout.jpg'
 
 const About = () => {
     return (
-        <section className="py-16 px-6 bg-white">
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <section className="py-16 px-1 md:px-0 bg-white">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
                 {/* Text Section */}
                 <div>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -27,7 +27,7 @@ const About = () => {
                 <div>
                     <img
                         src={workout}
-                        alt="About FitNest"
+                        alt="fitness-workout"
                         className="rounded-xl shadow-lg w-full"
                     />
                 </div>

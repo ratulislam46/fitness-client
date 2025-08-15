@@ -53,7 +53,6 @@ FitNess is a modern fitness and training platform that allows users to explore f
 #### 🔹 Forum page
 ![Forums](./assets/forum.png)
 
-## ⚙️ Installation & Running Locally
 
 # Install dependencies
 npm install

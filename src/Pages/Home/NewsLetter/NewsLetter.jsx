@@ -24,8 +24,8 @@ const Newsletter = () => {
     };
 
     return (
-        <div className="w-full bg-white py-16 px-4 md:px-10">
-            <div className="max-w-6xl mx-auto shadow-md bg-white rounded-lg p-8 grid md:grid-cols-2 gap-10 items-center">
+        <div className="w-full bg-white py-16 px-1 md:px-0">
+            <div className="shadow-md bg-white rounded-lg p-8 grid md:grid-cols-2 gap-10 items-center">
                 {/* Left side - Text */}
                 <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
@@ -64,7 +64,7 @@ const Newsletter = () => {
 
                     <button
                         type="submit"
-                        className="btn btn-primary w-full flex items-center justify-center gap-2"
+                        className="btn btn-primary w-full flex items-center justify-center gap-2 text-white"
                     >
                         Subscribe Now <FiSend />
                     </button>

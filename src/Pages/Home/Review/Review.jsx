@@ -25,7 +25,7 @@ const Review = () => {
     // console.log(reviews);
 
     return (
-        <section className="py-20 px-6 bg-gray-100">
+        <section className="py-20 px-1 md:px-0">
             <div className="max-w-6xl mx-auto text-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
                     What Our <span className="text-primary">Members Say</span>

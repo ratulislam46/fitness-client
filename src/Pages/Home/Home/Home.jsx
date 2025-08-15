@@ -9,7 +9,7 @@ import NewsLetter from '../NewsLetter/NewsLetter';
 
 const Home = () => {
     return (
-        <div>
+        <div className='container mx-auto mt-28'>
             <Banner></Banner>
             <Featured></Featured>
             <About></About>
