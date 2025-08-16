@@ -36,7 +36,7 @@ const ShowForumPost = ({ forum, refetch }) => {
     const date = new Date(forum.created_at).toLocaleDateString();
 
     return (
-        <div className="bg-base-100 rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
+        <div className="bg-base-100 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 p-4 transition duration-300">
             <div className="flex items-center mb-4 border-b pb-3 border-gray-400">
                 <img
                     src={forum.posted_by?.image}
@@ -53,7 +53,7 @@ const ShowForumPost = ({ forum, refetch }) => {
                     }
 
                 </div>
-                <p className="ml-auto text-sm text-gray-500 font-bold flex gap-1 items-center"><SlCalender color='red' /> {date}</p>
+                <p className="ml-auto text-md text-base-content font-bold flex gap-1 items-center"><SlCalender color='red' /> {date}</p>
             </div>
 
             <h3 className="text-lg  text-base-content mb-2">{forum.title}</h3>

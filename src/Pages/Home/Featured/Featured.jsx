@@ -33,7 +33,7 @@ const Featured = () => {
 
                 <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     {features.map((item, index) => (
-                        <div key={index} className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                        <div key={index} className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-300">
                             <div className="flex flex-col items-center text-center">
                                 {item.icon}
                                 <h3 className="text-xl font-semibold text-base-content mb-2">{item.title}</h3>

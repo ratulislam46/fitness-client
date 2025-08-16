@@ -25,7 +25,7 @@ const Review = () => {
     // console.log(reviews);
 
     return (
-        <section className="py-20 px-1 md:px-0 border">
+        <section className="py-16 px-1 md:px-0 bo">
             <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-base-content mb-4">
                     What Our <span className="text-primary">Members Say</span>
@@ -48,7 +48,7 @@ const Review = () => {
                 arrows={false}
             >
                 {reviews?.map((review) => (
-                    <div key={review.id} className="bg-base-100 p-6 rounded-xl shadow-md h-full hover:shadow-xl transition border border-base-300">
+                    <div key={review.id} className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 h-full transition">
                         <div className="flex items-center mb-4 gap-4">
                             <img
                                 src={review.userImage}
@@ -73,13 +73,13 @@ const Review = () => {
             <div className="mt-8 flex justify-center gap-6">
                 <button
                     onClick={() => carouselRef.current?.previous()}
-                    className="bg-purple-100 hover:bg-purple-200 text-purple-700 px-5 py-2 rounded-lg font-medium transition"
+                    className="bg-primary/5 hover:bg-primary/15 text-primary px-5 py-2 rounded-lg font-medium transition"
                 >
                     ⬅ Previous
                 </button>
                 <button
                     onClick={() => carouselRef.current?.next()}
-                    className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg font-medium transition"
+                    className="bg-primary text-white px-5 py-2 rounded-lg font-medium transition"
                 >
                     Next ➡
                 </button>

@@ -49,7 +49,7 @@ const Navbar = () => {
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <div tabIndex={0} role="button" className="lg:hidden">
                             <IoMdMenu size={24} />
                         </div>
                         <ul
@@ -91,8 +91,8 @@ const Navbar = () => {
                     {/* conditional button  */}
                     {
                         user ?
-                            <Link onClick={handleLogOut} to='/login' className="btn bg-purple-600 hover:bg-purple-700 text-white">Log Out</Link> :
-                            <Link to='/login' className="btn bg-purple-600 hover:bg-purple-700 text-white">Login</Link>
+                            <Link onClick={handleLogOut} to='/login' className="btn bg-green-500 hover:bg-green-600 border-none text-white">Log Out</Link> :
+                            <Link to='/login' className="btn bg-purple-600 border-none hover:bg-purple-700 text-white">Login</Link>
 
                     }
                 </div>

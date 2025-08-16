@@ -23,7 +23,7 @@ const ForumPost = () => {
     }
 
     return (
-        <section className="py-12 px-1 md:px-0 bg-base-100">
+        <section className="py-16 px-1 md:px-0 bg-base-100">
             <h2 className="text-3xl font-bold text-center mb-8 text-primary">Latest Forum Posts</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -35,6 +35,9 @@ const ForumPost = () => {
                     >
                     </ShowForumPost>
                 )}
+            </div>
+            <div className='flex justify-center mt-12'>
+                <Link to='/all-forum-post' className='text-white bg-primary px-8 py-3 hover:ring-2 hover:ring-primary duration-300 rounded-xl'>See All </Link>
             </div>
         </section>
     );
