@@ -12,7 +12,7 @@ import nine from '../../../../public/image/nine.jpeg'
 
 const DashboardHome = () => {
     return (
-        <section className="py-6 dark:bg-gray-100 object-cover dark:text-gray-900">
+        <section className="container mx-auto py-6 object-cover bg-base-100">
             <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
                 <img src={five} alt="" className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-square object-cover" />
                 <img alt="" className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square object-cover" src={six} />

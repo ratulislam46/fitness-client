@@ -53,42 +53,42 @@ const BookedDetails = ({ slot }) => {
     };
 
     return (
-        <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-200 hover:shadow-2xl transition duration-300 relative">
-            <h2 className="text-xl font-bold text-primary mb-4"> Booked Slot Details</h2>
+        <div className="bg-base-100 rounded-xl shadow-md hover:shadow-lg p-6 border border-base-content/5 hover:shadow-2xl transition duration-300 relative">
+            <h2 className="text-xl font-bold text-base-content mb-4"> Booked Slot Details</h2>
 
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-base-content/70">
                 <div className="flex items-center gap-2">
-                    <MdPerson className="text-secondary text-lg" />
+                    <MdPerson className="text-green-500 text-lg" />
                     <span className="font-medium">Trainer Name:</span>
                     <span>{trainerName}</span>
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <MdEmail className="text-secondary text-lg" />
+                    <MdEmail className="text-yellow-500 text-lg" />
                     <span className="font-medium">Trainer Email:</span>
                     <span>{trainerEmail}</span>
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <MdFitnessCenter className="text-secondary text-lg" />
+                    <MdFitnessCenter className="text-shadow-red-500 text-lg" />
                     <span className="font-medium">Slot Name:</span>
                     <span>{slotName}</span>
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <MdAccessTime className="text-secondary text-lg" />
+                    <MdAccessTime className="text-cyan-500 text-lg" />
                     <span className="font-medium">Duration:</span>
                     <span>{slotDuration}</span>
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <FaListAlt className="text-secondary text-lg" />
+                    <FaListAlt className="text-pink-500 text-lg" />
                     <span className="font-medium">Class Name(s):</span>
                     <div className="flex flex-wrap gap-2">
                         {selectedClasses.map((cls, idx) => (
                             <span
                                 key={idx}
-                                className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-sm"
+                                className="bg-primary/10 text-blue-700 px-2 py-1 rounded-full text-sm"
                             >
                                 {cls}
                             </span>
@@ -108,8 +108,8 @@ const BookedDetails = ({ slot }) => {
 
             {/* Inline Modal */}
             {isModalOpen && (
-                <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-95 rounded-xl shadow-xl z-10 p-6">
-                    <h3 className="text-lg font-semibold text-center mb-4 text-primary">📝 Submit Feedback</h3>
+                <div className="absolute top-0 left-0 w-full h-full bg-base-100 bg-opacity-95 rounded-xl shadow-xl z-10 p-6">
+                    <h3 className="text-lg font-semibold text-center mb-4 text-base-content">📝 Submit Feedback</h3>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <textarea

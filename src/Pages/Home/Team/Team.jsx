@@ -26,7 +26,7 @@ const Team = () => {
 
                 <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     {trainers.map((trainer, idx) => (
-                        <div key={idx} className="bg-base-100 border border-base-300 rounded-xl shadow-lg hover:shadow-xl transition p-6">
+                        <div key={idx} className="bg-base-100 border border-base-content/5 rounded-xl shadow-lg hover:shadow-xl transition p-6">
                             <img
                                 src={trainer.profileImage}
                                 alt={trainer.fullName}

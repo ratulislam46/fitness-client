@@ -35,8 +35,8 @@ const AllClasses = () => {
 //   if (isLoading) return <Loading />;
 
   return (
-    <div className="p-6 mt-20 max-w-3xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-6 border-b border-gray-300 pb-2">All Classes</h2>
+    <div className="p-6 mt-20 container mx-auto">
+      <h2 className="text-3xl font-bold text-center mb-8 border-b border-base-content/25 pb-2">All Classes</h2>
 
       {/* 🔍 Search Input */}
       <div className="mb-8">
@@ -53,11 +53,11 @@ const AllClasses = () => {
       <div className="grid grid-cols-1 gap-12">
         {classesData.result.length > 0 ? (
           classesData.result.map((cls) => (
-            <div key={cls._id} className="bg-white rounded-lg shadow-md pb-6">
+            <div key={cls._id} className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5">
               <img src={cls.image} className="w-full object-cover rounded mb-3" />
               <div className="px-4 space-y-4">
                 <h3 className="text-2xl font-bold">{cls.title}</h3>
-                <p className="text-sm text-gray-600 mb-2 pb-4 border-b border-gray-200">{cls.details}</p>
+                <p className="text-sm text-base-content/70 mb-2 pb-4 border-b border-base-content/5">{cls.details}</p>
               </div>
               <div className="px-4">
                 <TrainerList className={cls.title} />

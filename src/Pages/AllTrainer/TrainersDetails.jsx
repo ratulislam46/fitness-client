@@ -83,7 +83,7 @@ const TrainersDetails = () => {
                         {slots.map(slot => (
                             <div
                                 key={slot._id}
-                                className="p-4 bg-primary/5 shadow-xl hover:shadow-2xl rounded-lg transition space-y-2">
+                                className="p-4 bg-primary/5 shadow-md hover:shadow-xl rounded-lg transition space-y-2">
                                 <h3 className="text-2xl font-bold">{slot.slotName}</h3>
                                 <p className="text-sm font-semibold">Duration: {slot.slotDuration} hours</p>
                                 <div className="flex flex-wrap gap-2 mt-1">
@@ -95,7 +95,7 @@ const TrainersDetails = () => {
                                 <p className="text-sm italic mt-1 text-base-content/70">{slot.note}</p>
                                 <Link
                                     to={`/book-slot/${slot._id}`}
-                                    className="btn btn-xs btn-primary w-full mt-2 cursor-pointer"
+                                    className="btn btn-md btn-primary w-full mt-2 cursor-pointer"
                                 >Trainer Booking</Link>
                             </div>
                         ))}

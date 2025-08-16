@@ -36,7 +36,7 @@ const ActivityLog = () => {
 
     return (
         <div className="p-6">
-            <h2 className="text-3xl font-bold mb-4 text-primary">Trainer Application Activity Log</h2>
+            <h2 className="text-3xl font-bold mb-4 text-base-content">Trainer Application Activity Log</h2>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full text-sm">

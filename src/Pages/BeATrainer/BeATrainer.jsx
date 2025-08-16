@@ -53,8 +53,8 @@ const BeATrainer = () => {
     };
 
     return (
-        <div className="max-w-3xl mx-auto bg-white shadow-md p-6 rounded-lg mt-24">
-            <h2 className="text-2xl font-bold mb-6 text-center text-primary">Apply to be a Trainer</h2>
+        <div className="container mx-auto shadow-md p-6 rounded-md mt-24">
+            <h2 className="text-3xl font-bold text-center mb-8 border-b border-base-content/25 pb-2">Apply to be a Trainer</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
 
                 {/* Full Name */}
@@ -70,7 +70,7 @@ const BeATrainer = () => {
                     type="email"
                     defaultValue={user?.email}
                     readOnly
-                    className="input input-bordered w-full bg-gray-100"
+                    className="input input-bordered w-full"
                 />
 
                 {/* Age */}
