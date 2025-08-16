@@ -47,12 +47,12 @@ const PaymentPage = () => {
 
     return (
         <div className="mt-28 mb-12 px-1 lg:px-0">
-            <div className="max-w-3xl mx-auto bg-base-100 border border-gray-300 rounded-xl shadow-lg p-6 mt-10 space-y-4">
-                <h2 className="text-2xl font-bold text-center text-primary mb-6 border-b-3 border-indigo-300 pb-2">
+            <div className="max-w-3xl mx-auto bg-base-100 border border-base-content/5  rounded-xl shadow-lg p-6 mt-10 space-y-4">
+                <h2 className="text-2xl font-bold text-center text-base-content mb-6 border-b-3 pb-2">
                     Booking Summary
                 </h2>
 
-                <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+                <div className="grid md:grid-cols-2 gap-6 text-base-content/70">
                     {/* Trainer Name */}
                     <div className="flex items-center gap-3">
                         <FaUser className="text-xl text-indigo-500" />
@@ -67,7 +67,7 @@ const PaymentPage = () => {
 
                     {/* Package Name */}
                     <div className="flex items-center gap-3">
-                        <FaClipboardList className="text-xl text-indigo-500" />
+                        <FaClipboardList className="text-xl text-green-500" />
                         <p><strong>Package:</strong> {plan}</p>
                     </div>
 
@@ -79,13 +79,13 @@ const PaymentPage = () => {
 
                     {/* User Name */}
                     <div className="flex items-center gap-3">
-                        <FaUser className="text-xl text-indigo-500" />
+                        <FaUser className="text-xl text-sky-500" />
                         <p><strong>Your Name:</strong> {user?.displayName || "Not Available"}</p>
                     </div>
 
                     {/* Email */}
                     <div className="flex items-center gap-3">
-                        <FaEnvelope className="text-xl text-indigo-500" />
+                        <FaEnvelope className="text-xl text-sky-500" />
                         <p><strong>Email:</strong> {user?.email}</p>
                     </div>
                 </div>
@@ -93,8 +93,8 @@ const PaymentPage = () => {
                 {/* Optional Note */}
                 {slotData?.note && (
                     <div className="mt-6">
-                        <h4 className="font-semibold mb-2 text-indigo-600">Other Info:</h4>
-                        <p className="bg-indigo-50 text-gray-700 p-4 rounded-lg border-l-4 border-indigo-400 whitespace-pre-line">
+                        <h4 className="font-semibold mb-2 text-base-content">Other Info:</h4>
+                        <p className="bg-primary/5 text-base-content/70 p-4 rounded-lg border-l-4 border-indigo-400 whitespace-pre-line">
                             {slotData.note}
                         </p>
                     </div>

@@ -7,7 +7,7 @@ const NotFound = () => {
       <FaExclamationTriangle className="text-6xl text-red-500 mb-4" />
 
       <h1 className="text-5xl font-bold text-error">404</h1>
-      <p className="text-xl mt-2 text-gray-500">
+      <p className="text-xl mt-2 text-base-content/70">
         Oops! The page you’re looking for doesn’t exist.
       </p>
 

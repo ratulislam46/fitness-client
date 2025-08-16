@@ -82,7 +82,7 @@ const ActivityLog = () => {
                         {
                             combinedApplications.length === 0 && (
                                 <tr>
-                                    <td colSpan="4" className="text-center text-5xl mt-20 text-gray-500">No trainer application history found.</td>
+                                    <td colSpan="4" className="text-center text-5xl mt-20 text-base-content/70">No trainer application history found.</td>
                                 </tr>
                             )
                         }

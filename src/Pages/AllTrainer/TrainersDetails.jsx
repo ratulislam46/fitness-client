@@ -35,9 +35,9 @@ const TrainersDetails = () => {
     }
 
     return (
-        <div className="max-w-6xl mx-auto mt-16 px-4 py-10 grid md:grid-cols-2 gap-10">
+        <div className="container mx-auto mt-16 px-4 py-10 grid md:grid-cols-2 gap-10">
             {/* Trainer Info Section */}
-            <div className="bg-white shadow-md rounded-xl p-6 border border-gray-300 space-y-4">
+            <div className="bg-primary/5 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-300 space-y-2">
                 <div className="flex flex-col items-center">
                     {trainer.profileImage ? (
                         <img src={trainer.profileImage} alt="Trainer" className="w-64 h-64 rounded-xl object-cover border border-purple-300" />
@@ -45,54 +45,54 @@ const TrainersDetails = () => {
                         <FaUserCircle className="w-40 h-40 text-gray-400" />
                     )}
                     <h2 className="text-2xl font-bold mt-4">{trainer.fullName}</h2>
-                    <p className="text-sm text-gray-600">Age: {trainer.age}</p>
+                    <p className="text-sm text-base-content/70">Age: {trainer.age}</p>
                 </div>
 
                 <div>
                     <h3 className="font-semibold">Skills:</h3>
                     <div className="flex flex-wrap gap-2 mt-1">
                         {trainer.skills?.map((skill, i) => (
-                            <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">{skill}</span>
+                            <span key={i} className="bg-primary/5 text-indigo-400 px-3 py-1 rounded-full text-sm">{skill}</span>
                         ))}
                     </div>
                 </div>
 
                 <div>
                     <h3 className="font-semibold">Available Days:</h3>
-                    <p className="text-gray-700">{trainer.availableDays?.join(', ')}</p>
+                    <p className="text-sm text-base-content/70">{trainer.availableDays?.join(', ')}</p>
                 </div>
 
                 <div>
                     <h3 className="font-semibold">Available Time:</h3>
-                    <p className="text-gray-700">{trainer.availableTime}:00 hours</p>
+                    <p className="text-sm text-base-content/70">{trainer.availableTime}:00 hours</p>
                 </div>
 
                 <div>
                     <h3 className="font-semibold">About Trainer:</h3>
-                    <p className="text-gray-700 whitespace-pre-line">{trainer.otherInfo}</p>
+                    <p className="text-sm text-base-content/70 whitespace-pre-line">{trainer.otherInfo}</p>
                 </div>
             </div>
 
             {/* Available Slots Section */}
-            <div className="bg-cyan-50 shadow-md rounded-xl p-6 border border-gray-300">
+            <div className="bg-primary/5 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-300 space-y-2">
                 <h2 className="text-xl font-bold mb-4">Available Slots</h2>
                 {slots.length === 0 ? (
-                    <p className="text-gray-500">No slots available for booking.</p>
+                    <p className="text-base-content/70">No slots available for booking.</p>
                 ) : (
                     <div className="space-y-4">
                         {slots.map(slot => (
                             <div
                                 key={slot._id}
-                                className="p-4 bg-cyan-200 shadow-xl hover:shadow-2xl rounded-lg transition space-y-2">
+                                className="p-4 bg-primary/5 shadow-xl hover:shadow-2xl rounded-lg transition space-y-2">
                                 <h3 className="text-2xl font-bold">{slot.slotName}</h3>
                                 <p className="text-sm font-semibold">Duration: {slot.slotDuration} hours</p>
                                 <div className="flex flex-wrap gap-2 mt-1">
                                     {slot.selectedClasses?.map((skill, i) => (
-                                        <span key={i} className="bg-white text-cyan-900 px-3 py-1 rounded-full text-sm">{skill}</span>
+                                        <span key={i} className="text-base-content bg-primary/10  px-3 py-1 rounded-full text-sm">{skill}</span>
                                     ))}
                                 </div>
-                                <p className="text-sm font-semibold">Days: {slot.availableDays.join(', ')}</p>
-                                <p className="text-sm italic mt-1 text-gray-500">{slot.note}</p>
+                                <p className="text-sm "><span className="font-bold">Days: </span> {slot.availableDays.join(', ')}</p>
+                                <p className="text-sm italic mt-1 text-base-content/70">{slot.note}</p>
                                 <Link
                                     to={`/book-slot/${slot._id}`}
                                     className="btn btn-xs btn-primary w-full mt-2 cursor-pointer"

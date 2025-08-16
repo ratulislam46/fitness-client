@@ -47,7 +47,7 @@ const ForumDetails = () => {
 
                     </div>
                 </div>
-                <p className="ml-auto text-sm text-gray-500 font-bold flex gap-1 items-center"> <SlCalender color='red' />{date}</p>
+                <p className="ml-auto text-sm text-base-content/70 font-bold flex gap-1 items-center"> <SlCalender color='red' />{date}</p>
             </div>
 
             {/* Image */}
@@ -63,7 +63,7 @@ const ForumDetails = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-snug">{title}</h1>
 
             {/* Details */}
-            <div className="text-gray-500 text-base leading-7">
+            <div className="text-base-content/70 text-base leading-7">
                 {details}
             </div>
         </section >

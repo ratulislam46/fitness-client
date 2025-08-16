@@ -18,39 +18,39 @@ const AllTrainer = () => {
     if (isLoading) return <p className="text-center py-8">Loading...</p>;
 
     return (
-        <section className="py-12 bg-gray-50 mt-14">
+        <section className="py-16 bg-base-100 mt-14">
             <h2 className="text-3xl font-bold text-center mb-8">Meet Our Trainers</h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
                 {trainers.map((trainer) => (
-                    <div key={trainer._id} className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div key={trainer._id} className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-300 space-y-2">
                         <img
                             src={trainer.profileImage}
                             alt={trainer.fullName}
                             className="w-full h-80 object-cover rounded-lg"
                         />
                         <h3 className="text-xl font-semibold mt-4">{trainer.fullName}</h3>
-                        <p className="text-gray-500 text-sm mb-2">Age: {trainer.age}</p>
+                        <p className="text-sm text-base-content/70">Age: {trainer.age}</p>
 
                         {/* Experience */}
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-base-content/70">
                             Experience: <strong>{trainer.experience || "2+ years"}</strong>
                         </p>
 
                         {/* Slots (you can enhance later with real slot titles) */}
-                        <p className="text-sm text-gray-600 mb-2">
+                        <p className="text-sm text-base-content/70">
                             Available Days: {trainer.availableDays?.join(", ") || "N/A"}
                         </p>
 
                         {/* Social Icons */}
-                        <div className="flex gap-3 text-lg text-indigo-500 mt-2">
+                        <div className="flex gap-3 text-lg text-indigo-500">
                             <a href="#" className="hover:text-blue-600"><FaFacebook /></a>
                             <a href="#" className="hover:text-blue-600"><FaLinkedin /></a>
                             <a href="#" className="hover:text-pink-500"><FaInstagram /></a>
                         </div>
 
                         {/* Other Info */}
-                        <p className="text-sm text-gray-700 mt-2">{trainer.otherInfo}</p>
+                        <p className="text-sm text-base-content/70">{trainer.otherInfo}</p>
 
                         {/* Know More Button */}
                         <Link

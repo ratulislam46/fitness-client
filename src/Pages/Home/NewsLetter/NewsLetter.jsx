@@ -25,13 +25,13 @@ const Newsletter = () => {
 
     return (
         <div className="bg-base-100 py-16 px-1 md:px-0">
-            <div className="shadow-md bg-base-100 rounded-lg p-8 grid md:grid-cols-2 gap-10 items-center">
+            <div className="bg-base-100 p-8 grid md:grid-cols-2 gap-10 items-center">
                 {/* Left side - Text */}
                 <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
                         SUBSCRIBE TO OUR NEWSLETTER!!
                     </h2>
-                    <p className="text-gray-500 text-xl">
+                    <p className="text-base-content/70 text-xl">
                         Subscribe our newsletter to get exciting latest and updated news. So you stay connected to our forums.
                     </p>
                 </div>

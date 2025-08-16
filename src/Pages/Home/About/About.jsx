@@ -9,10 +9,10 @@ const About = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-base-content mb-4">
                         About <span className="text-primary">Fitness</span>
                     </h2>
-                    <p className="text-gray-500 mb-4 text-lg">
+                    <p className="text-base-content/70 mb-4 text-xl">
                         FitNess is a smart fitness tracking platform that empowers individuals to set, track, and smash their wellness goals. We’re committed to making fitness accessible and enjoyable through data, challenges, expert guidance, and a powerful community.
                     </p>
-                    <p className="text-gray-500 mb-4 text-lg">
+                    <p className="text-base-content/70 mb-4 text-xl">
                         Whether you’re a beginner or an athlete, our tools and trainers help you stay motivated, measure progress, and celebrate wins.
                     </p>
                 </div>

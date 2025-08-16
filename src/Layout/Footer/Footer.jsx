@@ -52,7 +52,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom copyright */}
-      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-base-content/70">
         © {new Date().getFullYear()} Fitness. All rights reserved.
       </div>
     </footer>

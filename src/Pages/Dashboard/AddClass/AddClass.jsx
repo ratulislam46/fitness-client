@@ -68,7 +68,7 @@ const AddClass = () => {
     return (
         <div className="max-w-5xl mx-auto p-6 md:p-10">
             <h2 className="text-3xl font-bold text-center mb-6">ADD NEW CLASS</h2>
-            <p className="text-center text-sm text-gray-500 mb-8">In here you can add new class</p>
+            <p className="text-center text-sm text-base-content/70 mb-8">In here you can add new class</p>
 
             <form onSubmit={handleSubmit(onSubmit)} className="bg-white shadow-md rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Forum Title */}

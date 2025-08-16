@@ -41,7 +41,7 @@ const AllNewsLetter = () => {
             </table>
 
             {subscribers.length === 0 && (
-                <p className="text-center text-gray-500 mt-4">No subscribers found.</p>
+                <p className="text-center text-base-content/70 mt-4">No subscribers found.</p>
             )}
         </div>
     );

@@ -65,7 +65,7 @@ const AllClasses = () => {
             </div>
           ))
         ) : (
-          <p className="text-center text-gray-500">No classes found.</p>
+          <p className="text-center text-base-content/70">No classes found.</p>
         )}
       </div>
 

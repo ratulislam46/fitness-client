@@ -138,7 +138,7 @@ const TrainerApplied = () => {
                         {
                             appliedTrainers.length === 0 && (
                                 <tr>
-                                    <td colSpan="7" className="text-center text-gray-500 py-4">
+                                    <td colSpan="7" className="text-center text-base-content/70 py-4">
                                         No trainer applications found.
                                     </td>
                                 </tr>

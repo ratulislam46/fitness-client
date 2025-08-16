@@ -176,7 +176,7 @@ const AddNewSlot = () => {
                 </button>
 
                 {/* Info Message */}
-                <p className="text-sm text-gray-500 text-center">
+                <p className="text-sm text-base-content/70 text-center">
                     Used: {totalUsedTime}h / Available: {trainer.availableTime}h
                 </p>
             </form>

@@ -52,7 +52,7 @@ const ManageSlot = () => {
             <h2 className="text-2xl font-bold mb-4 text-center">Manage Your Slots</h2>
 
             {slots.length === 0 ? (
-                <p className="text-center text-gray-500">No slots found.</p>
+                <p className="text-center text-base-content/70">No slots found.</p>
             ) : (
                 <div className="overflow-x-auto">
                     <table className="table table-zebra w-full">

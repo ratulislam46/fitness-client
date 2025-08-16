@@ -53,7 +53,7 @@ const AllForumPost = ({ forum, refetch }) => {
                     }
 
                 </div>
-                <p className="ml-auto text-sm text-gray-500 font-bold flex gap-1 items-center"><SlCalender color='red' /> {date}</p>
+                <p className="ml-auto text-sm text-base-content/70 font-bold flex gap-1 items-center"><SlCalender color='red' /> {date}</p>
             </div>
 
             <h3 className="text-lg font-bold text-gray-800 mb-2">{forum.title}</h3>

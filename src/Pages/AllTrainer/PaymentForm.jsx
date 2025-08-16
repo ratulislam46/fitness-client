@@ -92,12 +92,12 @@ const PaymentForm = ({ price, trainerId, slotId, plan, action, user }) => {
         <div>
             <form onSubmit={handleSubmit} className="max-w-2xl w-[90%] lg:w-[70%] mx-auto">
                 <CardElement
-                    className='py-4 px-2  bg-white border-gray-300 border rounded-md'
+                    className='py-4 px-2 border border-base-content/20 rounded-md'
                     options={{
                         style: {
                             base: {
                                 fontSize: '16px',
-                                color: '#424770',
+                                color: '#fffff',
                                 '::placeholder': {
                                     color: '#aab7c4',
                                 },

@@ -44,7 +44,7 @@ const ShowForumPost = ({ forum, refetch }) => {
                     className="w-10 h-10 rounded-full object-cover mr-3"
                 />
                 <div>
-                    <h4 className="font-semibold text-2xl">{forum.posted_by?.name}</h4>
+                    <h4 className="font-semibold text-3xl">{forum.posted_by?.name}</h4>
 
                     {/* conditional role admin && trainer */}
                     {forum.posted_by?.role === 'trainer' ?
@@ -56,8 +56,8 @@ const ShowForumPost = ({ forum, refetch }) => {
                 <p className="ml-auto text-md text-base-content font-bold flex gap-1 items-center"><SlCalender color='red' /> {date}</p>
             </div>
 
-            <h3 className="text-lg  text-base-content mb-2">{forum.title}</h3>
-            <p className="text-gray-500 text-xl mb-4">
+            <h3 className="text-2xl font-bold text-base-content mb-2">{forum.title}</h3>
+            <p className="text-base-content/70 text-xl mb-4">
                 {forum.details.length > 100 ? forum.details.slice(0, 100) + '...' : forum.details}
                 <Link to={`/dashboard/forum-details/${forum._id}`} className="text-blue-500 ml-1">see more</Link>
             </p>

@@ -37,7 +37,7 @@ const LoginPage = () => {
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
                         Welcome Back
                     </h2>
-                    <p className="text-xl text-center text-gray-500 mb-6">
+                    <p className="text-xl text-center text-base-content/70 mb-6">
                         Please login to your account
                     </p>
 

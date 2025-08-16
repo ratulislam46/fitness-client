@@ -30,7 +30,7 @@ const Review = () => {
                 <h2 className="text-3xl font-bold text-base-content mb-4">
                     What Our <span className="text-primary">Members Say</span>
                 </h2>
-                <p className="text-gray-500">
+                <p className="text-base-content/70 text-xl">
                     Real stories from people just like you. Discover how FitNest helped them reach their fitness goals.
                 </p>
             </div>
@@ -64,7 +64,7 @@ const Review = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="text-gray-500 italic text-md lg:text-xl">“{review.feedback}”</p>
+                        <p className="text-base-content/70 italic text-md lg:text-xl">“{review.feedback}”</p>
                     </div>
                 ))}
             </Carousel>

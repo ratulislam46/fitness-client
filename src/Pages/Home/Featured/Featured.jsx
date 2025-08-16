@@ -29,7 +29,7 @@ const Featured = () => {
         <section className="py-16 px-1 md:px-0">
             <div className="text-center">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-base-content">Why Choose <span className="text-primary">Fitness</span>?</h2>
-                <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-12">We bring powerful tools and a supportive community to make your fitness journey enjoyable and effective.</p>
+                <p className="text-xl text-base-content/70 max-w-2xl mx-auto mb-12">We bring powerful tools and a supportive community to make your fitness journey enjoyable and effective.</p>
 
                 <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     {features.map((item, index) => (
@@ -37,7 +37,7 @@ const Featured = () => {
                             <div className="flex flex-col items-center text-center">
                                 {item.icon}
                                 <h3 className="text-xl font-semibold text-base-content mb-2">{item.title}</h3>
-                                <p className="text-gray-500 text-md">{item.desc}</p>
+                                <p className="text-base-content/70 text-md">{item.desc}</p>
                             </div>
                         </div>
                     ))}

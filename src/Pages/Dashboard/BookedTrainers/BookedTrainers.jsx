@@ -23,7 +23,7 @@ const BookedTrainers = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
             {bookedSlots.length === 0 ?
-                <h3 className="min-h-screen flex justify-center items-center text-3xl lg:text-5xl text-gray-500">You have no booked class!</h3> :
+                <h3 className="min-h-screen flex justify-center items-center text-3xl lg:text-5xl text-base-content/70">You have no booked class!</h3> :
                 bookedSlots.map(slot =>
                     <BookedDetails
                         key={slot._id}

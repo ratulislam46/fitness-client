@@ -20,7 +20,7 @@ const Team = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-base-content">
                     Meet Our <span className="text-primary">Expert Trainers</span>
                 </h2>
-                <p className="text-gray-500 mb-12 text-xl">
+                <p className="text-base-content/70 mb-12 text-xl">
                     Our team of professional trainers is here to guide and motivate you in every step of your fitness journey.
                 </p>
 
@@ -33,7 +33,7 @@ const Team = () => {
                                 className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-500 mb-4"
                             />
                             <h3 className="text-xl font-semibold text-base-content">{trainer.fullName}</h3>
-                            <p className="text-sm md:text-md lg:text-lg text-gray-500 mt-2 mb-3">{trainer.otherInfo}</p>
+                            <p className="text-sm md:text-md lg:text-lg text-base-content/70 mt-2 mb-3">{trainer.otherInfo}</p>
                             <div className="text-sm md:text-md lg:text-lg xl:text-xl">
                                 <span className="font-semibold text-primary">Expertise:</span>
                                 <ul className="mt-1 list-disc list-inside">
