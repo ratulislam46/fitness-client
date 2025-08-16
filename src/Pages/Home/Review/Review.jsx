@@ -25,12 +25,12 @@ const Review = () => {
     // console.log(reviews);
 
     return (
-        <section className="py-20 px-1 md:px-0">
-            <div className="max-w-6xl mx-auto text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
+        <section className="py-20 px-1 md:px-0 border">
+            <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-base-content mb-4">
                     What Our <span className="text-primary">Members Say</span>
                 </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
+                <p className="text-gray-500">
                     Real stories from people just like you. Discover how FitNest helped them reach their fitness goals.
                 </p>
             </div>
@@ -48,15 +48,15 @@ const Review = () => {
                 arrows={false}
             >
                 {reviews?.map((review) => (
-                    <div key={review.id} className="bg-white p-6 rounded-xl shadow-md h-full hover:shadow-xl transition">
+                    <div key={review.id} className="bg-base-100 p-6 rounded-xl shadow-md h-full hover:shadow-xl transition border border-base-300">
                         <div className="flex items-center mb-4 gap-4">
                             <img
                                 src={review.userImage}
                                 alt={review.userName}
-                                className="w-14 h-14 rounded-full object-cover border-2 border-purple-500"
+                                className="w-14 h-14 rounded-full object-cover border-2 border-blue-500"
                             />
                             <div className="text-left">
-                                <h3 className="font-semibold text-gray-800">{review.userName}</h3>
+                                <h3 className="font-semibold text-base-content">{review.userName}</h3>
                                 <div className="flex text-yellow-400 text-sm">
                                     {[...Array(review.rating)].map((_, i) => (
                                         <FaStar key={i} />
@@ -64,7 +64,7 @@ const Review = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="text-gray-600 italic">“{review.feedback}”</p>
+                        <p className="text-gray-500 italic text-md lg:text-xl">“{review.feedback}”</p>
                     </div>
                 ))}
             </Carousel>

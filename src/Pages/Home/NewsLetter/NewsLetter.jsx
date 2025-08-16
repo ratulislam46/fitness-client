@@ -24,14 +24,14 @@ const Newsletter = () => {
     };
 
     return (
-        <div className="w-full bg-white py-16 px-1 md:px-0">
-            <div className="shadow-md bg-white rounded-lg p-8 grid md:grid-cols-2 gap-10 items-center">
+        <div className="bg-base-100 py-16 px-1 md:px-0">
+            <div className="shadow-md bg-base-100 rounded-lg p-8 grid md:grid-cols-2 gap-10 items-center">
                 {/* Left side - Text */}
                 <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                    <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
                         SUBSCRIBE TO OUR NEWSLETTER!!
                     </h2>
-                    <p className="text-gray-600">
+                    <p className="text-gray-500 text-xl">
                         Subscribe our newsletter to get exciting latest and updated news. So you stay connected to our forums.
                     </p>
                 </div>
@@ -39,7 +39,7 @@ const Newsletter = () => {
                 {/* Right side - Form */}
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                        <label className="block text-xl text-base-content mb-1">Your Name</label>
                         <input
                             type="text"
                             {...register("name", { required: "Name is required" })}
@@ -50,7 +50,7 @@ const Newsletter = () => {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                        <label className="block text-xl text-base-content mb-1">Your Email</label>
                         <input
                             type="email"
                             {...register("email", {
@@ -64,7 +64,7 @@ const Newsletter = () => {
 
                     <button
                         type="submit"
-                        className="btn btn-primary w-full flex items-center justify-center gap-2 text-white"
+                        className="btn btn-primary w-full flex items-center justify-be gap-2 text-white"
                     >
                         Subscribe Now <FiSend />
                     </button>

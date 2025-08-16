@@ -5,8 +5,8 @@ import { Link } from 'react-router';
 const FitnestIcon = () => {
     return (
         <Link to='/'>
-            <div className='flex items-center font-bold'>
-                <FaDumbbell size={20} className='mr-1 text-green-500'/>
+            <div className='flex items-center font-bold -ml-3'>
+                <FaDumbbell size={20} className='mr-1'/>
                 <h3 className='text-xl text-secondary'><span className='text-primary'>FIT</span>NESS</h3>
             </div>
         </Link>

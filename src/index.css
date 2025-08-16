@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+*{
+     font-family: "Playfair", serif;
+}
+
 @import "tailwindcss";
 
 @plugin "daisyui" {
     themes: light --default, dark;
 }
 
+
 @plugin "daisyui/theme" {
     name: "light";
     default: true;
     --color-primary: #FF7F3E;
-    --color-secondary: #5CB338;
+    --color-secondary: #31C950;
 }
