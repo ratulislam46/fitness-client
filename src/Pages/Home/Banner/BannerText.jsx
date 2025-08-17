@@ -11,7 +11,9 @@ const BannerText = () => {
                     <h1 className='text-5xl lg:text-6xl xl:w-7xl text-white text-center md:text-start'>Gym Gives you the perfect <span className='text-primary'>Health</span></h1>
                     <p className='text-center md:text-start text-white text-xl'>Stay strong, stay fit – the gym helps you build a healthy body and a balanced lifestyle.</p>
                     <div className='flex justify-center gap-4 md:justify-start'>
-                        <Link to='/classes' className='text-white bg-primary px-8 py-3 hover:ring-2 hover:ring-primary duration-300 rounded-xl'>Watch </Link>
+                        <Link to='/classes' className='text-white bg-primary px-8 py-2 hover:ring-2 hover:ring-primary duration-300 rounded-xl'>See Classes </Link>
+
+                        <Link to='/all-forum-post' className='btn btn-outline btn-info px-8 py-2 rounded-xl'>See Forums </Link>
                     </div>
                 </div>
 
@@ -20,12 +22,13 @@ const BannerText = () => {
                         src="https://i.postimg.cc/QdPRxy0j/rifki-dwi-achsani-t-L-o-HZt-wr-F8-unsplash-removebg-preview.png"
                         alt="banner image"
                         className='w-[350px] md:w-[450px] rounded-full'
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.5, ease: 'easeOut' }}
-                        // whileHover={{ scale: 1.05 }}
+                        initial={{ opacity: 0, y: 20 }}
                         animate={{ x: 0, y: [0, -10, 0], opacity: 1 }}
-                        transition={{ y: { repeat: Infinity, duration: 4, ease: 'easeInOut' }, opacity: { duration: 1.5 } }}
+                        transition={{
+                            y: { repeat: Infinity, duration: 4, ease: "easeInOut" },
+                            opacity: { duration: 1.5 },
+                            x: { duration: 0 } 
+                        }}
                     />
                 </div>
 
