@@ -29,6 +29,7 @@ import TrainerBookedPage from "../Pages/AllTrainer/TrainerBookedPage";
 import PaymentPage from "../Pages/AllTrainer/PaymentPage";
 import Forbidden from "../Components/Loading/Forbidden";
 import NotFound from "../Components/Error/NotFound";
+import Contact from "../Pages/Conact/Contact";
 
 
 
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
             {
                 path: 'trainer/:id',
                 Component: TrainersDetails
+            },
+            {
+                path: 'contact',
+                Component: Contact
             },
             {
                 path: 'forbidden',

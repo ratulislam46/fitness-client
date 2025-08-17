@@ -53,7 +53,7 @@ const BookedDetails = ({ slot }) => {
     };
 
     return (
-        <div className="bg-base-100 rounded-xl shadow-md hover:shadow-lg p-6 border border-base-content/5 hover:shadow-2xl transition duration-300 relative">
+        <div className="bg-base-100 rounded-xl shadow-md hover:shadow-lg p-6 border border-base-content/5 transition duration-300 relative">
             <h2 className="text-xl font-bold text-base-content mb-4"> Booked Slot Details</h2>
 
             <div className="space-y-3 text-base-content/70">
@@ -83,7 +83,7 @@ const BookedDetails = ({ slot }) => {
 
                 <div className="flex items-center gap-2">
                     <FaListAlt className="text-pink-500 text-lg" />
-                    <span className="font-medium">Class Name(s):</span>
+                    <span className="font-medium">Class Name:</span>
                     <div className="flex flex-wrap gap-2">
                         {selectedClasses.map((cls, idx) => (
                             <span

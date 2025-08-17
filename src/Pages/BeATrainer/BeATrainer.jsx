@@ -53,8 +53,8 @@ const BeATrainer = () => {
     };
 
     return (
-        <div className="container mx-auto shadow-md p-6 rounded-md mt-24">
-            <h2 data-aos="fade-up" className="text-3xl font-bold text-center mb-8 pb-4 border-b border-base-content/25">Apply to be a Trainer</h2>
+        <div className="container mx-auto shadow-md p-6 rounded-md mt-24 mb-10">
+            <h2 data-aos="fade-up" className="text-3xl lg:text-5xl font-bold text-center mb-8 pb-4">Apply to be a Trainer</h2>
             <form
                 data-aos="fade-up"
                 onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -120,6 +120,32 @@ const BeATrainer = () => {
                             className="react-select-container"
                             classNamePrefix="react-select"
                             placeholder="Select Available Days"
+                            styles={{
+                                control: (base) => ({
+                                    ...base,
+                                    backgroundColor: '#fffff',
+                                    borderColor: base.borderColor,
+                                    color: 'var(--p)', 
+                                }),
+                                menu: (base) => ({
+                                    ...base,
+                                    backgroundColor: '#6B7280',
+                                    color: 'var(--p)', 
+                                }),
+                                multiValue: (base) => ({
+                                    ...base,
+                                    backgroundColor: '#fffff', 
+                                    color: 'var(--p)',
+                                }),
+                                multiValueLabel: (base) => ({
+                                    ...base,
+                                    color: 'var(--p)',
+                                }),
+                                singleValue: (base) => ({
+                                    ...base,
+                                    color: 'var(--p)',
+                                }),
+                            }}
                         />
                     )}
                 />

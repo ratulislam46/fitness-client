@@ -54,6 +54,8 @@ const Dashboard = () => {
                         <div className='pb-6'>
                             <FitnestIcon></FitnestIcon>
                         </div>
+
+                        {/* dashboad all route  */}
                         <div>
 
                             {/* admin role routes  */}
@@ -122,6 +124,18 @@ const Dashboard = () => {
                                             <span className="font-semibold">Balance</span>
                                         </Link>
                                     </li>
+
+                                    {/* Profile */}
+                                    <li>
+                                        <Link
+                                            to="/dashboard/my-profile"
+                                            className="flex items-center gap-3 text-sky-600 hover:bg-sky-100 px-3 py-2 rounded-lg transition"
+                                        >
+                                            <MdOutlinePerson className="text-xl text-sky-500" />
+                                            <span className="font-semibold">My Profile</span>
+                                        </Link>
+                                    </li>
+
                                 </>
                             }
 
@@ -161,6 +175,18 @@ const Dashboard = () => {
                                             <span className="font-semibold">Add New Forum</span>
                                         </Link>
                                     </li>
+
+                                    {/* Profile */}
+                                    <li>
+                                        <Link
+                                            to="/dashboard/my-profile"
+                                            className="flex items-center gap-3 text-sky-600 hover:bg-sky-100 px-3 py-2 rounded-lg transition"
+                                        >
+                                            <MdOutlinePerson className="text-xl text-sky-500" />
+                                            <span className="font-semibold">My Profile</span>
+                                        </Link>
+                                    </li>
+
                                 </>
                             }
 

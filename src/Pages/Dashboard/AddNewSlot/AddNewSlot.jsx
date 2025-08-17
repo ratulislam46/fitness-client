@@ -84,7 +84,7 @@ const AddNewSlot = () => {
                 icon: "success",
                 draggable: true,
                 confirm
-                
+
             });
             reset();
         }
@@ -157,7 +157,33 @@ const AddNewSlot = () => {
                                 {...field}
                                 isMulti
                                 options={classOptions}
-                                className="mt-1 bg-black"
+                                className="mt-1 "
+                                styles={{
+                                    control: (base) => ({
+                                        ...base,
+                                        backgroundColor: '#fffff',
+                                        borderColor: base.borderColor,
+                                        color: 'var(--p)',
+                                    }),
+                                    menu: (base) => ({
+                                        ...base,
+                                        backgroundColor: '#6B7280',
+                                        color: 'var(--p)',
+                                    }),
+                                    multiValue: (base) => ({
+                                        ...base,
+                                        backgroundColor: '#fffff',
+                                        color: 'var(--p)',
+                                    }),
+                                    multiValueLabel: (base) => ({
+                                        ...base,
+                                        color: 'var(--p)',
+                                    }),
+                                    singleValue: (base) => ({
+                                        ...base,
+                                        color: 'var(--p)',
+                                    }),
+                                }}
                             />
                         )}
                     />

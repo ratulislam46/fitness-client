@@ -6,6 +6,8 @@ import Review from '../Review/Review';
 import Team from '../Team/Team';
 import About from '../About/About';
 import NewsLetter from '../NewsLetter/NewsLetter';
+import LatestClass from '../LatestClass/LatestClass';
+import FAQ from '../FAQ/FAQ';
 
 const Home = () => {
     return (
@@ -25,6 +27,9 @@ const Home = () => {
                     <ForumPost></ForumPost>
                 </section>
                 <section className='mb-4'>
+                    <LatestClass />
+                </section>
+                <section className='mb-4'>
                     <Review></Review>
                 </section>
                 <section className='mb-4'>
@@ -32,6 +37,9 @@ const Home = () => {
                 </section>
                 <section className='mb-4'>
                     <Team></Team>
+                </section>
+                <section className='mb-4'>
+                    <FAQ></FAQ>
                 </section>
             </div>
         </div>

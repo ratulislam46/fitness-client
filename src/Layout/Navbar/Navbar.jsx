@@ -35,6 +35,7 @@ const Navbar = () => {
             <li className='text-base-content'><NavLink to='/all-trainer'>Trainers</NavLink></li>
             <li className='text-base-content'><NavLink to='/all-forum-post'>Forums</NavLink></li>
             <li className='text-base-content'><NavLink to='/classes'>Classes</NavLink></li>
+            {/* <li className='text-base-content'><NavLink to='/contact'>Contact</NavLink></li> */}
 
             {
                 user && <>
