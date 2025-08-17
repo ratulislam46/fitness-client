@@ -44,13 +44,13 @@ const Balance = () => {
     return (
         <div className="mt-24 bg-base-100">
 
-            <div className="flex justify-around items-center px-2 lg:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 place-items-center px-2 lg:px-0">
                 {/* total payment  */}
-                <div className="bg-primary/20 py-6 px-2 lg:px-10 rounded-md shadow-md text-center h-40 lg:h-32">
+                <div className="max-w-xs bg-primary/20 py-6 px-2 lg:px-10 rounded-md shadow-md text-center h-40 lg:h-32">
                     <h2 className="text-2xl font-bold mb-2">Total Earnings</h2>
                     <p className="text-4xl text-base-content font-semibold">${totalPayments.totalBalance}</p>
                 </div>
-
+ 
                 {/* show pie chart  */}
                 <div className="">
                     <PieChart width={300} height={300}>
@@ -75,7 +75,7 @@ const Balance = () => {
             </div>
 
             {/* last six payment details  */}
-            <div className="overflow-x-auto bg-base-100 shadow rounded-lg p-4 mt-10">
+            <div className="overflow-x-auto bg-base-100 shadow rounded-lg p-4 mt-10 ">
                 <h2 className="text-2xl font-bold mb-4 text-base-content">Recent Payments</h2>
                 <table className="table table-zebra w-full">
                     <thead className="bg-primary/20">

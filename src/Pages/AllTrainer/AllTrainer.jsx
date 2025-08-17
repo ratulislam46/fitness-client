@@ -18,10 +18,10 @@ const AllTrainer = () => {
     if (isLoading) return <p className="text-center py-8">Loading...</p>;
 
     return (
-        <section className="py-16 bg-base-100 mt-14">
+        <section className="py-16 bg-base-100 mt-10 container mx-auto px-1 md:px-0">
             <h2 className="text-3xl font-bold text-center mb-8">Meet Our Trainers</h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {trainers.map((trainer) => (
                     <div key={trainer._id} className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-300 space-y-2">
                         <img

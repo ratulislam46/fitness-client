@@ -16,7 +16,7 @@ const ForumPage = () => {
             return res.data;
         }
     });
-    console.log(forums);
+    // console.log(forums);
 
     if (isLoading) {
         return <Loading></Loading>

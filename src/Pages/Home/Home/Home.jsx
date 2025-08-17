@@ -9,28 +9,31 @@ import NewsLetter from '../NewsLetter/NewsLetter';
 
 const Home = () => {
     return (
-        <div className='container mx-auto mt-24'>
-            <section className='mb-4'>
+        <div>
+            <section className='mb-4 mt-16'>
                 <Banner></Banner>
             </section>
-            <section className='mb-4'>
-                <Featured></Featured>
-            </section>
-            <section className='mb-4'>
-                <About></About>
-            </section>
-            <section className='mb-4'>
-                <ForumPost></ForumPost>
-            </section>
-            <section className='mb-4'>
-                <Review></Review>
-            </section>
-            <section className='mb-4'>
-                <NewsLetter></NewsLetter>
-            </section>
-            <section className='mb-4'>
-                <Team></Team>
-            </section>
+            <div className='container mx-auto'>
+
+                <section className='mb-4'>
+                    <Featured></Featured>
+                </section>
+                <section className='mb-4'>
+                    <About></About>
+                </section>
+                <section className='mb-4'>
+                    <ForumPost></ForumPost>
+                </section>
+                <section className='mb-4'>
+                    <Review></Review>
+                </section>
+                <section className='mb-4'>
+                    <NewsLetter></NewsLetter>
+                </section>
+                <section className='mb-4'>
+                    <Team></Team>
+                </section>
+            </div>
         </div>
     );
 };

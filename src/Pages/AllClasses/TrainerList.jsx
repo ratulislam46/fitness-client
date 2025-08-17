@@ -13,7 +13,7 @@ const TrainerList = ({ className }) => {
         }
     });
 
-    console.log(trainers);
+    // console.log(trainers);
 
     return (
         <div className="mt-3">

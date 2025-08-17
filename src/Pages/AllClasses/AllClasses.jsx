@@ -35,7 +35,7 @@ const AllClasses = () => {
 //   if (isLoading) return <Loading />;
 
   return (
-    <div className="p-6 mt-20 container mx-auto">
+    <div className="py-6 mt-20 container mx-auto px-1 md:px-0">
       <h2 className="text-3xl font-bold text-center mb-8 border-b border-base-content/25 pb-2">All Classes</h2>
 
       {/* 🔍 Search Input */}
