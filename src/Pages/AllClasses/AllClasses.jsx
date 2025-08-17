@@ -32,7 +32,7 @@ const AllClasses = () => {
 
   const totalPages = Math.ceil(classesData.total / limit);
 
-//   if (isLoading) return <Loading />;
+  if (isLoading) return <Loading />;
 
   return (
     <div className="py-6 mt-20 container mx-auto px-1 md:px-0">

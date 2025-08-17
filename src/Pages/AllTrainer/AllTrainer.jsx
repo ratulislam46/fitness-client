@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import UseAxiosSecure from "../../hooks/useAxiosSecure";
+import Loading from "../../Components/Loading/Loading";
 
 const AllTrainer = () => {
     const axiosSecure = UseAxiosSecure()
@@ -15,7 +16,7 @@ const AllTrainer = () => {
     });
     // console.log(trainers);
 
-    if (isLoading) return <p className="text-center py-8">Loading...</p>;
+    if (isLoading) return <Loading/>
 
     return (
         <section className="py-16 bg-base-100 mt-10 container mx-auto px-1 md:px-0">

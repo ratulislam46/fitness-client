@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import UseAxiosSecure from "../../../hooks/UseAxiosSecure";
 import moment from "moment/moment";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
+import Loading from "../../../Components/Loading/Loading";
 
 const COLORS = ["#00C49F", "#FF8042"];
 
@@ -38,7 +39,7 @@ const Balance = () => {
         { name: "Paid Members", value: data.paidMembers || 0 },
     ];
 
-    if (isLoading) return <p>Loading balance...</p>;
+    if (isLoading) return <Loading/>
     if (error) return <p>Error loading balance</p>;
 
     return (

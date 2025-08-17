@@ -88,7 +88,7 @@ const Trainers = () => {
                     </tbody>
                 </table>
                 {trainers.length === 0 && (
-                    <p className="text-center text-base-content/70 mt-6">No trainers found.</p>
+                    <p className="text-center text-base-content/70 mt-6 text-5xl">No trainers found.</p>
                 )}
             </div>
         </div>
