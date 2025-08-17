@@ -41,7 +41,7 @@ const GoogleSignIn = () => {
     return (
         <button
             onClick={handleGoogleLogin}
-            className="flex items-center justify-center gap-2 border w-full py-2 rounded-lg hover:bg-gray-100 transition"
+            className="flex items-center justify-center gap-2 border w-full py-2 rounded-lg hover:bg-base-100 transition"
         >
             <FcGoogle className="text-xl" />
             <span>Continue with Google</span>

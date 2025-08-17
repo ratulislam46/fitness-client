@@ -42,13 +42,13 @@ const Balance = () => {
     if (error) return <p>Error loading balance</p>;
 
     return (
-        <div className="mt-24">
+        <div className="mt-24 bg-base-100">
 
             <div className="flex justify-around items-center px-2 lg:px-0">
                 {/* total payment  */}
-                <div className="bg-green-100 py-6 px-2 lg:px-10 rounded-md shadow-md text-center h-40 lg:h-32">
+                <div className="bg-primary/20 py-6 px-2 lg:px-10 rounded-md shadow-md text-center h-40 lg:h-32">
                     <h2 className="text-2xl font-bold mb-2">Total Earnings</h2>
-                    <p className="text-4xl text-green-600 font-semibold">${totalPayments.totalBalance}</p>
+                    <p className="text-4xl text-base-content font-semibold">${totalPayments.totalBalance}</p>
                 </div>
 
                 {/* show pie chart  */}
@@ -75,10 +75,10 @@ const Balance = () => {
             </div>
 
             {/* last six payment details  */}
-            <div className="overflow-x-auto bg-white shadow rounded-lg p-4 mt-10">
-                <h2 className="text-2xl font-bold mb-4">Recent Payments</h2>
+            <div className="overflow-x-auto bg-base-100 shadow rounded-lg p-4 mt-10">
+                <h2 className="text-2xl font-bold mb-4 text-base-content">Recent Payments</h2>
                 <table className="table table-zebra w-full">
-                    <thead className="bg-gray-100">
+                    <thead className="bg-primary/20">
                         <tr>
                             <th>#</th>
                             <th>User</th>

@@ -88,12 +88,12 @@ const TrainerApplied = () => {
     };
 
     return (
-        <div className="p-6">
-            <h2 className="text-3xl font-bold mb-4 text-primary">Applied Trainers</h2>
+        <div className="px-1 mt-4 text-center">
+            <h2 className="text-3xl lg:text-5xl font-bold mt-0 md:mt-8 mb-4 md:mb-8 text-base-content">Applied Trainers</h2>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full text-sm">
-                    <thead className="bg-purple-100 text-purple-800">
+                    <thead className="bg-primary/5 text-base-content">
                         <tr>
                             <th>#</th>
                             <th>Photo</th>

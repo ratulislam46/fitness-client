@@ -97,8 +97,8 @@ const AddNewSlot = () => {
     if (!trainer) return <p className="text-red-500 text-center">Trainer not found!</p>;
 
     return (
-        <div className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
-            <h2 className="text-2xl font-bold mb-4 text-center">Add New Slot</h2>
+        <div className="container mx-auto p-6 md:p-10">
+            <h2 className="text-3xl lg:text-5xl font-bold text-center mb-6">Add New Slot</h2>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 {/* Trainer Info */}
@@ -115,7 +115,7 @@ const AddNewSlot = () => {
 
                 {/* Show Available Days (React Select - read-only style) */}
                 <div>
-                    <label className="font-semibold">Available Days</label>
+                    <label className="font-semibold text-base-content">Available Days</label>
                     <Select
                         isMulti
                         isDisabled
@@ -123,7 +123,7 @@ const AddNewSlot = () => {
                             value: day,
                             label: day,
                         }))}
-                        className="mt-1"
+                        className="mt-1 "
                     />
                 </div>
 
@@ -157,7 +157,7 @@ const AddNewSlot = () => {
                                 {...field}
                                 isMulti
                                 options={classOptions}
-                                className="mt-1"
+                                className="mt-1 bg-black"
                             />
                         )}
                     />

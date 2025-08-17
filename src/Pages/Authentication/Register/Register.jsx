@@ -63,12 +63,12 @@ const Register = () => {
 
     return (
         <div>
-            <div className="bg-gray-100 lg:pl-6 lg:pt-6 pt-2">
+            <div className="bg-base-100 lg:pl-6 lg:pt-6 pt-2">
                 <FitnestIcon></FitnestIcon>
             </div>
-            <div className="min-h-screen flex items-center justify-center px-4 bg-gray-100">
-                <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
-                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+            <div className="min-h-screen flex items-center justify-center px-4 bg-base-100">
+                <div className="w-full max-w-md bg-base-100 shadow-md hover:shadow-lg duration-300 rounded-lg p-8">
+                    <h2 className="text-3xl font-bold text-center text-base-content mb-4">
                         Register an account!
                     </h2>
                     <form onSubmit={handleSubmit(handleRegister)}>
@@ -79,14 +79,14 @@ const Register = () => {
                             <input
                                 type="text "
                                 {...register("name", { required: true })}
-                                className="input" placeholder="Your Name" />
+                                className="input w-full" placeholder="Your Name" />
 
                             {/* image field */}
                             <label className="label">Image</label>
                             <input
                                 onChange={handleImageUpload}
                                 type="file" name='image'
-                                className='input pt-2 font-semibold' />
+                                className='input pt-2 font-semibold w-full' />
 
 
                             {/* email field  */}
@@ -94,7 +94,7 @@ const Register = () => {
                             <input
                                 type="email"
                                 {...register("email", { required: true })}
-                                className="input" placeholder="Email" />
+                                className="input w-full" placeholder="Email" />
                             {errors.email?.type === 'required' && <p className='text-red-500'>Email required</p>}
 
 
@@ -103,7 +103,7 @@ const Register = () => {
                             <input
                                 type="password"
                                 {...register("password", { required: true, minLength: 6 })}
-                                className="input" placeholder="Password" />
+                                className="input w-full" placeholder="Password" />
                             {errors.password?.type === 'required' && <p className='text-red-500'>Password required</p>}
                             {errors.password?.type === 'minLength' && <p className='text-red-500'>Password must be 6 character or longer</p>}
 

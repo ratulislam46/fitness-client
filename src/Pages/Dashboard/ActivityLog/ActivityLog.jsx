@@ -40,7 +40,7 @@ const ActivityLog = () => {
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full text-sm">
-                    <thead className="bg-purple-100 text-purple-800">
+                    <thead className="bg-primary/20 text-base-content">
                         <tr>
                             <th>#</th>
                             <th>Applied Date</th>

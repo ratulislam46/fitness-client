@@ -16,12 +16,12 @@ const AllNewsLetter = () => {
     }, [axiosSecure]);
 
     return (
-        <div className="p-6 mt-10 overflow-x-auto bg-white rounded shadow">
-            <h2 className="text-3xl font-bold mb-4 text-primary">All Newsletter Subscribers</h2>
+        <div className="px-1 mt-4 text-center">
+            <h2 className="text-3xl lg:text-5xl font-bold mt-0 md:mt-8 mb-4 md:mb-8 text-base-content">All Newsletter Subscribers</h2>
 
             <table className="table table-zebra w-full">
                 <thead>
-                    <tr className="bg-purple-100 text-primary">
+                    <tr className="bg-primary/5 text-base-content">
                         <th>#</th>
                         <th>Name</th>
                         <th>Email</th>

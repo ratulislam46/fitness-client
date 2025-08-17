@@ -62,11 +62,11 @@ const AddForum = () => {
     };
 
     return (
-        <div className="max-w-5xl mx-auto p-6 md:p-10">
-            <h2 className="text-3xl font-bold text-center mb-6">ADD NEW FORUM</h2>
-            <p className="text-center text-sm text-base-content/70 mb-8">In here you can add new forum</p>
+        <div className="container mx-auto p-6 md:p-10">
+            <h2 className="text-3xl lg:text-5xl font-bold text-center mb-6">ADD NEW FORUM</h2>
+            <p className="text-center text-xl text-base-content/70 mb-8">In here you can add new forum</p>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="bg-white shadow-md rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="bg-primary/5 shadow-md rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Forum Title */}
                 <div className="col-span-1">
                     <label className="block font-semibold mb-1">Forum Title</label>
@@ -106,7 +106,7 @@ const AddForum = () => {
                 {/* Submit Button */}
                 <div className="col-span-1 md:col-span-2">
                     <button type="submit" className="btn btn-primary w-full" disabled={uploading}>
-                        {uploading ? "Posting..." : "Make Post"}
+                        {uploading ? "Posting..." : "Add Forum"}
                     </button>
                 </div>
             </form>
