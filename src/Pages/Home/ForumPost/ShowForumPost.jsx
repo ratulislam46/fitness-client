@@ -36,7 +36,7 @@ const ShowForumPost = ({ forum, refetch }) => {
     const date = new Date(forum.created_at).toLocaleDateString();
 
     return (
-        <div data-aos="fade-up" className="bg-base-100 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 p-4 transition duration-300">
+        <div data-aos="fade-up" className="bg-base-100 rounded-xl shadow-xs hover:shadow-md  border border-base-content/5 p-4 transition duration-300">
             <div className="flex items-center mb-4 border-b pb-3 border-gray-400">
                 <img
                     src={forum.posted_by?.image}

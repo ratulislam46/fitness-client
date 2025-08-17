@@ -10,7 +10,7 @@ const ShowLatestClass = ({ signleClass, refetch }) => {
             <div
                 data-aos="fade-up"
                 key={signleClass._id}
-                className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 h-[550px] flex flex-col justify-between">
+                className="bg-base-100 p-6 rounded-xl shadow-xs hover:shadow-md border border-base-content/5 h-[550px] flex flex-col justify-between">
                 <img src={signleClass.image} className="w-full object-cover rounded mb-3" />
                 <div className="px-4 space-y-4">
                     <h3 className="text-2xl font-bold">{signleClass.title}</h3>

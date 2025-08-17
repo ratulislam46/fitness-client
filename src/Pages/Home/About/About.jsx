@@ -6,7 +6,7 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-10 items-center">
                 {/* Text Section */}
                 <div data-aos="fade-up">
-                    <h2 className="text-3xl md:text-4xl font-bold text-base-content mb-4">
+                    <h2 className="text-3xl md:text-5xl font-bold text-base-content mb-4">
                         About <span className="text-primary">Fitness</span>
                     </h2>
                     <p className="text-base-content/70 mb-4 text-xl">

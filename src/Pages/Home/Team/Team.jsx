@@ -18,7 +18,7 @@ const Team = () => {
         <section className="py-16 px-1 md:px-1">
             <div className="text-center">
                 <div data-aos="fade-up">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-base-content">
+                    <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-base-content">
                         Meet Our <span className="text-primary">Expert Trainers</span>
                     </h2>
                     <p className="text-base-content/70 mb-12 text-xl">
@@ -31,7 +31,7 @@ const Team = () => {
                         <div
                             data-aos="fade-up"
                             key={idx}
-                            className="bg-base-100 border border-base-content/5 rounded-xl shadow-lg hover:shadow-xl transition p-6">
+                            className="bg-base-100 border border-base-content/5 rounded-xl shadow-md duration-300 transition p-6 hover:bg-primary/5">
                             <img
                                 src={trainer.profileImage}
                                 alt={trainer.fullName}

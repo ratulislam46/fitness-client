@@ -3,6 +3,7 @@ import UseAxios from '../../../hooks/UseAxios';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router';
 import ShowLatestClass from './ShowLatestClass';
+import Loading from '../../../Components/Loading/Loading';
 
 const LatestClass = () => {
 
@@ -16,6 +17,7 @@ const LatestClass = () => {
         }
     })
     console.log(classes);
+    if(isLoading) return <Loading/>
 
     return (
         <div className="container mx-auto py-16 px-1 md:px-0 bg-base-100">

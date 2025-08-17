@@ -27,7 +27,7 @@ const Review = () => {
     return (
         <section className="py-16 px-1 md:px-0 bo">
             <div data-aos="fade-up" className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-base-content mb-4">
+                <h2 className="text-3xl lg:text-5xl font-bold text-base-content mb-4">
                     What Our <span className="text-primary">Members Say</span>
                 </h2>
                 <p className="text-base-content/70 text-xl">
