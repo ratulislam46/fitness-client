@@ -28,7 +28,7 @@ const Footer = () => {
             <li><Link to="/" className="hover:text-purple-400">Home</Link></li>
             <li><Link to="/classes" className="hover:text-purple-400">Classes</Link></li>
             <li><Link to="/all-trainer" className="hover:text-purple-400">Trainers</Link></li>
-            <li><Link  className="hover:text-purple-400">Contact</Link></li>
+            <li><Link className="hover:text-purple-400">Contact</Link></li>
           </ul>
         </div>
 
@@ -36,10 +36,18 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">Follow Us</h3>
           <div className="flex gap-4 text-xl">
-            <a href="#" className="hover:text-purple-400"><FaFacebookF /></a>
-            <a href="#" className="hover:text-purple-400"><FaTwitter /></a>
-            <a href="#" className="hover:text-purple-400"><FaInstagram /></a>
-            <a href="#" className="hover:text-purple-400"><FaYoutube /></a>
+            <Link
+              to='https://web.facebook.com/mdratul.islam.46'
+              target="_blank"
+              className="hover:text-purple-400">
+              <FaFacebookF />
+            </Link>
+            <Link
+              to='https://www.instagram.com/arfan_ratul_46/'
+              target="_blank"
+              className="hover:text-purple-400">
+              <FaInstagram />
+            </Link>
           </div>
         </div>
 
@@ -52,7 +60,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom copyright */}
-      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-base-content/70">
+      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
         © {new Date().getFullYear()} Fitness. All rights reserved.
       </div>
     </footer>

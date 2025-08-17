@@ -45,7 +45,7 @@ const Navbar = () => {
         </>
 
     return (
-        <div className="shadow-sm fixed top-0 left-0 w-full z-50 backdrop-blur-2xl  border-b-2 border-primary/30 ">
+        <div className="shadow-sm fixed top-0 left-0 w-full z-50 backdrop-blur-2xl">
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

@@ -17,16 +17,21 @@ const Team = () => {
     return (
         <section className="py-16 px-1 md:px-1">
             <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-base-content">
-                    Meet Our <span className="text-primary">Expert Trainers</span>
-                </h2>
-                <p className="text-base-content/70 mb-12 text-xl">
-                    Our team of professional trainers is here to guide and motivate you in every step of your fitness journey.
-                </p>
+                <div data-aos="fade-up">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-base-content">
+                        Meet Our <span className="text-primary">Expert Trainers</span>
+                    </h2>
+                    <p className="text-base-content/70 mb-12 text-xl">
+                        Our team of professional trainers is here to guide and motivate you in every step of your fitness journey.
+                    </p>
+                </div>
 
                 <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     {trainers.map((trainer, idx) => (
-                        <div key={idx} className="bg-base-100 border border-base-content/5 rounded-xl shadow-lg hover:shadow-xl transition p-6">
+                        <div
+                            data-aos="fade-up"
+                            key={idx}
+                            className="bg-base-100 border border-base-content/5 rounded-xl shadow-lg hover:shadow-xl transition p-6">
                             <img
                                 src={trainer.profileImage}
                                 alt={trainer.fullName}

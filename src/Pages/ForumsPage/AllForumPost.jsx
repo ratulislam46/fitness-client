@@ -36,8 +36,8 @@ const AllForumPost = ({ forum, refetch }) => {
     const date = new Date(forum.created_at).toLocaleDateString();
 
     return (
-        <div className="rounded-lg  p-4 transition duration-300 border border-base-content/5">
-            <div className="flex items-center mb-4 border-b pb-3 border-base-content/5">
+        <div data-aos="fade-up" className="rounded-lg  p-4 transition duration-300 border border-base-content/5">
+            <div data-aos="fade-up" className="flex items-center mb-4 border-b pb-3 border-base-content/5">
                 <img
                     src={forum.posted_by?.image}
                     alt="Poster"

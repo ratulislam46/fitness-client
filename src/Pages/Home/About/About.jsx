@@ -5,7 +5,7 @@ const About = () => {
         <section className="py-16 px-1 md:px-0">
             <div className="grid md:grid-cols-2 gap-10 items-center">
                 {/* Text Section */}
-                <div>
+                <div data-aos="fade-up">
                     <h2 className="text-3xl md:text-4xl font-bold text-base-content mb-4">
                         About <span className="text-primary">Fitness</span>
                     </h2>
@@ -18,7 +18,7 @@ const About = () => {
                 </div>
 
                 {/* Image Section */}
-                <div>
+                <div data-aos="fade-up">
                     <img
                         src={workout}
                         alt="fitness-workout"

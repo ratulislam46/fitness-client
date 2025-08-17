@@ -27,7 +27,7 @@ const Newsletter = () => {
         <div className="bg-base-100 py-16 px-1 md:px-0">
             <div className="bg-base-100 p-8 grid md:grid-cols-2 gap-10 items-center">
                 {/* Left side - Text */}
-                <div>
+                <div data-aos="fade-up">
                     <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
                         SUBSCRIBE TO OUR NEWSLETTER!!
                     </h2>
@@ -37,7 +37,9 @@ const Newsletter = () => {
                 </div>
 
                 {/* Right side - Form */}
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                <form
+                    data-aos="fade-up"
+                    onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                     <div>
                         <label className="block text-xl text-base-content mb-1">Your Name</label>
                         <input

@@ -16,15 +16,18 @@ const AllTrainer = () => {
     });
     // console.log(trainers);
 
-    if (isLoading) return <Loading/>
+    if (isLoading) return <Loading />
 
     return (
         <section className="py-16 bg-base-100 mt-10 container mx-auto px-1 md:px-0">
-            <h2 className="text-3xl font-bold text-center mb-8">Meet Our Trainers</h2>
+            <h2 data-aos="fade-up" className="text-3xl font-bold text-center mb-8">Meet Our Trainers</h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {trainers.map((trainer) => (
-                    <div key={trainer._id} className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-300 space-y-2">
+                    <div
+                        data-aos="fade-up"
+                        key={trainer._id}
+                        className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-300 space-y-2">
                         <img
                             src={trainer.profileImage}
                             alt={trainer.fullName}

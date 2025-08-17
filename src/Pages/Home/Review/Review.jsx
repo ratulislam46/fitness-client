@@ -26,7 +26,7 @@ const Review = () => {
 
     return (
         <section className="py-16 px-1 md:px-0 bo">
-            <div className="text-center mb-12">
+            <div data-aos="fade-up" className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-base-content mb-4">
                     What Our <span className="text-primary">Members Say</span>
                 </h2>
@@ -48,7 +48,10 @@ const Review = () => {
                 arrows={false}
             >
                 {reviews?.map((review) => (
-                    <div key={review.id} className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 h-full transition">
+                    <div
+                        data-aos="fade-up"
+                        key={review.id}
+                        className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 h-full transition">
                         <div className="flex items-center mb-4 gap-4">
                             <img
                                 src={review.userImage}
@@ -70,7 +73,7 @@ const Review = () => {
             </Carousel>
 
             {/* Bottom buttons */}
-            <div className="mt-8 flex justify-center gap-6">
+            <div data-aos="fade-up" className="mt-8 flex justify-center gap-6">
                 <button
                     onClick={() => carouselRef.current?.previous()}
                     className="bg-primary/5 hover:bg-primary/15 text-primary px-5 py-2 rounded-lg font-medium transition"
