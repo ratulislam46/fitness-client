@@ -57,6 +57,7 @@ const MyProfile = () => {
         const formData = new FormData();
         formData.append("image", image);
         setImageUploading(true);
+        console.log(formData);
 
         try {
             const url = `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMAGE_UPLOAD_KEY}`;
@@ -138,6 +139,16 @@ const MyProfile = () => {
 
                     {/* Image URL hidden */}
                     <input type="hidden" {...register("photoURL")} />
+
+                    {/* Phone Number */}
+                    <div>
+                        <label className="label">Phone Number</label>
+                        <input
+                            type="number"
+                            className="input input-bordered w-full"
+                            placeholder="Your Personal Phone Number"
+                        />
+                    </div>
 
                     {/* Last login */}
                     <div>

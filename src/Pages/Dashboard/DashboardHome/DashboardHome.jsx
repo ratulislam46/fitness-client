@@ -9,11 +9,18 @@ import six from '../../../../public/image/six.png'
 import seven from '../../../../public/image/seven.png'
 import eight from '../../../../public/image/eight.jpg'
 import nine from '../../../../public/image/nine.jpeg'
+import UseAxios from '../../../hooks/UseAxios';
+import UseUserRole from '../../../hooks/UseUserRole'
+import MemberDashboard from './MemberDashboard/MemberDashboard';
 
 const DashboardHome = () => {
+
+    const axiosInstance = UseAxios();
+    const { role, isLoading } = UseUserRole();
+
     return (
         <section className="container mx-auto py-6 object-cover bg-base-100">
-            <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
+            {/* <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
                 <img src={five} alt="" className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-square object-cover" />
                 <img alt="" className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square object-cover" src={six} />
                 <img alt="" className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square object-cover" src={seven} />
@@ -24,7 +31,10 @@ const DashboardHome = () => {
                 <img alt="" className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square object-cover" src={three}/>
                 <img alt="" className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square object-cover" src={four} />
                 <img src={workOut} alt="" className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square object-cover" />
-            </div>
+            </div> */}
+            <section>
+                <MemberDashboard></MemberDashboard>
+            </section>
         </section>
     );
 };

@@ -32,7 +32,7 @@ const Balance = () => {
             return res.data;
         },
     });
-    console.log(data.subscribers);
+    // console.log(data.subscribers);
 
     const chartData = [
         { name: "Subscribers", value: data.subscribers || 0 },

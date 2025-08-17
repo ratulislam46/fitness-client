@@ -204,17 +204,6 @@ const Dashboard = () => {
                                         </Link>
                                     </li>
 
-                                    {/* Profile */}
-                                    <li>
-                                        <Link
-                                            to="/dashboard/my-profile"
-                                            className="flex items-center gap-3 text-sky-600 hover:bg-sky-100 px-3 py-2 rounded-lg transition"
-                                        >
-                                            <MdOutlinePerson className="text-xl text-sky-500" />
-                                            <span className="font-semibold">My Profile</span>
-                                        </Link>
-                                    </li>
-
                                     {/* Booked Trainer */}
                                     <li>
                                         <Link
@@ -223,6 +212,17 @@ const Dashboard = () => {
                                         >
                                             <BiBookBookmark className="text-xl text-fuchsia-500" />
                                             <span className="font-semibold">Booked Trainer</span>
+                                        </Link>
+                                    </li>
+                                    
+                                    {/* Profile */}
+                                    <li>
+                                        <Link
+                                            to="/dashboard/my-profile"
+                                            className="flex items-center gap-3 text-sky-600 hover:bg-sky-100 px-3 py-2 rounded-lg transition"
+                                        >
+                                            <MdOutlinePerson className="text-xl text-sky-500" />
+                                            <span className="font-semibold">My Profile</span>
                                         </Link>
                                     </li>
                                 </>

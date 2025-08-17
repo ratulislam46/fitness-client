@@ -16,7 +16,7 @@ const LatestClass = () => {
             return res.data
         }
     })
-    console.log(classes);
+    // console.log(classes);
     if(isLoading) return <Loading/>
 
     return (

@@ -3,8 +3,9 @@ import { AuthContext } from '../../../Context/AuthProvider';
 import TrainerList from '../../AllClasses/TrainerList';
 
 const ShowLatestClass = ({ signleClass, refetch }) => {
-    console.log(signleClass);
+    // console.log(signleClass);
     const { user } = use(AuthContext)
+    
     return (
         <div>
             <div
