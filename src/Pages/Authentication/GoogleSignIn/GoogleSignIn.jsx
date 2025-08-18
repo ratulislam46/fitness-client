@@ -1,21 +1,24 @@
 import React, { use } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { FcGoogle } from 'react-icons/fc';
 import UseAxios from '../../../hooks/UseAxios';
 
 const GoogleSignIn = () => {
 
     const { signInWithGoogle } = use(AuthContext)
-    const navigate = useNavigate();
+
+    const location = useLocation();
     const from = location.state || '/';
+    const navigate = useNavigate();
     const axiosInstance = UseAxios();
 
     const handleGoogleLogin = () => {
         // Google login logic here
         signInWithGoogle()
             .then(async (result) => {
-                console.log('google login', result.user);
+                navigate(from)
+
                 const user = result.user;
 
                 // update user info in database 
@@ -29,9 +32,7 @@ const GoogleSignIn = () => {
                 }
                 // console.log(userInfo);
                 const userResult = await axiosInstance.post('/users', userInfo);
-                console.log(userResult.data);
-
-                navigate(from)
+                // console.log(userResult.data);
             })
             .catch(error => {
                 console.log(error);

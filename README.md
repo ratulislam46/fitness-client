@@ -59,3 +59,7 @@ npm install
 
 # Run the development server
 npm run dev
+
+## ADMIN Email & pass
+hero@gmail.com
+123456
