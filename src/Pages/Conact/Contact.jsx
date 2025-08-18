@@ -32,7 +32,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="py-6 mt-20 container mx-auto px-4 md:px-0">
+        <div className="py-6 mt-20 container mx-auto px-4 md:px-4 border border-base-content/5 rounded-xl">
             <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4 pb-2">Contact Us</h2>
             <p className="mb-6 text-base-content/70 text-xl text-center">
                 Have questions or want to get in touch? Please fill out the form below.
@@ -47,7 +47,7 @@ const Contact = () => {
                         type="text"
                         name="user_name"
                         placeholder="Enter your name"
-                        className="w-full border rounded-lg p-2"
+                        className="w-full border border-base-content/5 rounded-lg p-2"
                     />
                 </div>
 
@@ -57,7 +57,7 @@ const Contact = () => {
                         type="email"
                         name="user_email"
                         placeholder="Enter your email"
-                        className="w-full border rounded-lg p-2"
+                        className="w-full border border-base-content/5 rounded-lg p-2"
                     />
                 </div>
 
@@ -67,7 +67,7 @@ const Contact = () => {
                         placeholder="Write your message..."
                         name="message"
                         rows="4"
-                        className="w-full border rounded-lg p-2"
+                        className="w-full border border-base-content/5 rounded-lg p-2"
                     ></textarea>
                 </div>
 
