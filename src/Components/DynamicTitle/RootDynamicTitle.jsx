@@ -23,12 +23,12 @@ const RootDynamicTitle = () => {
 
   useEffect(() => {
     const pathname = location.pathname;
-    let title = "FitNess";
+    let title = "Fitness";
 
     for (const routePattern in rootRouteTitleMap) {
       const matched = matchPath({ path: routePattern, end: true }, pathname);
       if (matched) {
-        title = `FitNess | ${rootRouteTitleMap[routePattern]}`;
+        title = `Fitness | ${rootRouteTitleMap[routePattern]}`;
         break;
       }
     }

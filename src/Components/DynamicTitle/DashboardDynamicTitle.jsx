@@ -24,12 +24,12 @@ const DashboardDynamicTitle = () => {
 
   useEffect(() => {
     const pathname = location.pathname;
-    let title = "FitNess";
+    let title = "Fitness";
 
     for (const routePattern in dashboardRouteTitleMap) {
       const matched = matchPath({ path: routePattern, end: true }, pathname);
       if (matched) {
-        title = `FitNess | ${dashboardRouteTitleMap[routePattern]}`;
+        title = `Fitness | ${dashboardRouteTitleMap[routePattern]}`;
         break;
       }
     }
