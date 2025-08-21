@@ -17,20 +17,15 @@ const BannerText = () => {
                     </div>
                 </div>
 
-                <div className='flex justify-center md:justify-end items-center mt-10 md:mt-0'>
+                {/* <div className='flex justify-center md:justify-end items-center mt-10 md:mt-0'>
                     <motion.img
                         src="https://i.postimg.cc/QdPRxy0j/rifki-dwi-achsani-t-L-o-HZt-wr-F8-unsplash-removebg-preview.png"
                         alt="banner image"
                         className='w-[350px] md:w-[450px] rounded-full'
                         // initial={{ opacity: 0, y: 20 }}
                         animate={{ x: 0, y: [0, -10, 0], opacity: 1 }}
-                        // transition={{
-                        //     y: { repeat: Infinity, duration: 4, ease: "easeInOut" },
-                        //     opacity: { duration: 1.5 },
-                        //     x: { duration: 0 } 
-                        // }}
                     />
-                </div>
+                </div> */}
 
             </div>
         </div>
