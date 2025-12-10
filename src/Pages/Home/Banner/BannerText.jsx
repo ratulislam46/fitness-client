@@ -16,17 +16,6 @@ const BannerText = () => {
                         <Link to='/all-forum-post' className='btn btn-outline btn-info px-8 py-2 rounded-xl'>See Forums </Link>
                     </div>
                 </div>
-
-                {/* <div className='flex justify-center md:justify-end items-center mt-10 md:mt-0'>
-                    <motion.img
-                        src="https://i.postimg.cc/QdPRxy0j/rifki-dwi-achsani-t-L-o-HZt-wr-F8-unsplash-removebg-preview.png"
-                        alt="banner image"
-                        className='w-[350px] md:w-[450px] rounded-full'
-                        // initial={{ opacity: 0, y: 20 }}
-                        animate={{ x: 0, y: [0, -10, 0], opacity: 1 }}
-                    />
-                </div> */}
-
             </div>
         </div>
     );
