@@ -36,24 +36,39 @@ const ShowForumPost = ({ forum, refetch }) => {
     const date = new Date(forum.created_at).toLocaleDateString();
 
     return (
-        <div data-aos="fade-up" className="bg-base-100 rounded-xl shadow-xs border border-base-content/5 p-4 transition duration-300 hover:border">
-            <div className="flex items-center mb-4 border-b pb-3 border-gray-400">
-                <img
-                    src={forum.posted_by?.image}
-                    alt="Profile"
-                    className="w-10 h-10 rounded-full object-cover mr-3"
-                />
-                <div>
-                    <h4 className="font-semi bold text-3xl">{forum.posted_by?.name}</h4>
-
-                    {/* conditional role admin && trainer */}
-                    {forum.posted_by?.role === 'trainer' ?
-                        <p className="text-sm text-white capitalize badge badge-accent">{forum.posted_by?.role}</p> :
-                        <p className="text-sm text-white capitalize badge badge-error">{forum.posted_by?.role}</p>
-                    }
-
+        <div 
+            data-aos="fade-up" 
+            className="bg-gradient-to-br from-base-100 to-base-200 rounded-2xl shadow-xl border border-base-content/10 p-6 transition-all duration-500 hover:shadow-2xl relative overflow-hidden"
+        >
+            {/* Decorative elements */}
+            <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-primary/5"></div>
+            <div className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full bg-secondary/5"></div>
+            
+            <div className="flex items-start mb-4 pb-3 border-b border-base-content/10">
+                <div className="relative">
+                    <div className="avatar">
+                        <div className="w-12 h-12 rounded-full ring-2 ring-primary ring-offset-2 ring-offset-base-100">
+                            <img src={forum.posted_by?.image} alt="Profile" className="object-cover" />
+                        </div>
+                    </div>
                 </div>
-                <p className="ml-auto text-md text-base-content font-bold flex gap-1 items-center"><SlCalender color='red' /> {date}</p>
+                
+                <div className="ml-3 flex-1">
+                    <div className="flex justify-between items-start">
+                        <div>
+                            <h4 className="font-bold text-lg text-base-content">{forum.posted_by?.name}</h4>
+                            <div className="flex items-center mt-1">
+                                {forum.posted_by?.role === 'trainer' ?
+                                    <span className="badge badge-success badge-xs mr-2">Trainer</span> :
+                                    <span className="badge badge-warning badge-xs mr-2">Member</span>
+                                }
+                                <span className="text-xs text-base-content/60 flex items-center">
+                                    <SlCalender className="mr-1 text-primary" size={12} /> {date}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <h3 className="text-2xl font-bold text-base-content mb-2">{forum.title}</h3>
