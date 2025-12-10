@@ -36,7 +36,7 @@ const ShowForumPost = ({ forum, refetch }) => {
     const date = new Date(forum.created_at).toLocaleDateString();
 
     return (
-        <div data-aos="fade-up" className="bg-base-100 rounded-xl shadow-xs hover:shadow-md  border border-base-content/5 p-4 transition duration-300">
+        <div data-aos="fade-up" className="bg-base-100 rounded-xl shadow-xs border border-base-content/5 p-4 transition duration-300 hover:border">
             <div className="flex items-center mb-4 border-b pb-3 border-gray-400">
                 <img
                     src={forum.posted_by?.image}
@@ -44,11 +44,11 @@ const ShowForumPost = ({ forum, refetch }) => {
                     className="w-10 h-10 rounded-full object-cover mr-3"
                 />
                 <div>
-                    <h4 className="font-semibold text-3xl">{forum.posted_by?.name}</h4>
+                    <h4 className="font-semi bold text-3xl">{forum.posted_by?.name}</h4>
 
                     {/* conditional role admin && trainer */}
                     {forum.posted_by?.role === 'trainer' ?
-                        <p className="text-sm text-purple-600 capitalize badge badge-accent">{forum.posted_by?.role}</p> :
+                        <p className="text-sm text-white capitalize badge badge-accent">{forum.posted_by?.role}</p> :
                         <p className="text-sm text-white capitalize badge badge-error">{forum.posted_by?.role}</p>
                     }
 
@@ -57,27 +57,27 @@ const ShowForumPost = ({ forum, refetch }) => {
             </div>
 
             <h3 className="text-2xl font-bold text-base-content mb-2">{forum.title}</h3>
-            <p className="text-base-content/70 text-xl mb-4">
+            <p className="text-base-content/70 mb-4">
                 {forum.details.length > 100 ? forum.details.slice(0, 100) + '...' : forum.details}
-                <Link to={`/dashboard/forum-details/${forum._id}`} className="text-blue-500 ml-1">see more</Link>
+                <Link to={`/dashboard/forum-details/${forum._id}`} className="text-blue-500 ml-1 hover:text-primary transition-colors duration-300">see more</Link>
             </p>
 
             <img
                 src={forum.bannerImage}
                 alt="Forum Banner"
-                className="w-full h-80 object-cover rounded-md mb-4"
+                className="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 hover:scale-105"
             />
 
             <div className="flex gap-4">
                 <button
                     onClick={() => handleVote('vote', forum._id)}
-                    className="flex items-center gap-1 text-sm px-3 py-1 rounded text-white btn btn-info"
+                    className="flex items-center gap-1 text-sm px-3 py-1 rounded text-white btn btn-info hover:bg-info/90 transition-all duration-300 transform hover:scale-105"
                 >
                     <ArrowUp size={16} /> Up-vote: {forum.count || 0}
                 </button>
                 <button
                     onClick={() => handleVote('cancelVote', forum._id)}
-                    className="flex items-center gap-1 text-sm px-3 py-1 rounded hover:text-white btn btn-soft btn-error"
+                    className="flex items-center gap-1 text-sm px-3 py-1 rounded hover:text-white btn btn-soft btn-error hover:bg-error/90 transition-all duration-300 transform hover:scale-105"
                 >
                     <ArrowDown size={16} /> Down-vote
                 </button>

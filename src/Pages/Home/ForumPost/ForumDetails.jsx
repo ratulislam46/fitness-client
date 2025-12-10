@@ -16,8 +16,6 @@ const ForumDetails = () => {
             .catch(err => console.error("Failed to load forum details", err));
     }, [axiosSecure, id]);
 
-    console.log(forumData);
-    // console.log(forumData.posted_by);
     if (!forumData) {
         return <Loading></Loading>
     }
