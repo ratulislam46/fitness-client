@@ -43,7 +43,6 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, provider)
     }
 
-
     const authInfo = {
         Register,
         SignIn,

@@ -16,7 +16,7 @@ const UseAdminRole = () => {
             return res.data.role;
         }
     })
-    console.log(role);
+    // console.log(role);
 
     return { role, isLoading, refetch }
 };

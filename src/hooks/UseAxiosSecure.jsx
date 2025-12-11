@@ -21,9 +21,7 @@ const UseAxiosSecure = () => {
         return Promise.reject(error)
     })
 
-    // admin role verify 
-    // trainer role verify 
-    // member role verify 
+    // admin, trainer, user role verify 
     axiosInstance.interceptors.response.use(res => {
         return res;
     }, error => {

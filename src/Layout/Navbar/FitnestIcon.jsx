@@ -3,6 +3,7 @@ import { FaDumbbell } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 const FitnestIcon = () => {
+    
     return (
         <Link to='/'>
             <div className='flex items-center font-bold ml-1'>

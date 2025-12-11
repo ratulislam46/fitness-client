@@ -13,7 +13,7 @@ const ShowForumPost = ({ forum, refetch }) => {
 
 
     const handleVote = async (vote, forumId) => {
-        console.log(vote, forumId);
+        // console.log(vote, forumId);
         if (!user) {
             return Swal.fire("Please login", "You must be logged in to vote", "warning");
         }
@@ -31,7 +31,6 @@ const ShowForumPost = ({ forum, refetch }) => {
             console.log('Error from forums votes', error);
         }
     }
-
 
     const date = new Date(forum.created_at).toLocaleDateString();
 

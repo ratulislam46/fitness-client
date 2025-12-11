@@ -1,8 +1,8 @@
-// components/Forbidden.jsx
 import { Link } from "react-router-dom";
 import { FaLock } from "react-icons/fa";
 
 const Forbidden = () => {
+
     return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-base-100">
             <FaLock className="text-6xl text-red-500 mb-4" />
