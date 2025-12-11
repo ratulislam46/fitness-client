@@ -1,12 +1,8 @@
-# 🌟 FitNess - Fitness & Training Platform (Client Side)
+# FitNess - Fitness & Training Platform (Client Side)
 
 FitNess is a modern fitness and training platform that allows users to explore fitness classes, book training slots, communicate via forums, and pay securely. Trainers can manage their profiles, add available slots, and track bookings. Admins have full control over the system with analytics and management tools.
 
 ---
-
-## 🔗 Live Site
-
-👉 [Live Website](https://whimsical-praline-dd388c.netlify.app/)
 
 
 ## 🚀 Features
@@ -45,14 +41,14 @@ FitNess is a modern fitness and training platform that allows users to explore f
 #### 🔹 Dashboard
 ![Dashboard](./assets/finess-dashboard.png)
 
+#### 🔹 Payment component
+![Payment](./assets/payment.png)
+
 #### 🔹 Classes Page
 ![Classes](./assets/class.png)
 
 #### 🔹 Forum page
 ![Forums](./assets/forum.png)
-
-#### 🔹 Payment component
-![Payment](./assets/payment.png)
 
 
 # Install dependencies
