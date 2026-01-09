@@ -39,19 +39,19 @@ const Team = () => {
                                 <img
                                     src={trainer?.profileImage}
                                     alt={trainer?.fullName}
-                                    className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-500 mb-4 group-hover:border-base-100 transition-colors duration-1000"
+                                    className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-secondary mb-4 group-hover:border-white transition-colors duration-1000"
                                 />
-                                <h3 className="text-xl font-semibold text-base-content group-hover:text-base-100 transition-colors duration-1000">{trainer?.fullName}</h3>
-                                <p className="text-sm md:text-md lg:text-lg text-base-content/70 mt-2 mb-3 group-hover:text-base-100/90 transition-colors duration-1000">{trainer.otherInfo}</p>
+                                <h3 className="text-xl font-semibold text-base-content group-hover:text-white transition-colors duration-1000">{trainer?.fullName}</h3>
+                                <p className="text-sm md:text-md lg:text-lg text-base-content/70 mt-2 mb-3 group-hover:text-white transition-colors duration-1000">{trainer.otherInfo}</p>
 
                                 {/* skils  */}
                                 <div className="text-sm md:text-md lg:text-lg xl:text-xl">
-                                    <span className="flex pl-2">Expertise:</span>
+                                    <span className="flex pl-2 group-hover:text-white">Expertise:</span>
                                     <div className="flex flex-wrap gap-2 mt-2">
                                         {trainer?.skills?.map((skill, index) => (
                                             <span
                                                 key={index}
-                                                className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-primary/10 text-primary border border-primary/20 group-hover:bg-base-100 group-hover:text-primary group-hover:border-base-100 transition-all duration-1000"
+                                                className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-primary/10 text-primary border border-primary/20 group-hover:bg-white group-hover:text-primary group-hover:border-primary transition-all duration-1000"
                                             >
                                                 {skill}
                                             </span>
