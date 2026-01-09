@@ -26,7 +26,9 @@ const ScrollProgress = () => {
             onClick={scrollToTop}
             className='fixed bottom-6 right-6 h-12 w-12 md:h-16 md:w-16 rounded-full border-base-100 
         bg-green-400 flex items-center justify-center text-md md:text-2xl text-white font-semibold z-50 ring-4'>
-            {Math.round(scrollPercent)} %
+            {scrollPercent >= 100 ? "↑" : `${Math.round(scrollPercent)}%`}
+
+
         </div>
     );
 };
