@@ -6,7 +6,7 @@ const NotFound = () => {
     <div className="min-h-screen bg-base-200 flex flex-col items-center justify-center text-center p-6">
       <FaExclamationTriangle className="text-6xl text-red-500 mb-4" />
 
-      <h1 className="text-5xl font-bold text-error">404</h1>
+      <h1 className="text-5xl font-semibold text-error">404</h1>
       <p className="text-xl mt-2 text-base-content/70">
         Oops! The page you’re looking for doesn’t exist.
       </p>

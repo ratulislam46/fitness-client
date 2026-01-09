@@ -34,7 +34,7 @@ const LoginPage = () => {
             </div>
             <div className="min-h-screen flex items-center justify-center px-4 bg-base-100">
                 <div className="w-full max-w-md bg-base-100 shadow-md hover:shadow-lg duration-300 p-8 border border-base-content/5">
-                    <h2 className="text-3xl font-bold text-center text-base-content mb-4">
+                    <h2 className="text-3xl font-semibold text-center text-base-content mb-4">
                         Welcome Back
                     </h2>
                     <p className="text-xl text-center text-base-content/70 mb-6">

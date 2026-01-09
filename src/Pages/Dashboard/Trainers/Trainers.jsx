@@ -49,7 +49,7 @@ const Trainers = () => {
 
     return (
         <div className="p-6">
-            <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-base-content">All Trainers</h2>
+            <h2 className="text-3xl lg:text-5xl font-semibold mb-4 text-base-content">All Trainers</h2>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full text-sm">

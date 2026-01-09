@@ -60,7 +60,7 @@ const AllClasses = () => {
               className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5">
               <img src={cls.image} className="w-full object-cover rounded mb-3" />
               <div className="px-4 space-y-4">
-                <h3 className="text-2xl font-bold">{cls.title}</h3>
+                <h3 className="text-2xl font-semibold">{cls.title}</h3>
                 <p className="text-sm text-base-content/70 mb-2 pb-4 border-b border-base-content/5">{cls.details}</p>
               </div>
               <div className="px-4">

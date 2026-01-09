@@ -44,7 +44,7 @@ const TrainersDetails = () => {
                     ) : (
                         <FaUserCircle className="w-40 h-40 text-gray-400" />
                     )}
-                    <h2 className="text-2xl font-bold mt-4">{trainer.fullName}</h2>
+                    <h2 className="text-2xl font-semibold mt-4">{trainer.fullName}</h2>
                     <p className="text-sm text-base-content/70">Age: {trainer.age}</p>
                 </div>
 
@@ -75,7 +75,7 @@ const TrainersDetails = () => {
 
             {/* Available Slots Section */}
             <div className="bg-primary/5 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-300 space-y-2">
-                <h2 className="text-xl font-bold mb-4">Available Slots</h2>
+                <h2 className="text-xl font-semibold mb-4">Available Slots</h2>
                 {slots.length === 0 ? (
                     <p className="text-base-content/70">No slots available for booking.</p>
                 ) : (
@@ -84,14 +84,14 @@ const TrainersDetails = () => {
                             <div
                                 key={slot._id}
                                 className="p-4 bg-primary/5 shadow-md hover:shadow-xl rounded-lg transition space-y-2">
-                                <h3 className="text-2xl font-bold">{slot.slotName}</h3>
+                                <h3 className="text-2xl font-semibold">{slot.slotName}</h3>
                                 <p className="text-sm font-semibold">Duration: {slot.slotDuration} hours</p>
                                 <div className="flex flex-wrap gap-2 mt-1">
                                     {slot.selectedClasses?.map((skill, i) => (
                                         <span key={i} className="text-base-content bg-primary/10  px-3 py-1 rounded-full text-sm">{skill}</span>
                                     ))}
                                 </div>
-                                <p className="text-sm "><span className="font-bold">Days: </span> {slot.availableDays.join(', ')}</p>
+                                <p className="text-sm "><span className="font-semibold">Days: </span> {slot.availableDays.join(', ')}</p>
                                 <p className="text-sm italic mt-1 text-base-content/70">{slot.note}</p>
                                 <Link
                                     to={`/book-slot/${slot._id}`}

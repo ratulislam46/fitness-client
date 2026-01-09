@@ -48,7 +48,7 @@ const Balance = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 place-items-center px-2 lg:px-0">
                 {/* total payment  */}
                 <div className="max-w-xs bg-primary/20 py-6 px-2 lg:px-10 rounded-md shadow-md text-center h-40 lg:h-32">
-                    <h2 className="text-2xl font-bold mb-2">Total Earnings</h2>
+                    <h2 className="text-2xl font-semibold mb-2">Total Earnings</h2>
                     <p className="text-4xl text-base-content font-semibold">${totalPayments.totalBalance}</p>
                 </div>
  
@@ -77,7 +77,7 @@ const Balance = () => {
 
             {/* last six payment details  */}
             <div className="overflow-x-auto bg-base-100 shadow rounded-lg p-4 mt-10 ">
-                <h2 className="text-2xl font-bold mb-4 text-base-content">Recent Payments</h2>
+                <h2 className="text-2xl font-semibold mb-4 text-base-content">Recent Payments</h2>
                 <table className="table table-zebra w-full">
                     <thead className="bg-primary/20">
                         <tr>
@@ -97,7 +97,7 @@ const Balance = () => {
                                 <td>{pay.userName}</td>
                                 <td>{pay.userEmail}</td>
                                 <td>{pay.plan}</td>
-                                <td className="text-green-500 font-bold">${pay.price}</td>
+                                <td className="text-green-500 font-semibold">${pay.price}</td>
                                 <td>{moment(pay.paymentDate).format("MMM DD, YYYY")}</td>
                                 <td className="text-sm break-all">{pay.transactionId}</td>
                             </tr>

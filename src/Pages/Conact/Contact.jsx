@@ -33,7 +33,7 @@ const Contact = () => {
 
     return (
         <div className="py-6 mt-20 container mx-auto px-4 md:px-4 border border-base-content/5 rounded-xl">
-            <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4 pb-2">Contact Us</h2>
+            <h2 className="text-3xl lg:text-5xl font-semibold text-center mb-4 pb-2">Contact Us</h2>
             <p className="mb-6 text-base-content/70 text-xl text-center">
                 Have questions or want to get in touch? Please fill out the form below.
             </p>

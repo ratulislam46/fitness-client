@@ -15,7 +15,7 @@ const TrainerList = ({ className }) => {
 
     return (
         <div className="mt-3">
-            <h4 className="text-xl italic font-bold">Trainers who Took this class</h4>
+            <h4 className="text-xl italic font-semibold">Trainers who Took this class</h4>
             <div className="flex gap-2 mt-2">
                 {trainers.map(trainer => (
                     <Link key={trainer._id} to={`/trainer/${trainer._id}`}>

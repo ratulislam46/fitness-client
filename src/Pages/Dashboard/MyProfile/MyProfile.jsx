@@ -99,7 +99,7 @@ const MyProfile = () => {
             </div>
 
             <div className="mt-8 bg-base-100 p-6 rounded-lg shadow-md">
-                <h2 className="text-3xl font-bold mb-4 text-center">My Profile</h2>
+                <h2 className="text-3xl font-semibold mb-4 text-center">My Profile</h2>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                     {/* Name */}

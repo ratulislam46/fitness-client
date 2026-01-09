@@ -27,7 +27,7 @@ const ForumPost = () => {
         <section className="container mx-auto py-16 px-1 md:px-0 bg-base-100">
 
             {/* Heading  */}
-            <Header title='Upcoming Forums' subtitle='See what the community is talking about right now.' />
+            <Header title='Recent Forums' subtitle='See what the community is talking about right now.' />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {forums.map((forum) =>

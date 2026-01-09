@@ -53,10 +53,10 @@ const AllForumPost = ({ forum, refetch }) => {
                     }
 
                 </div>
-                <p className="ml-auto text-sm text-base-content/70 font-bold flex gap-1 items-center"><SlCalender color='red' /> {date}</p>
+                <p className="ml-auto text-sm text-base-content/70 font-semibold flex gap-1 items-center"><SlCalender color='red' /> {date}</p>
             </div>
 
-            <h3 className="text-2xl font-bold text-base-content mb-2">{forum.title}</h3>
+            <h3 className="text-2xl font-semibold text-base-content mb-2">{forum.title}</h3>
             <p className="text-base-content/70 text-sm mb-4">
                 {forum.details.length > 100 ? forum.details.slice(0, 100) + '...' : forum.details}
                 <Link to={`/single-forum-details/${forum._id}`} className="text-blue-500 ml-1">see more</Link>

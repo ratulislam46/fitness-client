@@ -98,7 +98,7 @@ const AddNewSlot = () => {
 
     return (
         <div className="container mx-auto p-6 md:p-10">
-            <h2 className="text-3xl lg:text-5xl font-bold text-center mb-6">Add New Slot</h2>
+            <h2 className="text-3xl lg:text-5xl font-semibold text-center mb-6">Add New Slot</h2>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 {/* Trainer Info */}

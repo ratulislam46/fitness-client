@@ -54,7 +54,7 @@ const BeATrainer = () => {
 
     return (
         <div className="container mx-auto shadow-md p-6 rounded-md mt-24 mb-10">
-            <h2 data-aos="fade-up" className="text-3xl lg:text-5xl font-bold text-center mb-8 pb-4">Apply to be a Trainer</h2>
+            <h2 data-aos="fade-up" className="text-3xl lg:text-5xl font-semibold text-center mb-8 pb-4">Apply to be a Trainer</h2>
             <form
                 data-aos="fade-up"
                 onSubmit={handleSubmit(onSubmit)} className="space-y-4">

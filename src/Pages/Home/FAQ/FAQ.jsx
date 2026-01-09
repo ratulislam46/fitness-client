@@ -4,7 +4,7 @@ const FAQ = () => {
     return (
         <section className="py-16">
             <div className="flex flex-col justify-center px-1 md:px-1 lg:px-1 md:p-8">
-                <h2 data-aos="fade-up" className="text-3xl lg:text-5xl font-semibold text-center">Frequently Asked <span className='text-primary'>Questions</span></h2>
+                <h2 data-aos="fade-up" className="text-3xl lg:text-5xl text-center">Frequently Asked <span className='text-primary'>Questions</span></h2>
                 <p data-aos="fade-up" className="mt-4 mb-8 text-base-content/70 text-xl text-center">Sagittis tempor donec id vestibulum viverra. Neque condimentum primis orci at lacus amet bibendum.</p>
                 <div className="space-y-4">
                     <details data-aos="fade-up" className="w-full border border-base-content/5 rounded-lg hover:bg-primary/5" open="">

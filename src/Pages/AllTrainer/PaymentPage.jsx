@@ -48,7 +48,7 @@ const PaymentPage = () => {
     return (
         <div className="mt-28 mb-12 px-1 lg:px-0">
             <div className="max-w-3xl mx-auto bg-base-100 border border-base-content/5  rounded-xl shadow-lg p-6 mt-10 space-y-4">
-                <h2 className="text-2xl font-bold text-center text-base-content mb-6 border-b-3 pb-2">
+                <h2 className="text-2xl font-semibold text-center text-base-content mb-6 border-b-3 pb-2">
                     Booking Summary
                 </h2>
 

@@ -6,7 +6,7 @@ const FitnestIcon = () => {
     
     return (
         <Link to='/'>
-            <div className='flex items-center font-bold ml-1'>
+            <div className='flex items-center font-semibold ml-1'>
                 <FaDumbbell size={20} className='mr-1'/>
                 <h3 className='text-xl'><span className='text-primary'>FIT</span>NESS</h3>
             </div>

@@ -36,7 +36,7 @@ const ActivityLog = () => {
 
     return (
         <div className="p-6">
-            <h2 className="text-3xl font-bold mb-4 text-base-content">Trainer Application Activity Log</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-base-content">Trainer Application Activity Log</h2>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full text-sm">
@@ -72,7 +72,7 @@ const ActivityLog = () => {
                                                 <button onClick={() => setSelectedFeedback(app)} className="btn btn-soft btn-info">
                                                     <FaEye />
                                                 </button> :
-                                                <p className="font-bold text-gray-400">Nothing</p>
+                                                <p className="font-semibold text-gray-400">Nothing</p>
                                         }
                                     </td>
                                 </tr>

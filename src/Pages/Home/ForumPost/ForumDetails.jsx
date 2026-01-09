@@ -45,7 +45,7 @@ const ForumDetails = () => {
 
                     </div>
                 </div>
-                <p className="ml-auto text-sm text-base-content/70 font-bold flex gap-1 items-center"> <SlCalender color='red' />{date}</p>
+                <p className="ml-auto text-sm text-base-content/70 font-semibold flex gap-1 items-center"> <SlCalender color='red' />{date}</p>
             </div>
 
             {/* Image */}
@@ -58,7 +58,7 @@ const ForumDetails = () => {
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-base-content mb-6 leading-snug">{title}</h1>
+            <h1 className="text-3xl md:text-4xl font-semibold text-base-content mb-6 leading-snug">{title}</h1>
 
             {/* Details */}
             <div className="text-base-content/70 text-base leading-7">

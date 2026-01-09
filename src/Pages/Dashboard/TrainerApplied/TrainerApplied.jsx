@@ -89,7 +89,7 @@ const TrainerApplied = () => {
 
     return (
         <div className="px-1 mt-4 text-center">
-            <h2 className="text-3xl lg:text-5xl font-bold mt-0 md:mt-8 mb-4 md:mb-8 text-base-content">Applied Trainers</h2>
+            <h2 className="text-3xl lg:text-5xl font-semibold mt-0 md:mt-8 mb-4 md:mb-8 text-base-content">Applied Trainers</h2>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full text-sm">
@@ -151,7 +151,7 @@ const TrainerApplied = () => {
                 {openRejectModal && selectedTrainer && (
                     <dialog open className="modal modal-middle">
                         <div className="modal-box border border-red-300 shadow-xl">
-                            <h3 className="font-bold text-lg text-red-600 mb-2">Reject Trainer</h3>
+                            <h3 className="font-semibold text-lg text-red-600 mb-2">Reject Trainer</h3>
 
                             <div className="space-y-1">
                                 <p><strong>Name:</strong> {selectedTrainer.fullName}</p>

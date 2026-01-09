@@ -49,7 +49,7 @@ const ManageSlot = () => {
 
     return (
         <div className="container mx-auto p-6 md:p-10">
-            <h2 className="text-3xl lg:text-5xl font-bold text-center mb-6">Manage Your Slots</h2>
+            <h2 className="text-3xl lg:text-5xl font-semibold text-center mb-6">Manage Your Slots</h2>
 
             {slots.length === 0 ? (
                 <p className="text-center text-base-content/70">No slots found.</p>

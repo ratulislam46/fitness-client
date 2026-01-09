@@ -14,7 +14,7 @@ const ShowLatestClass = ({ signleClass, refetch }) => {
                 className="bg-base-100 p-6 rounded-xl shadow-xs hover:shadow-md border border-base-content/5 h-[550px] flex flex-col justify-between">
                 <img src={signleClass.image} className="w-full object-cover rounded mb-3" />
                 <div className="px-4 space-y-4">
-                    <h3 className="text-2xl font-bold">{signleClass.title}</h3>
+                    <h3 className="text-2xl font-semibold">{signleClass.title}</h3>
                     <p className="text-sm text-base-content/70 mb-2 pb-4 border-b border-base-content/5">{signleClass.details}</p>
                 </div>
                 <div className="px-4">
