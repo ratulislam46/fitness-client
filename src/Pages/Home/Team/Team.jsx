@@ -31,23 +31,34 @@ const Team = () => {
                         <div
                             data-aos="fade-up"
                             key={idx}
-                            className="bg-base-100 border border-base-content/5 rounded-xl shadow-md duration-300 transition p-6 hover:bg-primary/5">
-                            <img
-                                src={trainer?.profileImage}
-                                alt={trainer?.fullName}
-                                className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-500 mb-4"
-                            />
-                            <h3 className="text-xl font-semibold text-base-content">{trainer?.fullName}</h3>
-                            <p className="text-sm md:text-md lg:text-lg text-base-content/70 mt-2 mb-3">{trainer.otherInfo}</p>
-                            <div className="text-sm md:text-md lg:text-lg xl:text-xl">
-                                <span className="font-semibold text-primary">Expertise:</span>
-                                <ul className="mt-1 list-disc list-inside">
-                                    {trainer?.skills?.map((skill, index) => (
-                                        <div key={index}>
-                                            <p>{skill}</p>
-                                        </div>
-                                    ))}
-                                </ul>
+                            className="bg-base-100 border border-base-content/5 rounded-xl shadow-md duration-300 transition p-6 relative overflow-hidden group">
+                            {/* Hover overlay that slides from bottom */}
+                            <div className="absolute inset-0 bg-primary transform translate-y-full group-hover:translate-y-0 transition-transform duration-1000"></div>
+
+                            <div className="relative z-10">
+                                <img
+                                    src={trainer?.profileImage}
+                                    alt={trainer?.fullName}
+                                    className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-500 mb-4 group-hover:border-base-100 transition-colors duration-1000"
+                                />
+                                <h3 className="text-xl font-semibold text-base-content group-hover:text-base-100 transition-colors duration-1000">{trainer?.fullName}</h3>
+                                <p className="text-sm md:text-md lg:text-lg text-base-content/70 mt-2 mb-3 group-hover:text-base-100/90 transition-colors duration-1000">{trainer.otherInfo}</p>
+
+                                {/* skils  */}
+                                <div className="text-sm md:text-md lg:text-lg xl:text-xl">
+                                    <span className="flex pl-2">Expertise:</span>
+                                    <div className="flex flex-wrap gap-2 mt-2">
+                                        {trainer?.skills?.map((skill, index) => (
+                                            <span
+                                                key={index}
+                                                className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-primary/10 text-primary border border-primary/20 group-hover:bg-base-100 group-hover:text-primary group-hover:border-base-100 transition-all duration-1000"
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     ))}
