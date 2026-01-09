@@ -6,7 +6,7 @@ const Header = ({ title, subtitle }) => {
             <h2 data-aos="fade-up" className="text-3xl lg:text-5xl font-bold text-center text-base-content">
                 {title}
             </h2>
-            <p className="text-base-content/70 mb-4 text-xl text-center">
+            <p  data-aos="fade-up" className="text-base-content/70 mb-4 text-xl text-center">
                 {subtitle}
             </p>
         </div>

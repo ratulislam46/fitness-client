@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import UseAxiosSecure from "../../hooks/useAxiosSecure";
 import Loading from "../../Components/Loading/Loading";
+import Header from "../../Components/Shared/Header";
 
 const AllTrainer = () => {
     const axiosSecure = UseAxiosSecure()
@@ -20,7 +21,7 @@ const AllTrainer = () => {
 
     return (
         <section className="py-16 bg-base-100 mt-10 container mx-auto px-1 md:px-0">
-            <h2 data-aos="fade-up" className="text-3xl lg:text-5xl font-bold text-center mb-8">Meet Our Trainers</h2>
+            <Header title='Meet Our Trainers' subtitle='Get to know the experts who will guide your fitness journey.' />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {trainers.map((trainer) => (

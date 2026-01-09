@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router';
 import ShowLatestClass from './ShowLatestClass';
 import Loading from '../../../Components/Loading/Loading';
+import Header from '../../../Components/Shared/Header';
 
 const LatestClass = () => {
 
@@ -17,20 +18,20 @@ const LatestClass = () => {
         }
     })
     // console.log(classes);
-    if(isLoading) return <Loading/>
+    if (isLoading) return <Loading />
 
     return (
         <div className="container mx-auto py-16 px-1 md:px-0 bg-base-100">
-            <h2 data-aos="fade-up" className="text-3xl lg:text-5xl font-bold text-center mb-8 text-base-content">Latest Classes</h2>
+            <Header title='Upcoming Classes' subtitle='Explore the newest classes and start learning today.' />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {classes.map((signleClass) =>
-                <ShowLatestClass
-                    key={signleClass._id}
-                    signleClass={signleClass}
-                    refetch={refetch}
-                >
-                </ShowLatestClass>
+                    <ShowLatestClass
+                        key={signleClass._id}
+                        signleClass={signleClass}
+                        refetch={refetch}
+                    >
+                    </ShowLatestClass>
                 )}
             </div>
             <div data-aos="fade-up" className='flex justify-center mt-12'>

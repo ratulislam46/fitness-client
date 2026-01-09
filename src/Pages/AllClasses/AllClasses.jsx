@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import UseAxios from '../../hooks/UseAxios';
 import TrainerList from './TrainerList';
 import Loading from '../../Components/Loading/Loading';
+import Header from '../../Components/Shared/Header';
 
 const AllClasses = () => {
   const [page, setPage] = useState(1);
@@ -36,7 +37,7 @@ const AllClasses = () => {
 
   return (
     <div className="py-6 mt-20 container mx-auto px-1 md:px-0">
-      <h2 data-aos="fade-up" className="text-3xl lg:text-5xl font-bold text-center mb-8 pb-2">All Classes</h2>
+      <Header title='Explore All Classes' subtitle='Discover all learning opportunities and start your journey today' />
 
       {/*  Search Input */}
       <div data-aos="fade-up" className="mb-8">
