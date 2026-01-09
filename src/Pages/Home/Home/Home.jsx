@@ -15,8 +15,8 @@ const Home = () => {
             <section className='mb-4 mt-16'>
                 <Banner></Banner>
             </section>
-            <div className='container mx-auto'>
 
+            <div className='container mx-auto'>
                 <section className='mb-4'>
                     <Featured></Featured>
                 </section>

@@ -3,22 +3,22 @@ import { GiProgression } from "react-icons/gi";
 
 const features = [
     {
-        icon: <FaChartLine className="text-4xl text-primary mb-4" />,
+        icon: <FaChartLine className="text-4xl text-secondary mb-4" />,
         title: "Track Your Progress",
         desc: "Monitor your daily activity, calories, water intake, and more in real-time.",
     },
     {
-        icon: <GiProgression className="text-4xl text-primary mb-4" />,
+        icon: <GiProgression className="text-4xl text-secondary mb-4" />,
         title: "Smart Goals",
         desc: "Set personal fitness goals and watch your growth with smart analytics.",
     },
     {
-        icon: <FaUserFriends className="text-4xl text-primary mb-4" />,
+        icon: <FaUserFriends className="text-4xl text-secondary mb-4" />,
         title: "Join Challenges",
         desc: "Participate in global fitness challenges and climb the leaderboard.",
     },
     {
-        icon: <FaDumbbell className="text-4xl text-primary mb-4" />,
+        icon: <FaDumbbell className="text-4xl text-secondary mb-4" />,
         title: "Expert Trainers",
         desc: "Get guidance from certified trainers through videos and tips.",
     },
@@ -33,11 +33,18 @@ const Featured = () => {
 
                 <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     {features.map((item, index) => (
-                        <div key={index} className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-300">
-                            <div className="flex flex-col items-center text-center">
+                        <div 
+                            key={index} 
+                            className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-lg border border-base-content/5 transition-all duration-1000 relative overflow-hidden group"
+                        >
+                            {/* Hover overlay that slides from bottom */}
+                            <div className="absolute inset-0 bg-primary transform translate-y-full group-hover:translate-y-0 transition-transform duration-1000"></div>
+                            
+                            {/* Content container */}
+                            <div className="relative z-10 flex flex-col items-center text-center">
                                 {item.icon}
-                                <h3 className="text-xl font-semibold text-base-content mb-2">{item.title}</h3>
-                                <p className="text-base-content/70 text-md">{item.desc}</p>
+                                <h3 className="text-xl font-semibold text-base-content mb-2 group-hover:text-white transition-colors duration-1000">{item.title}</h3>
+                                <p className="text-base-content/70 text-md group-hover:text-white transition-colors duration-1000">{item.desc}</p>
                             </div>
                         </div>
                     ))}

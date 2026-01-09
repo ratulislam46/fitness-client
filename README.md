@@ -1,4 +1,4 @@
-# FitNess - Fitness & Training Platform (Client Side)
+# FitNess - Fitness & Training Platform
 
 FitNess is a modern fitness and training platform that allows users to explore fitness classes, book training slots, communicate via forums, and pay securely. Trainers can manage their profiles, add available slots, and track bookings. Admins have full control over the system with analytics and management tools.
 
@@ -57,6 +57,3 @@ npm install
 # Run the development server
 npm run dev
 
-## ADMIN Email & pass
-hero@gmail.com
-123456
