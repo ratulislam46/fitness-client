@@ -23,6 +23,7 @@ const About = () => {
                         src={workout}
                         alt="fitness-workout"
                         className="rounded-xl shadow-lg w-full"
+                        loading='lazy'
                     />
                 </div>
             </div>
