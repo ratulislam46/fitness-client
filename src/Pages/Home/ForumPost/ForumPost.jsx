@@ -1,10 +1,10 @@
 import React from 'react';
 import UseAxiosSecure from '../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
-import { Link } from 'react-router';
 import Loading from '../../../Components/Loading/Loading';
 import ShowForumPost from './ShowForumPost';
 import Header from '../../../Components/Shared/Header';
+import ButtonTwo from '../../../Components/Button/ButtonTwo';
 
 const ForumPost = () => {
 
@@ -30,7 +30,7 @@ const ForumPost = () => {
             <Header title='Recent Forums' subtitle='See what the community is talking about right now.' />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {forums.map((forum) =>
+                {forums?.map((forum) =>
                     <ShowForumPost
                         key={forum._id}
                         forum={forum}
@@ -39,8 +39,9 @@ const ForumPost = () => {
                     </ShowForumPost>
                 )}
             </div>
+
             <div data-aos="fade-up" className='flex justify-center mt-12'>
-                <Link to='/all-forum-post' className='text-white bg-primary px-8 py-3 hover:ring-2 hover:ring-primary duration-300 rounded-xl'>See All Forums</Link>
+                <ButtonTwo address='/all-forum-post' text='See All Forum' />
             </div>
         </section>
     );

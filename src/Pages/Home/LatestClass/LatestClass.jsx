@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import ShowLatestClass from './ShowLatestClass';
 import Loading from '../../../Components/Loading/Loading';
 import Header from '../../../Components/Shared/Header';
+import ButtonTwo from '../../../Components/Button/ButtonTwo';
 
 const LatestClass = () => {
 
@@ -35,7 +36,7 @@ const LatestClass = () => {
                 )}
             </div>
             <div data-aos="fade-up" className='flex justify-center mt-12'>
-                <Link to='/classes' className='text-white bg-primary px-8 py-3 hover:ring-2 hover:ring-primary duration-300 rounded-xl'>See All Class</Link>
+                <ButtonTwo address='/classes' text='See All Class' />
             </div>
         </div>
     );

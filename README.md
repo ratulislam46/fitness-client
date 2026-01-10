@@ -135,7 +135,7 @@ FitNess is a modern fitness and training platform that allows users to explore f
 
 ---
 
-## 📦 Install Dependencies
+## Install Dependencies
 ```bash
 npm install
 ```
