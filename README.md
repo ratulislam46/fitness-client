@@ -89,9 +89,46 @@ FitNess is a modern fitness and training platform that allows users to explore f
 
 ---
 
+## 🧪 Demo Credentials
+- **User Email:** tamim@gmail.com
+- **Password:** 111111
+- **Trainer Email:** sourav@gmail.com
+- **Password:** 111111
+
+---
+
+
+## 🧩 Challenges & Solutions
+
+- **Problem:** Designing a scalable role-based access system as the application grew  
+  **Solution:** Implemented protected routes, role-based guards, and centralized permission logic to ensure scalability and clean access control.
+
+- **Problem:** Preventing invalid or duplicate Stripe payments in real-world scenarios  
+  **Solution:** Used Stripe Elements with server-side payment intent verification and handled edge cases like page refresh and double submission.
+
+- **Problem:** Managing complex server state and reducing unnecessary API calls  
+  **Solution:** Adopted TanStack React Query with caching, background refetching, and request deduplication to optimize performance.
+
+- **Problem:** Keeping large forms performant and maintainable  
+  **Solution:** Leveraged React Hook Form with controlled and uncontrolled inputs to minimize re-renders and simplify validation logic.
+
+- **Problem:** Maintaining UI smoothness while using multiple animation libraries  
+  **Solution:** Carefully orchestrated Framer Motion and AOS animations to avoid layout shifts and performance bottlenecks.
+
+- **Problem:** Avoiding tight coupling between UI and business logic  
+  **Solution:** Abstracted logic into reusable custom hooks and utility functions for better separation of concerns.
+
+- **Problem:** Securing sensitive configuration and third-party keys  
+  **Solution:** Used environment variables with Vite’s build-time configuration and ensured no secrets were exposed to the client repository.
+
+- **Problem:** Ensuring long-term maintainability as the codebase expanded  
+  **Solution:** Followed consistent folder conventions, reusable component patterns, and ESLint rules to enforce code quality.
+
 
 # Install dependencies
 npm install
+
+---
 
 # Run the development server
 npm run dev
