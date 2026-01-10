@@ -4,6 +4,10 @@ FitNess is a modern fitness and training platform that allows users to explore f
 
 ---
 
+## 🚀 Live Demo
+🔗 Live Site: https://whimsical-praline-dd388c.netlify.app/
+
+
 
 ## 🚀 Features
 
@@ -18,19 +22,61 @@ FitNess is a modern fitness and training platform that allows users to explore f
 
 ---
 
+
 ## 🛠 Tech Stack
 
-- **React**
-- **React Router DOM**
-- **React Hook Form**
-- **Tailwind CSS** + **DaisyUI**
-- **Axios** + **Custom Secure Axios Hook**
-- **Stripe JS** (Payment Gateway)
-- **AOS (Animate On Scroll)**
+### 🌐 Frontend
+- **React (v19)** – Modern frontend library
+- **React DOM**
+- **React Router & React Router DOM (v7)** – Client-side routing
+- **Tailwind CSS (v4)** – Utility-first CSS framework
+- **DaisyUI** – Tailwind-based component library
+- **Framer Motion** – Animations & transitions
+- **AOS (Animate On Scroll)** – Scroll-based animations
+
+### 🧩 State & Data Management
+- **TanStack React Query** – Server state & data fetching
+- **Axios** – HTTP client for API communication
+- **Secure Axios Instance** – Protected API requests
+
+### 📝 Forms & Input Handling
+- **React Hook Form** – Form handling & validation
+- **React Select** – Advanced select inputs
+
+### 💳 Payment Integration
+- **Stripe JS**
+- **@stripe/react-stripe-js**
+- **@stripe/stripe-js**
+
+### 🔐 Authentication & Services
+- **Firebase** – Authentication & user management
+- **EmailJS** – Client-side email sending
+
+### 📊 Charts & UI Components
+- **Recharts**
+- **react-chartjs-2**
+- **Swiper**
+- **React Multi Carousel**
+- **React Responsive Carousel**
+- **React Icons**
+- **Lucide React**
+- **Moment.js**
+
+### 🎨 Visual Effects & Loaders
+- **tsparticles / react-tsparticles**
+- **react-particles**
+- **react-spinners**
+
+### 🔔 Notifications & Alerts
+- **React Hot Toast**
 - **SweetAlert2**
-- **TanStack Query** + **Axios**
+
+### 🛠 Development Tools
+- **Vite** – Fast development & build tool
+- **ESLint** – Code linting & quality assurance
 
 ---
+
 
 ## 📸 Screenshots
 
@@ -38,17 +84,10 @@ FitNess is a modern fitness and training platform that allows users to explore f
 
 ![Homepage](./assets/fitness-home.png)
 
-#### 🔹 Dashboard
-![Dashboard](./assets/finess-dashboard.png)
+#### 🔹 Register Page
+![Dashboard](./assets/register-page.png)
 
-#### 🔹 Payment component
-![Payment](./assets/payment.png)
-
-#### 🔹 Classes Page
-![Classes](./assets/class.png)
-
-#### 🔹 Forum page
-![Forums](./assets/forum.png)
+---
 
 
 # Install dependencies
