@@ -78,26 +78,6 @@ FitNess is a modern fitness and training platform that allows users to explore f
 ---
 
 
-## 📸 Screenshots
-
-#### 🔹 Home Page
-
-![Homepage](./assets/fitness-home.png)
-
-#### 🔹 Register Page
-![Dashboard](./assets/register-page.png)
-
----
-
-## 🧪 Demo Credentials
-- **User Email:** tamim@gmail.com
-- **Password:** 111111
-- **Trainer Email:** sourav@gmail.com
-- **Password:** 111111
-
----
-
-
 ## 🧩 Challenges & Solutions
 
 - **Problem:** Designing a scalable role-based access system as the application grew  
@@ -124,12 +104,37 @@ FitNess is a modern fitness and training platform that allows users to explore f
 - **Problem:** Ensuring long-term maintainability as the codebase expanded  
   **Solution:** Followed consistent folder conventions, reusable component patterns, and ESLint rules to enforce code quality.
 
+---
 
+
+## 📸 Screenshots
+
+#### 🔹 Home Page
+
+![Homepage](./assets/fitness-home.png)
+
+#### 🔹 Register Page
+![Dashboard](./assets/register-page.png)
+
+---
+
+## 🧪 Demo Credentials
+- **User Email:** tamim@gmail.com
+- **Password:** 111111
+- **Trainer Email:** sourav@gmail.com
+- **Password:** 111111
+
+---
+
+```md
 # Install dependencies
+```bash
 npm install
 
 ---
 
-# Run the development server
+```md
+## Start Development Server
+```bash
 npm run dev
 
