@@ -1,4 +1,4 @@
-# FitNess - Fitness & Training Platform
+# 🏋️ FitNess - Fitness & Training Platform
 
 FitNess is a modern fitness and training platform that allows users to explore fitness classes, book training slots, communicate via forums, and pay securely. Trainers can manage their profiles, add available slots, and track bookings. Admins have full control over the system with analytics and management tools.
 
@@ -9,7 +9,7 @@ FitNess is a modern fitness and training platform that allows users to explore f
 
 
 
-## 🚀 Features
+## ✨ Features
 
 - 🧘 Browse and join fitness classes
 - 📆 Book training slots with available trainers
@@ -107,6 +107,15 @@ FitNess is a modern fitness and training platform that allows users to explore f
 ---
 
 
+## 🧠 What I Learned
+- Building scalable React applications
+- Implementing secure authentication & authorization
+- Integrating Stripe payments safely
+- Managing server state with React Query
+- Writing clean, reusable, and maintainable code
+
+---
+
 ## 📸 Screenshots
 
 #### 🔹 Home Page
@@ -126,15 +135,14 @@ FitNess is a modern fitness and training platform that allows users to explore f
 
 ---
 
-```md
-# Install dependencies
+## 📦 Install Dependencies
 ```bash
 npm install
+```
 
 ---
 
-```md
 ## Start Development Server
 ```bash
 npm run dev
-
+```
