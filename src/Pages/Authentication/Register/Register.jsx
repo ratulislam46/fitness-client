@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import UseAxios from '../../../hooks/UseAxios';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 import axios from 'axios';
+import AuthBackground from '../../../Components/Shared/AuthBackground';
 
 const Register = () => {
 
@@ -63,67 +64,58 @@ const Register = () => {
 
     return (
         <div>
-            <div className="bg-base-100 lg:pl-6 lg:pt-6 pt-2">
-                <FitnestIcon></FitnestIcon>
-            </div>
-            <div className="min-h-screen flex items-center justify-center px-4 bg-base-100">
-                <div className="w-full max-w-md bg-base-100 shadow-md hover:shadow-lg duration-300 rounded-lg p-8 border border-base-content/5">
-                    <h2 className="text-3xl font-semibold text-center text-base-content mb-4">
-                        Register an account!
-                    </h2>
-                    <form onSubmit={handleSubmit(handleRegister)}>
-                        <fieldset className="fieldset">
+            <AuthBackground>
+                <form onSubmit={handleSubmit(handleRegister)}>
+                    <fieldset className="fieldset">
 
-                            {/* name field  */}
-                            <label className="label">Your Name</label>
-                            <input
-                                type="text "
-                                {...register("name", { required: true })}
-                                className="input w-full" placeholder="Your Name" />
+                        {/* name field  */}
+                        <label className="label">Your Name</label>
+                        <input
+                            type="text "
+                            {...register("name", { required: true })}
+                            className="input w-full" placeholder="Md Ratul Howlader" />
 
-                            {/* image field */}
-                            <label className="label">Image</label>
-                            <input
-                                onChange={handleImageUpload}
-                                type="file" name='image'
-                                className='input pt-2 font-semibold w-full' />
+                        {/* image field */}
+                        <label className="label">Image</label>
+                        <input
+                            onChange={handleImageUpload}
+                            type="file" name='image'
+                            className='input pt-2 font-semibold w-full' />
 
 
-                            {/* email field  */}
-                            <label className="label">Email</label>
-                            <input
-                                type="email"
-                                {...register("email", { required: true })}
-                                className="input w-full" placeholder="Email" />
-                            {errors.email?.type === 'required' && <p className='text-red-500'>Email required</p>}
+                        {/* email field  */}
+                        <label className="label">Email</label>
+                        <input
+                            type="email"
+                            {...register("email", { required: true })}
+                            className="input w-full" placeholder="arfanratul46@gmail.com" />
+                        {errors.email?.type === 'required' && <p className='text-red-500'>Email required</p>}
 
 
-                            {/* password field*/}
-                            <label className="label">Password</label>
-                            <input
-                                type="password"
-                                {...register("password", { required: true, minLength: 6 })}
-                                className="input w-full" placeholder="Password" />
-                            {errors.password?.type === 'required' && <p className='text-red-500'>Password required</p>}
-                            {errors.password?.type === 'minLength' && <p className='text-red-500'>Password must be 6 character or longer</p>}
+                        {/* password field*/}
+                        <label className="label">Password</label>
+                        <input
+                            type="password"
+                            {...register("password", { required: true, minLength: 6 })}
+                            className="input w-full" placeholder="• • • • • •" />
+                        {errors.password?.type === 'required' && <p className='text-red-500'>Password required</p>}
+                        {errors.password?.type === 'minLength' && <p className='text-red-500'>Password must be 6 character or longer</p>}
 
-                            <button className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition mt-2">Register</button>
+                        <button className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition mt-2">Register</button>
 
-                            <div><p className='pl-2'>Already you have account!
-                                <Link to='/login' className='text-blue-600 underline ml-1'>Login</Link> </p></div>
-                        </fieldset>
+                        <div><p className='pl-2'>Already you have account!
+                            <Link to='/login' className='text-blue-600 underline ml-1'>Login</Link> </p></div>
+                    </fieldset>
 
-                        <div className=" text-center">
-                            <div className="divider">Or Continue With</div>
+                    <div className=" text-center">
+                        <div className="divider">Or Continue With</div>
 
-                            {/* google login */}
-                            <GoogleSignIn></GoogleSignIn>
+                        {/* google login */}
+                        <GoogleSignIn></GoogleSignIn>
 
-                        </div>
-                    </form>
-
-                </div>
-            </div>
+                    </div>
+                </form>
+            </AuthBackground>
         </div>
     );
 };
