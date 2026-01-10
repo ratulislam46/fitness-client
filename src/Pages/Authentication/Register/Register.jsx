@@ -64,7 +64,7 @@ const Register = () => {
 
     return (
         <div>
-            <AuthBackground>
+            <AuthBackground title='Create an Account' subtitle='Join now to streamline your experience from day one' pageName='Sign Up'>
                 <form onSubmit={handleSubmit(handleRegister)}>
                     <fieldset className="fieldset">
 

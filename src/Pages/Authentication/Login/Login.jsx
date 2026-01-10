@@ -32,7 +32,7 @@ const LoginPage = () => {
 
     return (
         <div>
-            <AuthBackground>
+            <AuthBackground title='Welcome Back to' subtitle='Sign in your account' pageName='Sign in'>
                 <form onSubmit={handleSubmit(handleLogin)} className="space-y-4">
                     <fieldset className="fieldset">
                         {/* email field  */}
