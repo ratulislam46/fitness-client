@@ -36,53 +36,69 @@ const ShowForumPost = ({ forum, refetch }) => {
     const date = new Date(forum.created_at).toLocaleDateString();
 
     return (
-        <div data-aos="fade-up" className="bg-base-100 rounded-xl shadow-xs border border-base-content/5 p-4 transition duration-300 hover:border">
-            <div className="flex items-center mb-4 border-b pb-3 border-gray-400">
-                <img
-                    src={forum.posted_by?.image}
-                    alt="Profile"
-                    className="w-10 h-10 rounded-full object-cover mr-3"
-                />
-                <div>
-                    <h4 className="text-2xl">{forum.posted_by?.name}</h4>
-
-                    {/* conditional role admin && trainer */}
-                    {forum.posted_by?.role === 'trainer' ?
-                        <p className="text-sm text-white capitalize badge badge-accent">{forum.posted_by?.role}</p> :
-                        <p className="text-sm text-white capitalize badge badge-error">{forum.posted_by?.role}</p>
-                    }
-
-                </div>
-                <p className="ml-auto text-md text-base-content font-semibold flex gap-1 items-center"><SlCalender color='red' /> {date}</p>
-            </div>
-
-            <h3 className="text-2xl text-base-content mb-2">{forum.title}</h3>
-            <p className="text-base-content/70 mb-4">
-                {forum.details.length > 100 ? forum.details.slice(0, 100) + '...' : forum.details}
-                <Link to={`/dashboard/forum-details/${forum._id}`} className="text-blue-500 ml-1 hover:text-primary transition-colors duration-300">see more</Link>
-            </p>
+        <div
+            data-aos="fade-up"
+            className="group bg-base-100 rounded-2xl border border-base-content/5 overflow-hidden transition-all duration-1000 hover:text-primary-content relative"
+        >
+            <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-1000 z-0" />
 
             <img
                 src={forum.bannerImage}
                 alt="Forum Banner"
-                className="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 hover:scale-105"
+                className="w-full h-64 object-cover relative z-10 transition-transform duration-700 group-hover:scale-105"
             />
 
-            <div className="flex gap-4">
-                <button
-                    onClick={() => handleVote('vote', forum._id)}
-                    className="flex items-center gap-1 text-sm px-3 py-1 rounded text-white btn btn-info hover:bg-info/90 transition-all duration-300 transform hover:scale-105"
-                >
-                    <ArrowUp size={16} /> Up-vote: {forum.count || 0}
-                </button>
-                <button
-                    onClick={() => handleVote('cancelVote', forum._id)}
-                    className="flex items-center gap-1 text-sm px-3 py-1 rounded hover:text-white btn btn-soft btn-error hover:bg-error/90 transition-all duration-300 transform hover:scale-105"
-                >
-                    <ArrowDown size={16} /> Down-vote
-                </button>
+            <div className="p-4 space-y-3 relative z-10">
+                <div className="flex items-center gap-3">
+                    <img src={forum.posted_by?.image} className="w-9 h-9 rounded-full" />
+                    <div>
+                        <h4 className="text-lg font-semibold">{forum.posted_by?.name}</h4>
+                        <span className="badge badge-sm capitalize">{forum.posted_by?.role}</span>
+                    </div>
+                    <p className="ml-auto text-sm flex items-center gap-1">
+                        <SlCalender className="text-red-500" /> {date}
+                    </p>
+                </div>
+
+                <h3 className="text-xl font-semibold">{forum.title}</h3>
+
+                <p className="text-sm opacity-80">
+                    {forum.details.slice(0, 100)}...
+                    <Link to={`/dashboard/forum-details/${forum._id}`} className="ml-1 underline">
+                        see more
+                    </Link>
+                </p>
+
+                {/* Actions */}
+                <div className="flex gap-4 relative z-10">
+                    <button
+                        onClick={() => handleVote('vote', forum._id)}
+                        className="
+                flex items-center gap-1 text-sm px-4 py-1.5 rounded
+                btn btn-info text-white
+                transition-all duration-300
+                hover:scale-105
+            "
+                    >
+                        <ArrowUp size={16} /> Up-vote: {forum.count || 0}
+                    </button>
+
+                    <button
+                        onClick={() => handleVote('cancelVote', forum._id)}
+                        className="
+                flex items-center gap-1 text-sm px-4 py-1.5 rounded
+                btn btn-error btn-soft
+                transition-all duration-300
+                hover:scale-105
+            "
+                    >
+                        <ArrowDown size={16} /> Down-vote
+                    </button>
+                </div>
             </div>
         </div>
+
+
     );
 };
 
