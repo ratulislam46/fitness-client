@@ -27,9 +27,9 @@ const ForumPostDetails = () => {
     const date = new Date(created_at).toLocaleDateString();
 
     return (
-        <section className="max-w-4xl mx-auto mt-24 mb-12 px-4 md:px-8 py-12 bg-gray-50 border border-gray-300 rounded-xl">
+        <section className="max-w-4xl mx-auto mt-24 mb-12 px-4 md:px-8 py-12 bg-base-100 border border-base-content/5 rounded-xl">
             {/* Header */}
-            <div className="flex items-center justify-between mb-6 flex-wrap gap-4 border-b pb-3 border-gray-400 ">
+            <div className="flex items-center justify-between mb-6 flex-wrap gap-4 border-b pb-3 border-base-content/20 ">
                 <div className="flex items-center gap-4">
                     <img
                         src={posted_by.image}
@@ -60,7 +60,7 @@ const ForumPostDetails = () => {
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 leading-snug">{title}</h1>
+            <h1 className="text-2xl md:text-4xl font-semibold mb-6 leading-snug">{title}</h1>
 
             {/* Details */}
             <div className="text-base-content/70 text-base leading-7">
