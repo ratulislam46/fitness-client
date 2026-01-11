@@ -5,8 +5,6 @@ import { Link, useNavigate } from "react-router";
 import FitnestIcon from "../../../Layout/Navbar/FitnestIcon";
 import { useForm } from "react-hook-form";
 import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
-import AuthBackground from "../../../Components/Shared/AuthBackground";
-import toast from "react-hot-toast";
 
 const LoginPage = () => {
 
@@ -25,55 +23,66 @@ const LoginPage = () => {
             })
             .catch(error => {
                 console.log(error);
-                toast.error("password error")
             })
 
     };
 
     return (
         <div>
-            <AuthBackground title='Welcome Back to' subtitle='Sign in your account' pageName='Sign in'>
-                <form onSubmit={handleSubmit(handleLogin)} className="space-y-4">
-                    <fieldset className="fieldset">
-                        {/* email field  */}
-                        <label className="label">Email</label>
-                        <input
-                            type="email"
-                            {...register("email", { required: true })}
-                            className="input w-full" placeholder="arfanratul46@gmail.com" />
-                        {errors.email?.type === 'required' && <p className='text-red-500'>Email required</p>}
+            <div className="bg-base-100 lg:pl-6 lg:pt-6 pt-2">
+                <FitnestIcon></FitnestIcon>
+            </div>
+            <div className="min-h-screen flex items-center justify-center px-4 bg-base-100">
+                <div className="w-full max-w-md bg-base-100 shadow-md hover:shadow-lg duration-300 p-8">
+                    <h2 className="text-3xl font-bold text-center text-base-content mb-4">
+                        Welcome Back
+                    </h2>
+                    <p className="text-xl text-center text-base-content/70 mb-6">
+                        Please login to your account
+                    </p>
+
+                    <form onSubmit={handleSubmit(handleLogin)} className="space-y-4">
+                        <fieldset className="fieldset">
+                            {/* email field  */}
+                            <label className="label">Email</label>
+                            <input
+                                type="email"
+                                {...register("email", { required: true })}
+                                className="input w-full" placeholder="Email" />
+                            {errors.email?.type === 'required' && <p className='text-red-500'>Email required</p>}
 
 
-                        {/* password field*/}
-                        <label className="label">Password</label>
-                        <input
-                            type="password"
-                            {...register("password", { required: true, minLength: 6 })}
-                            className="input w-full" placeholder="• • • • • •" />
-                        {errors.password?.type === 'required' && <p className='text-red-500'>Password required</p>}
-                        {errors.password?.type === 'minLength' && <p className='text-red-500'>Password must be 6 character or longer</p>}
+                            {/* password field*/}
+                            <label className="label">Password</label>
+                            <input
+                                type="password"
+                                {...register("password", { required: true, minLength: 6 })}
+                                className="input w-full" placeholder="Password" />
+                            {errors.password?.type === 'required' && <p className='text-red-500'>Password required</p>}
+                            {errors.password?.type === 'minLength' && <p className='text-red-500'>Password must be 6 character or longer</p>}
 
-                        <button
-                            type="submit"
-                            className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition mt-2 cursor-pointer"
-                        >
-                            Login
-                        </button>
-                        <div><p className='pl-2'>If you have no account!
-                            <Link to='/register' className='text-blue-600 underline ml-1'>Register</Link> </p>
-                        </div>
+                            <button
+                                type="submit"
+                                className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition mt-2"
+                            >
+                                Login
+                            </button>
+                            <div><p className='pl-2'>If you have no account!
+                                <Link to='/register' className='text-blue-600 underline ml-1'>Register</Link> </p>
+                            </div>
 
-                        <div className=" text-center">
-                            <div className="divider">Or Continue With</div>
+                            <div className=" text-center">
+                                <div className="divider">Or Continue With</div>
 
-                            {/* google login */}
-                            <GoogleSignIn></GoogleSignIn>
+                                {/* google login */}
+                                <GoogleSignIn></GoogleSignIn>
 
-                        </div>
-                    </fieldset>
-                </form>
+                            </div>
+                        </fieldset>
+                    </form>
 
-            </AuthBackground>
+                </div>
+            </div>
         </div>
 
     );
