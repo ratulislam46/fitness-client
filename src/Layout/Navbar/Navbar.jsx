@@ -12,6 +12,10 @@ const Navbar = () => {
 
     const { user, LogOut } = use(AuthContext);
     const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [menuOpen, setMenuOpen] = useState(false);
+
 
     const handleLogOut = () => {
         LogOut()
@@ -27,11 +31,28 @@ const Navbar = () => {
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
         localStorage.setItem("theme", theme)
-    }, [theme])
+    }, [theme]);
+
+    // navbar hide/show on scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 80) {
+                setShowNavbar(false); // scroll down
+            } else {
+                setShowNavbar(true); // scroll up
+            }
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY]);
 
     const navLinks =
         <>
-            <li className='text-base-content'><NavLink to='/'>Home</NavLink></li>
+            <li className='text-base-content '><NavLink to='/'>Home</NavLink></li>
             <li className='text-base-content'><NavLink to='/all-trainer'>Trainers</NavLink></li>
             <li className='text-base-content'><NavLink to='/all-forum-post'>Forums</NavLink></li>
             <li className='text-base-content'><NavLink to='/classes'>Classes</NavLink></li>
@@ -46,57 +67,92 @@ const Navbar = () => {
         </>
 
     return (
-        <div className="shadow-sm fixed top-0 left-0 w-full z-50 backdrop-blur-2xl">
-            <div className="navbar container mx-auto">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="lg:hidden">
+        <div>
+            <div
+                className={`
+                    fixed top-0 left-0 w-full z-50
+                    backdrop-blur-2xl bg-base-100/80
+                    shadow-sm
+                    transition-transform duration-500 ease-in-out
+                    ${showNavbar ? "translate-y-0" : "-translate-y-full"}`} >
+                <div className="navbar container mx-auto">
+                    {/* Start */}
+                    <div className="navbar-start">
+                        <button
+                            onClick={() => setMenuOpen(true)}
+                            className="lg:hidden" >
                             <IoMdMenu size={24} />
-                        </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content rounded-box z-1 mt-5 w-52 p-2 shadow bg-base-100 text-base-content">
-                            {
-                                navLinks
-                            }
+                        </button>
+                        <FitnestIcon />
+                    </div>
+
+                    {/* Center */}
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className="flex gap-4">
+                            {navLinks}
                         </ul>
                     </div>
-                    <FitnestIcon></FitnestIcon>
-                </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 bg-bl">
-                        {
-                            navLinks
-                        }
-                    </ul>
-                </div>
-                <div className="navbar-end">
 
-                    {/* dark and light mood  */}
-                    <div className="flex-none mr-2">
+                    {/* End */}
+                    <div className="navbar-end flex items-center gap-2">
+                        {/* Theme toggle */}
                         <button
-                            className="px-2 py-1 rounded-md"
-                            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-                        >
-                            {theme === "light" ? <MdDarkMode size={28} /> : <MdLightMode size={28} />}
+                            className="p-2 rounded-md"
+                            onClick={() =>
+                                setTheme(theme === "light" ? "dark" : "light")
+                            } >
+                            {theme === "light" ? (
+                                <MdDarkMode size={26} />
+                            ) : (
+                                <MdLightMode size={26} />
+                            )}
                         </button>
+
+                        {/* User image */}
+                        {user && (
+                            <img
+                                className="w-10 h-10 rounded-2xl object-cover"
+                                src={
+                                    user.photoURL ||
+                                    "https://i.postimg.cc/pX5mX6Zd/istockphoto-1337144146-612x612.jpg"}
+                                alt="user" />
+                        )}
+
+                        {/* Auth button */}
+                        {user ? (
+                            <Link
+                                onClick={handleLogOut}
+                                to="/login"
+                                className="px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white transition" >
+                                Log Out
+                            </Link>
+                        ) : (
+                            <Link
+                                to="/login"
+                                className="px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white transition" >
+                                Login
+                            </Link>
+                        )}
                     </div>
-
-
-                    {/* user image */}
-                    {
-                        user &&
-                        <img className='w-10 h-10 mr-2 rounded-2xl' src={user.photoURL || 'https://i.postimg.cc/pX5mX6Zd/istockphoto-1337144146-612x612.jpg'} alt="" />
-                    }
-
-                    {/* conditional button  */}
-                    {
-                        user ?
-                            <Link onClick={handleLogOut} to='/login' className="btn bg-green-500 hover:bg-green-600 border-none text-white">Log Out</Link> :
-                            <Link to='/login' className="btn bg-green-500 hover:bg-green-600 border-none text-white">Login</Link>
-
-                    }
                 </div>
+            </div>
+
+            {/* Mobile Menu (Full screen slide from top) */}
+            <div
+                className={`fixed top-0 left-0 w-full z-50 bg-base-100 rounded-b-2xl shadow-lg transform transition-transform duration-500 ease-in-out ${menuOpen ? "translate-y-0" : "-translate-y-full"}`} >
+                {/* Close button */}
+                <button
+                    onClick={() => setMenuOpen(false)}
+                    className="absolute top-4 right-4 text-2xl" >
+                    ✕
+                </button>
+
+                {/* Menu content */}
+                <ul
+                    onClick={() => setMenuOpen(false)}
+                    className=" flex flex-col items-center gap-5  pt-16 pb-8 max-h-[50vh]overflow-y-auto"   >
+                    {navLinks}
+                </ul>
             </div>
         </div>
     );
