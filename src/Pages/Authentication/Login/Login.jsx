@@ -55,7 +55,7 @@ const LoginPage = () => {
 
                         <button
                             type="submit"
-                            className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition mt-2"
+                            className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition mt-2 cursor-pointer"
                         >
                             Login
                         </button>

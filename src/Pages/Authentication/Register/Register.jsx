@@ -101,7 +101,7 @@ const Register = () => {
                         {errors.password?.type === 'required' && <p className='text-red-500'>Password required</p>}
                         {errors.password?.type === 'minLength' && <p className='text-red-500'>Password must be 6 character or longer</p>}
 
-                        <button className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition mt-2">Register</button>
+                        <button className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition mt-2 cursor-pointer">Register</button>
 
                         <div><p className='pl-2'>Already you have account!
                             <Link to='/login' className='text-blue-600 underline ml-1'>Login</Link> </p></div>

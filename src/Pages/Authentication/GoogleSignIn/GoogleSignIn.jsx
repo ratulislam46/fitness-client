@@ -42,10 +42,10 @@ const GoogleSignIn = () => {
     return (
         <button
             onClick={handleGoogleLogin}
-            className="flex items-center justify-center gap-2 border w-full py-2 rounded-lg hover:bg-base-100 transition"
+            className="flex items-center justify-center gap-3 border border-gray-300 w-full py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 bg-white cursor-pointer"
         >
             <FcGoogle className="text-xl" />
-            <span>Continue with Google</span>
+            <span className="font-normal text-gray-600">Continue with Google</span>
         </button>
     );
 };

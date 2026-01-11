@@ -6,7 +6,7 @@ const ButtonTwo = ({ address, text }) => {
     return (
         <Link
             to={address}
-            className='group relative text-white bg-primary px-8 py-4 rounded-xl font-semibold text-lg shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 min-w-[160px]'
+            className='group relative text-white bg-primary px-4 lg:px-8 py-4 rounded-xl font-semibold text-lg shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 min-w-[120px]'
         >
             {/* Button Background Animation */}
             <div className='absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/80 group-hover:from-primary/90 group-hover:to-primary transition-all duration-500'></div>

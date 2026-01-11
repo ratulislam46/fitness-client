@@ -6,7 +6,7 @@ const ButtonOne = ({ address, text }) => {
     return (
         <Link
             to={address}
-            className='group relative bg-transparent text-white border-2 border-white/60 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 min-w-[160px]'
+            className='group relative bg-transparent text-white border-2 border-white/60 px-4 lg:px-8 py-4 rounded-xl font-semibold text-lg shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 min-w-[120px]'
         >
             {/* Button Background Fill Animation */}
             <div className='absolute inset-0 bg-white/90 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700'></div>
