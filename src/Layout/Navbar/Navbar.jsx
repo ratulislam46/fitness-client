@@ -139,7 +139,7 @@ const Navbar = () => {
 
             {/* Mobile Menu (Full screen slide from top) */}
             <div
-                className={`fixed top-0 left-0 w-full z-50 bg-base-100 rounded-b-2xl shadow-lg transform transition-transform duration-500 ease-in-out ${menuOpen ? "translate-y-0" : "-translate-y-full"}`} >
+                className={`fixed top-0 left-0 w-full z-50 bg-base-100 shadow-lg transform transition-transform duration-1000 ease-in-out ${menuOpen ? "translate-y-0" : "-translate-y-full"}`} >
                 {/* Close button */}
                 <button
                     onClick={() => setMenuOpen(false)}
