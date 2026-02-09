@@ -2,7 +2,6 @@ import { use } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../../Context/AuthProvider";
 import { Link, useNavigate } from "react-router";
-import FitnestIcon from "../../../Layout/Navbar/FitnestIcon";
 import { useForm } from "react-hook-form";
 import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
 import AuthBackground from "../../../Components/Shared/AuthBackground";
@@ -61,7 +60,7 @@ const LoginPage = () => {
                             <Link to='/register' className='text-blue-600 underline ml-1'>Register</Link> </p>
                         </div>
 
-                        <div className=" text-center">
+                        <div className="text-center">
                             <div className="divider">Or Continue With</div>
 
                             {/* google login */}

@@ -2,17 +2,17 @@ import React from 'react';
 
 const AuthBackground = ({ children, title, subtitle, pageName }) => {
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row">
+        <div className="min-h-screen bg-base-100 flex flex-col md:flex-row">
             {/* Left side - Login form */}
             <div className="md:w-1/2 flex flex-col justify-center p-8 md:p-16">
                 <div className="max-w-md w-full mx-auto">
                     {/* Logo and header */}
                     <div className="mb-10">
                         <div className="mb-2">
-                            <h1 className="text-3xl font-bold text-gray-800">{title}</h1>
+                            <h1 className="text-3xl font-bold">{title}</h1>
                             <h1 className="text-3xl font-bold text-secondary">Fitness</h1>
                         </div>
-                        <p className="text-gray-600 mt-2">{subtitle}</p>
+                        <p className="mt-2">{subtitle}</p>
                     </div>
 
                     {/* Your existing form exactly as provided */}
@@ -21,7 +21,7 @@ const AuthBackground = ({ children, title, subtitle, pageName }) => {
             </div >
 
             {/* Right side - Fitness Theme */}
-            <div className="md:w-1/2 bg-gradient-to-br from-blue-600 to-blue-800 p-8 md:p-16 flex flex-col justify-center relative overflow-hidden">
+            <div className="md:w-1/2 bg-gradient-to-br from-blue-400 to-blue-800 p-8 md:p-16 flex flex-col justify-center relative overflow-hidden">
                 <div className="relative z-10 text-white max-w-md mx-auto">
                     {/* Updated Headline */}
                     <h2 className="text-4xl font-bold mb-6">Transform Your Fitness Journey</h2>
